@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>tb_axi_florian</header>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message> bus interface data width mismatch</message>
+    <detail> There is a data width mismatch between axi_master_3_florian_0:BIF_1:WDATA[0-511] and tb_axi_florian:BIF_1:WDATA[0-63] which may result in a loss of data.</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_florian/pins/axi_master_3_florian_0:BIF_1</crossprobe>
+  </drc>
+</drcreport>

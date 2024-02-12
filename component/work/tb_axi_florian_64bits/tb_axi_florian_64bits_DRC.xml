@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>tb_axi_florian_64bits</header>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message> bus interface ID width mismatch</message>
+    <detail> There is an ID width mismatch between axi_master_florian_64bits_0:BIF_1:AWID[0-3] and COREAXI4INTERCONNECT_C0_0:AXI4mmaster0:MASTER0_AWID[0-0] which may result in a loss of data.</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_florian_64bits/pins/axi_master_florian_64bits_0:BIF_1</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message> bus interface ID width mismatch</message>
+    <detail> There is an ID width mismatch between COREAXI4SRAM_C2_0:AXI4_Slave:RID[0-3] and COREAXI4INTERCONNECT_C0_0:AXI4mslave0:SLAVE0_RID[0-1] which may result in a loss of data.</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_florian_64bits/pins/COREAXI4SRAM_C2_0:AXI4_Slave</crossprobe>
+  </drc>
+</drcreport>

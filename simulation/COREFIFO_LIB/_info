@@ -1,0 +1,408 @@
+m255
+K4
+z2
+!s11e vcom 2023.1 2023.01, Jan 24 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/YanGao/Desktop/Yan/Test_ram_write/simulation
+Ecorefifo_c0_corefifo_c0_0_corefifo
+Z1 w1707314008
+Z2 DPx4 work 8 fifo_pkg 0 22 @MLFzo3Ljf1?QCaNB1T;D3
+Z3 DPx8 synopsys 10 attributes 0 22 9IX8bg`a2S[Azh3JDMQM02
+Z4 DPx4 ieee 14 std_logic_misc 0 22 Vh1S?Q;D1AH@iib=XF9h<0
+Z5 DPx4 ieee 15 std_logic_arith 0 22 B[jVX6I8iRX2o6WYW0BB>3
+Z6 DPx4 ieee 18 std_logic_unsigned 0 22 o4hn5gYc0WVo72BSL@Ta50
+Z7 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z8 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 24
+R0
+Z9 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd
+Z10 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd
+l0
+L34 1
+ViOG>S=jMGGl4MhUC:;cCD2
+!s100 `I0?TX[l2BOWLJUK1896;3
+Z11 OW;C;2023.1;77
+33
+Z12 !s110 1707314822
+!i10b 1
+Z13 !s108 1707314822.000000
+Z14 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd|
+Z15 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd|
+!i113 1
+Z16 o-2008 -explicit -work COREFIFO_LIB -O0
+Z17 tCvgOpt 0
+Atranslated
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 34 corefifo_c0_corefifo_c0_0_corefifo 0 22 iOG>S=jMGGl4MhUC:;cCD2
+!i122 24
+l609
+L120 1583
+V=j0aJ=;W;if?aczUF5Kfh2
+!s100 ;kXbLJI??^ni`:hRa6nLD2
+R11
+33
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 1
+R16
+R17
+Ecorefifo_c0_corefifo_c0_0_corefifo_async
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+!i122 20
+R0
+Z18 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd
+Z19 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd
+l0
+L33 1
+VSUXV0MGaC:Kc8_UjKc93j2
+!s100 c1ZEe^6bz@Nz3IKe9OEW_3
+R11
+33
+Z20 !s110 1707314821
+!i10b 1
+Z21 !s108 1707314821.000000
+Z22 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd|
+Z23 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd|
+!i113 1
+R16
+R17
+Atranslated
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 40 corefifo_c0_corefifo_c0_0_corefifo_async 0 22 SUXV0MGaC:Kc8_UjKc93j2
+!i122 20
+l326
+L108 1728
+V5ISdKZ=:_Ng=0JVo:HRIK0
+!s100 iMnKzjC3i8>CdHZU5E]632
+R11
+33
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 1
+R16
+R17
+Ecorefifo_c0_corefifo_c0_0_corefifo_fwft
+R1
+R3
+R4
+R5
+R6
+R7
+R8
+!i122 21
+R0
+Z24 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd
+Z25 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd
+l0
+Z26 L31 1
+V;TXlk=XcLW=;LI0Q0<TO[1
+!s100 h9gSR5LhBz1ZdEBV89QGj0
+R11
+33
+R20
+!i10b 1
+R21
+Z27 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd|
+Z28 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd|
+!i113 1
+R16
+R17
+Atranslated
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 39 corefifo_c0_corefifo_c0_0_corefifo_fwft 0 22 ;TXlk=XcLW=;LI0Q0<TO[1
+!i122 21
+l203
+L87 360
+VMzYEJSmAZC>5ChGjUR54V0
+!s100 H]SC9^RFg@g^Bdf6ia^W70
+R11
+33
+R20
+!i10b 1
+R21
+R27
+R28
+!i113 1
+R16
+R17
+Ecorefifo_c0_corefifo_c0_0_corefifo_graytobinconv
+R1
+R3
+R4
+R5
+R6
+R7
+R8
+!i122 18
+R0
+Z29 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
+Z30 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
+l0
+L32 1
+Vd6=[>]0c>WeQn6QKS?O]T1
+!s100 TciIlHChGJ>2HeLzFW1MQ1
+R11
+33
+R20
+!i10b 1
+R21
+Z31 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
+Z32 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd|
+!i113 1
+R16
+R17
+Atranslated
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 48 corefifo_c0_corefifo_c0_0_corefifo_graytobinconv 0 22 d6=[>]0c>WeQn6QKS?O]T1
+!i122 18
+l62
+L54 31
+VcmV2]mcL]JHg2;XSQ@=AZ1
+!s100 @D@n>jhO5`]FOf_7KUA@41
+R11
+33
+R20
+!i10b 1
+R21
+R31
+R32
+!i113 1
+R16
+R17
+Ecorefifo_c0_corefifo_c0_0_corefifo_nstagessync
+R1
+R3
+R4
+R5
+R6
+R7
+R8
+!i122 17
+R0
+Z33 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
+Z34 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
+l0
+R26
+V7WDVYj_bBe22go=321bmZ0
+!s100 j1eHRlFffZXjzGJ5nLi833
+R11
+33
+R20
+!i10b 1
+R21
+Z35 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
+Z36 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd|
+!i113 1
+R16
+R17
+Atranslated
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 46 corefifo_c0_corefifo_c0_0_corefifo_nstagessync 0 22 7WDVYj_bBe22go=321bmZ0
+!i122 17
+l68
+L58 46
+VT4`QYl;fZSQVQokJIUYI;3
+!s100 h3n9LBWZ41SYO]<zNVoRM0
+R11
+33
+R20
+!i10b 1
+R21
+R35
+R36
+!i113 1
+R16
+R17
+Ecorefifo_c0_corefifo_c0_0_corefifo_sync
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+!i122 23
+R0
+Z37 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd
+Z38 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd
+l0
+R26
+V8P[RWdQ@8kjgMLED>17UC2
+!s100 eocIKDL<klP@4dZf1oR=g1
+R11
+33
+R12
+!i10b 1
+R13
+Z39 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd|
+Z40 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd|
+!i113 1
+R16
+R17
+Atranslated
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 39 corefifo_c0_corefifo_c0_0_corefifo_sync 0 22 8P[RWdQ@8kjgMLED>17UC2
+!i122 23
+l283
+L99 1221
+Vg4ZOL;<`Qcmj^CoVE:l5<1
+!s100 ZeN_=nTg@0jP<aT8nc;>F0
+R11
+33
+R12
+!i10b 1
+R13
+R39
+R40
+!i113 1
+R16
+R17
+Ecorefifo_c0_corefifo_c0_0_corefifo_sync_scntr
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+!i122 22
+R0
+Z41 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
+Z42 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
+l0
+R26
+V5O=145e]AIOCP;;ZnLQK22
+!s100 mi7`66Qj[nJONn^cB=Qo=3
+R11
+33
+R20
+!i10b 1
+R21
+Z43 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
+Z44 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd|
+!i113 1
+R16
+R17
+Atranslated
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 45 corefifo_c0_corefifo_c0_0_corefifo_sync_scntr 0 22 5O=145e]AIOCP;;ZnLQK22
+!i122 22
+l287
+L101 818
+V5U=WWM98e>jZ;E[3i8Z[k0
+!s100 YmgKEhPS9Jn40BQZmGDZk0
+R11
+33
+R20
+!i10b 1
+R21
+R43
+R44
+!i113 1
+R16
+R17
+Pfifo_pkg
+R5
+R6
+R7
+R8
+!i122 70
+Z45 w1707301522
+R0
+Z46 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
+Z47 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
+l0
+L5 7
+V@MLFzo3Ljf1?QCaNB1T;D3
+!s100 VZ8O<JR0V4>h>[o3;Dz[G3
+R11
+33
+b1
+Z48 !s110 1707749881
+!i10b 1
+Z49 !s108 1707749881.000000
+Z50 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd|
+Z51 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd|
+!i113 1
+R16
+R17
+Bbody
+R2
+R5
+R6
+R7
+R8
+!i122 70
+l0
+Z52 L13 61
+Z53 V3jLTCPHMf79zR0Un`ba9[1
+Z54 !s100 DmlBVSC3nmBK^QkJWW04b0
+R11
+33
+R48
+!i10b 1
+R49
+R50
+R51
+!i113 1
+R16
+R17

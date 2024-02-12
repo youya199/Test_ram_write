@@ -1,0 +1,282 @@
+# Reading pref.tcl
+# do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap PolarFire C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/precompiled/vlog/polarfire 
+# Modifying modelsim.ini
+# INFO: Simulation library COREFIFO_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap COREFIFO_LIB COREFIFO_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:28:52 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/axi_master_florian.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity axi_master_3_florian
+# -- Compiling architecture architecture_axi_master_3_florian of axi_master_3_florian
+# End time: 13:28:52 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:28:52 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package fifo_pkg
+# -- Compiling package body fifo_pkg
+# -- Loading package fifo_pkg
+# End time: 13:28:52 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:28:52 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/CLK_GEN/1.0.1/CLK_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity CLK_GEN
+# -- Compiling architecture behave of CLK_GEN
+# End time: 13:28:52 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:28:52 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/CLK_GEN_C0/CLK_GEN_C0.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CLK_GEN_C0
+# -- Compiling architecture RTL of CLK_GEN_C0
+# End time: 13:28:52 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:28:52 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/RESET_GEN/1.0.1/RESET_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity RESET_GEN
+# -- Compiling architecture behavior of RESET_GEN
+# End time: 13:28:52 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:28:52 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/RESET_GEN_C1/RESET_GEN_C1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RESET_GEN_C1
+# -- Compiling architecture RTL of RESET_GEN_C1
+# End time: 13:28:52 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:28:52 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/datapacker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package NUMERIC_STD_UNSIGNED
+# -- Compiling entity data_packer
+# -- Compiling architecture Behavioral of data_packer
+# End time: 13:28:52 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:28:52 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/limited_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package NUMERIC_STD_UNSIGNED
+# -- Compiling entity limited_counter
+# -- Compiling architecture Behavioral of limited_counter
+# End time: 13:28:52 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:28:52 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_axi_florian_2/tb_axi_florian_2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_axi_florian_2
+# -- Compiling architecture RTL of tb_axi_florian_2
+# -- Loading package NUMERIC_STD
+# -- Loading entity axi_master_3_florian
+# End time: 13:28:53 on Feb 08,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -L PolarFire -L presynth -L COREFIFO_LIB -t 1ps -pli "C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll" presynth.tb_axi_florian_2 
+# Start time: 13:28:53 on Feb 08,2024
+# //  ModelSim Microsemi Pro 2023.1 Jan 24 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim Microsemi Pro and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading presynth.tb_axi_florian_2(rtl)
+# Loading presynth.axi_master_3_florian(architecture_axi_master_3_florian)
+# Loading presynth.clk_gen_c0(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading presynth.clk_gen(behave)
+# Loading ieee.numeric_std_unsigned(body)
+# Loading presynth.data_packer(behavioral)
+# Loading presynth.limited_counter(behavioral)
+# Loading presynth.reset_gen_c1(rtl)
+# Loading presynth.reset_gen(behavior)
+# Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARADDR(31 downto 0) has no driver.
+# This port will contribute value (XXXXXXXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARSIZE(2 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARBURST(1 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARVALID has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/RREADY has no driver.
+# This port will contribute value (U) to the signal network.
+do wave_florian2.do
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARADDR(31 downto 0) has no driver.
+# This port will contribute value (XXXXXXXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARSIZE(2 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARBURST(1 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARVALID has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/RREADY has no driver.
+# This port will contribute value (U) to the signal network.
+run -continue
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARADDR(31 downto 0) has no driver.
+# This port will contribute value (XXXXXXXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARSIZE(2 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARBURST(1 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/ARVALID has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_florian_2/axi_master_3_florian_0/RREADY has no driver.
+# This port will contribute value (U) to the signal network.
+run
+run
+run
+force -freeze sim:/tb_axi_florian_2/axi_master_3_florian_0/AWREADY 1 0 -cancel 11ns
+# ** Warning: (vsim-8780) Forcing /tb_axi_florian_2/AWREADY as root of /tb_axi_florian_2/axi_master_3_florian_0/AWREADY specified in the force.
+run
+run
+run
+run
+force -freeze sim:/tb_axi_florian_2/axi_master_3_florian_0/WREADY 1 0 -cancel 11ns
+# ** Warning: (vsim-8780) Forcing /tb_axi_florian_2/WREADY as root of /tb_axi_florian_2/axi_master_3_florian_0/WREADY specified in the force.
+run
+run
+run
+run
+run
+run
+force -freeze sim:/tb_axi_florian_2/axi_master_3_florian_0/BVALID 1 0 -cancel 11ns
+# ** Warning: (vsim-8780) Forcing /tb_axi_florian_2/BVALID as root of /tb_axi_florian_2/axi_master_3_florian_0/BVALID specified in the force.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/tb_axi_florian_2/axi_master_3_florian_0/AWREADY 1 0 -cancel 11ns
+# ** Warning: (vsim-8780) Forcing /tb_axi_florian_2/AWREADY as root of /tb_axi_florian_2/axi_master_3_florian_0/AWREADY specified in the force.
+run
+run
+run
+run
+force -freeze sim:/tb_axi_florian_2/axi_master_3_florian_0/WREADY 1 0 -cancel 11ns
+# ** Warning: (vsim-8780) Forcing /tb_axi_florian_2/WREADY as root of /tb_axi_florian_2/axi_master_3_florian_0/WREADY specified in the force.
+run
+run
+run
+force -freeze sim:/tb_axi_florian_2/axi_master_3_florian_0/BVALID 1 0 -cancel 11ns
+# ** Warning: (vsim-8780) Forcing /tb_axi_florian_2/BVALID as root of /tb_axi_florian_2/axi_master_3_florian_0/BVALID specified in the force.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 13:56:40 on Feb 08,2024, Elapsed time: 0:27:47
+# Errors: 0, Warnings: 11

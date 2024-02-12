@@ -1,0 +1,126 @@
+# Reading pref.tcl
+# do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap PolarFire C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/precompiled/vlog/polarfire 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 17:14:33 on Feb 04,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/32bit_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package NUMERIC_STD_UNSIGNED
+# -- Compiling entity bit12_counter
+# -- Compiling architecture Behavioral of bit12_counter
+# End time: 17:14:33 on Feb 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 17:14:33 on Feb 04,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/CLK_GEN/1.0.1/CLK_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity CLK_GEN
+# -- Compiling architecture behave of CLK_GEN
+# End time: 17:14:33 on Feb 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 17:14:33 on Feb 04,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/CLK_GEN_C0/CLK_GEN_C0.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CLK_GEN_C0
+# -- Compiling architecture RTL of CLK_GEN_C0
+# End time: 17:14:33 on Feb 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 17:14:33 on Feb 04,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/PULSE_GEN/1.0.1/PULSE_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity PULSE_GEN
+# -- Compiling architecture behavior of PULSE_GEN
+# End time: 17:14:33 on Feb 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 17:14:33 on Feb 04,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PULSE_GEN_C0/PULSE_GEN_C0.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PULSE_GEN_C0
+# -- Compiling architecture RTL of PULSE_GEN_C0
+# End time: 17:14:33 on Feb 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 17:14:33 on Feb 04,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/allignedFSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity read_control
+# -- Compiling architecture Behavioral of read_control
+# End time: 17:14:33 on Feb 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 17:14:33 on Feb 04,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_allignedFSM/tb_allignedFSM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_allignedFSM
+# -- Compiling architecture RTL of tb_allignedFSM
+# End time: 17:14:33 on Feb 04,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L PolarFire -L presynth -t 1ps -pli "C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll" presynth.tb_allignedFSM 
+# Start time: 17:14:34 on Feb 04,2024
+# //  ModelSim Microsemi Pro 2023.1 Jan 24 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim Microsemi Pro and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading presynth.tb_allignedfsm(rtl)
+# Loading ieee.numeric_std(body)
+# Loading ieee.numeric_std_unsigned(body)
+# Loading presynth.bit12_counter(behavioral)
+# Loading presynth.clk_gen_c0(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading presynth.clk_gen(behave)
+# Loading presynth.pulse_gen_c0(rtl)
+# Loading presynth.pulse_gen(behavior)
+# Loading ieee.std_logic_unsigned(body)
+# Loading presynth.read_control(behavioral)
+# Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
+add wave -position end  sim:/tb_allignedfsm/read_control_0/clk
+add wave -position end  sim:/tb_allignedfsm/read_control_0/enable
+add wave -position end  sim:/tb_allignedfsm/read_control_0/test_in
+add wave -position end  sim:/tb_allignedfsm/read_control_0/test_out
+add wave -position end  sim:/tb_allignedfsm/read_control_0/State
+add wave -position end  sim:/tb_allignedfsm/read_control_0/NextState
+restart
+# Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
+run
+# End time: 17:30:08 on Feb 04,2024, Elapsed time: 0:15:34
+# Errors: 0, Warnings: 0

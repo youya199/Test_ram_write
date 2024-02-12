@@ -1,0 +1,31 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Wed Feb  7 14:53:31 2024
+Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
+Component :  COREFIFO_C0
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/COREFIFO.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_sync_scntr.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_async.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_NstagesSync.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_grayToBinConv.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/core/corefifo_fwft.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0.vhd
+
+Stimulus files for all Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/mti/scripts/wave_vhdl.do
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/mti/scripts/runall_vhdl.do
+
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_std_logic.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_misc.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/g4_dp_ext_mem.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/TB.vhd
+
+Constraint files:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.sdc

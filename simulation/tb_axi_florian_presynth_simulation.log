@@ -1,0 +1,125 @@
+# Reading pref.tcl
+# do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap PolarFire C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/precompiled/vlog/polarfire 
+# Modifying modelsim.ini
+# INFO: Simulation library COREFIFO_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap COREFIFO_LIB COREFIFO_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 12:39:54 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/axi_master_florian.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity axi_master_3_florian
+# -- Compiling architecture architecture_axi_master_3_florian of axi_master_3_florian
+# End time: 12:39:54 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 12:39:54 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package fifo_pkg
+# -- Compiling package body fifo_pkg
+# -- Loading package fifo_pkg
+# End time: 12:39:54 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 12:39:54 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/CLK_GEN/1.0.1/CLK_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity CLK_GEN
+# -- Compiling architecture behave of CLK_GEN
+# End time: 12:39:54 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 12:39:54 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/CLK_GEN_C0/CLK_GEN_C0.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CLK_GEN_C0
+# -- Compiling architecture RTL of CLK_GEN_C0
+# End time: 12:39:54 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 12:39:54 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/RESET_GEN/1.0.1/RESET_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity RESET_GEN
+# -- Compiling architecture behavior of RESET_GEN
+# End time: 12:39:55 on Feb 08,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 12:39:55 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/RESET_GEN_C1/RESET_GEN_C1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RESET_GEN_C1
+# -- Compiling architecture RTL of RESET_GEN_C1
+# End time: 12:39:55 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 12:39:55 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/datapacker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package NUMERIC_STD_UNSIGNED
+# -- Compiling entity data_packer
+# -- Compiling architecture Behavioral of data_packer
+# End time: 12:39:55 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 12:39:55 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/limited_counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package NUMERIC_STD_UNSIGNED
+# -- Compiling entity limited_counter
+# -- Compiling architecture Behavioral of limited_counter
+# End time: 12:39:55 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 12:39:55 on Feb 08,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_axi_florian/tb_axi_florian.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_axi_florian
+# -- Compiling architecture RTL of tb_axi_florian
+# ** Error: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_axi_florian/tb_axi_florian.vhd(187): (vcom-1294) Declaration with designator "RDATA" already exists in this region.
+# ** =====> Prior declaration of "RDATA" is at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_axi_florian/tb_axi_florian.vhd(26).
+# -- Loading package NUMERIC_STD
+# -- Loading entity axi_master_3_florian
+# ** Error (suppressible): C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_axi_florian/tb_axi_florian.vhd(239): (vcom-1272) Length of expected is 64; length of actual is 512.
+# ** Error (suppressible): C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_axi_florian/tb_axi_florian.vhd(241): (vcom-1272) Length of expected is 8; length of actual is 64.
+# ** Note: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_axi_florian/tb_axi_florian.vhd(363): VHDL Compiler exiting
+# End time: 12:39:55 on Feb 08,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/Microchip/Libero_SoC_v2023.2/ModelSimPro/win32acoem/vcom failed.
+# Error in macro ./run.do line 28
+# C:/Microchip/Libero_SoC_v2023.2/ModelSimPro/win32acoem/vcom failed.
+#     while executing
+# "vcom -2008 -explicit  -work presynth "${PROJECT_DIR}/component/work/tb_axi_florian/tb_axi_florian.vhd""

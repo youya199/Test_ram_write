@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>tb_SR13</header>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin RESET_GEN_C0_0:RESET</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_SR13/pins/RESET_GEN_C0_0:RESET</crossprobe>
+  </drc>
+</drcreport>

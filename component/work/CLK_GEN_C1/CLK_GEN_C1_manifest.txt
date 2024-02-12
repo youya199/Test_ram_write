@@ -1,0 +1,12 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Wed Dec 13 17:55:51 2023
+Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
+Component :  CLK_GEN_C1
+Family    :  PolarFire
+
+
+Stimulus files for all Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/CLK_GEN_C1/CLK_GEN_C1.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/CLK_GEN/1.0.1/CLK_GEN.vhd
+

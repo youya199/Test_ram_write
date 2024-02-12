@@ -1,0 +1,26 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Thu Feb  8 15:10:07 2024
+Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
+Component :  COREAXI4SRAM_C2
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MAINCTRL.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_SLVIF.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2.vhd
+
+Stimulus files for all Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/test/user/misc_pkg.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/test/user/XHDL_misc.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/test/user/XHDL_std_logic.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/coreparameters.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/test/user/axi_master.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/test/user/testbench.vhd
+
