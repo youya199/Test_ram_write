@@ -226,8 +226,8 @@ begin
     end if;
 end process;
 
-ARLEN <= "00000011"; --change to 1 beat per burst --test: change to 4 beats per burst
-AWLEN <= "00000011"; --always burst of length 256 beats of 64 bits --change to 1 beat per burst  --test: change to 4 beats per burst
+ARLEN <= "00000000"; --change to 1 beat per burst 
+AWLEN <= "00000000"; --always burst of length 256 beats of 64 bits --change to 1 beat per burst  
 ARLOCK <= (others => '0'); --the ddr core uses axi3 style lock instead of axi4 one bit lock, dont know why
 AWLOCK <= (others => '0'); --the ddr core uses axi3 style lock instead of axi4 one bit lock, dont know why, locking not needed
 AWID <= (others => '0'); -- always use id 0

@@ -18,7 +18,7 @@ Z5 DPx4 ieee 15 std_logic_arith 0 22 B[jVX6I8iRX2o6WYW0BB>3
 Z6 DPx4 ieee 18 std_logic_unsigned 0 22 o4hn5gYc0WVo72BSL@Ta50
 Z7 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
 Z8 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
-!i122 80
+!i122 461
 R0
 Z9 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM.vhd
 Z10 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM.vhd
@@ -28,9 +28,9 @@ VNoAlFCl]2MP8ZhZAlOTWX0
 !s100 @d1K<Y[?W6n7?2IhoV;zf3
 Z11 OW;C;2023.1;77
 33
-Z12 !s110 1707749890
+Z12 !s110 1710415555
 !i10b 1
-Z13 !s108 1707749890.000000
+Z13 !s108 1710415555.000000
 Z14 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM.vhd|
 Z15 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM.vhd|
 !i113 1
@@ -44,12 +44,12 @@ R5
 R6
 R7
 R8
-Z18 DEx4 work 46 coreaxi4sram_c2_coreaxi4sram_c2_0_coreaxi4sram 0 22 NoAlFCl]2MP8ZhZAlOTWX0
-!i122 80
+DEx4 work 46 coreaxi4sram_c2_coreaxi4sram_c2_0_coreaxi4sram 0 22 NoAlFCl]2MP8ZhZAlOTWX0
+!i122 461
 l438
-Z19 L112 557
-Z20 V6_if^K?GM0LXlzgnIa;RT0
-Z21 !s100 ?j;j:fNCPo^?EQEMPTUGa3
+L112 557
+V6_if^K?GM0LXlzgnIa;RT0
+!s100 ?j;j:fNCPo^?EQEMPTUGa3
 R11
 33
 R12
@@ -62,7 +62,7 @@ R16
 R17
 Ecoreaxi4sram_c2_coreaxi4sram_c2_0_coreaxi4sram_mainctrl
 R1
-Z22 DPx4 work 14 xhdl_std_logic 0 22 8BaGmd4lh35Mo_I7]l=;]1
+Z18 DPx4 work 14 xhdl_std_logic 0 22 8BaGmd4lh35Mo_I7]l=;]1
 R2
 R3
 R4
@@ -70,10 +70,10 @@ R5
 R6
 R7
 R8
-!i122 77
+!i122 458
 R0
-Z23 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MAINCTRL.vhd
-Z24 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MAINCTRL.vhd
+Z19 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MAINCTRL.vhd
+Z20 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MAINCTRL.vhd
 l0
 L49 1
 Veb8]4Z=8FUD3oe[nZdRP@0
@@ -83,13 +83,13 @@ R11
 R12
 !i10b 1
 R13
-Z25 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MAINCTRL.vhd|
-Z26 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MAINCTRL.vhd|
+Z21 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MAINCTRL.vhd|
+Z22 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MAINCTRL.vhd|
 !i113 1
 R16
 R17
 Atrans
-R22
+R18
 R2
 R3
 R4
@@ -98,7 +98,7 @@ R6
 R7
 R8
 DEx4 work 55 coreaxi4sram_c2_coreaxi4sram_c2_0_coreaxi4sram_mainctrl 0 22 eb8]4Z=8FUD3oe[nZdRP@0
-!i122 77
+!i122 458
 l467
 L134 2866
 V^>]`2T?L7eKo3R9d>4mGU0
@@ -108,8 +108,8 @@ R11
 R12
 !i10b 1
 R13
-R25
-R26
+R21
+R22
 !i113 1
 R16
 R17
@@ -122,12 +122,12 @@ R5
 R6
 R7
 R8
-!i122 78
+!i122 459
 R0
-Z27 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd
-Z28 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd
+Z23 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd
+Z24 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd
 l0
-Z29 L47 1
+Z25 L47 1
 Vlb_i[b;6mIAkJ:;cN^bbA3
 !s100 7]Y<9UOAz[b<@2`_2CSAo1
 R11
@@ -135,8 +135,8 @@ R11
 R12
 !i10b 1
 R13
-Z30 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd|
-Z31 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd|
+Z26 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd|
+Z27 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd|
 !i113 1
 R16
 R17
@@ -149,7 +149,7 @@ R6
 R7
 R8
 DEx4 work 52 coreaxi4sram_c2_coreaxi4sram_c2_0_coreaxi4sram_memif 0 22 lb_i[b;6mIAkJ:;cN^bbA3
-!i122 78
+!i122 459
 l123
 L86 73
 VNRil]mb9RPeDGjcVcC]Q=2
@@ -159,8 +159,8 @@ R11
 R12
 !i10b 1
 R13
-R30
-R31
+R26
+R27
 !i113 1
 R16
 R17
@@ -173,12 +173,12 @@ R5
 R6
 R7
 R8
-!i122 79
+!i122 460
 R0
-Z32 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_SLVIF.vhd
-Z33 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_SLVIF.vhd
+Z28 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_SLVIF.vhd
+Z29 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_SLVIF.vhd
 l0
-R29
+R25
 V^?lEo5Qk4Ne0ZSZlMMOAe0
 !s100 1oC5IX:n0e?e1LGT?4mi52
 R11
@@ -186,8 +186,8 @@ R11
 R12
 !i10b 1
 R13
-Z34 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_SLVIF.vhd|
-Z35 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_SLVIF.vhd|
+Z30 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_SLVIF.vhd|
+Z31 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_SLVIF.vhd|
 !i113 1
 R16
 R17
@@ -200,7 +200,7 @@ R6
 R7
 R8
 DEx4 work 52 coreaxi4sram_c2_coreaxi4sram_c2_0_coreaxi4sram_slvif 0 22 ^?lEo5Qk4Ne0ZSZlMMOAe0
-!i122 79
+!i122 460
 l201
 L149 178
 VBEN0@8mm5X@f^WACSF<ME2
@@ -210,8 +210,8 @@ R11
 R12
 !i10b 1
 R13
-R34
-R35
+R30
+R31
 !i113 1
 R16
 R17
@@ -220,11 +220,11 @@ R5
 R6
 R7
 R8
-!i122 74
+!i122 465
 R1
 R0
-Z36 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd
-Z37 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd
+Z32 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd
+Z33 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd
 l0
 L5 9
 V:ZM:o<bT6<NA4[DM<al1X0
@@ -232,11 +232,11 @@ V:ZM:o<bT6<NA4[DM<al1X0
 R11
 33
 b1
-Z38 !s110 1707749881
+Z34 !s110 1710507731
 !i10b 1
-Z39 !s108 1707749881.000000
-Z40 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd|
-Z41 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd|
+Z35 !s108 1710507731.000000
+Z36 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd|
+Z37 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd|
 !i113 1
 R16
 R17
@@ -246,29 +246,29 @@ R5
 R6
 R7
 R8
-!i122 74
+!i122 465
 l0
 L15 80
 V@V6FQOc5iIGfT;Tdg27Wn2
 !s100 o61T[Z8E_H<Hk65>_Y:ci1
 R11
 33
-R38
+R34
 !i10b 1
-R39
-R40
-R41
+R35
+R36
+R37
 !i113 1
 R16
 R17
 Pxhdl_misc
 R7
 R8
-!i122 75
+!i122 466
 R1
 R0
-Z42 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd
-Z43 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd
+Z38 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd
+Z39 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd
 l0
 L33 19
 VlgFCgjfWlemo:DB]RiL>e3
@@ -276,11 +276,11 @@ VlgFCgjfWlemo:DB]RiL>e3
 R11
 33
 b1
-R38
+R34
 !i10b 1
-R39
-Z44 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd|
-Z45 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd|
+R35
+Z40 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd|
+Z41 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd|
 !i113 1
 R16
 R17
@@ -288,18 +288,18 @@ Bbody
 DPx4 work 9 xhdl_misc 0 22 lgFCgjfWlemo:DB]RiL>e3
 R7
 R8
-!i122 75
+!i122 466
 l0
 L53 86
 Vnj6_jU]mZjM?n@8<e^z]C3
 !s100 3Y?BJWR1ZSa3]gNZHKGBE1
 R11
 33
-R38
+R34
 !i10b 1
-R39
-R44
-R45
+R35
+R40
+R41
 !i113 1
 R16
 R17
@@ -308,11 +308,11 @@ R6
 R5
 R7
 R8
-!i122 76
+!i122 467
 R1
 R0
-Z46 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd
-Z47 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd
+Z42 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd
+Z43 FC:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd
 l0
 L43 91
 V8BaGmd4lh35Mo_I7]l=;]1
@@ -320,32 +320,32 @@ V8BaGmd4lh35Mo_I7]l=;]1
 R11
 33
 b1
-R38
+Z44 !s110 1710507732
 !i10b 1
-R39
-Z48 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd|
-Z49 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd|
+R35
+Z45 !s90 -reportprogress|300|-2008|-explicit|-work|COREAXI4SRAM_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd|
+!s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd|
 !i113 1
 R16
 R17
 Bbody
-R22
+R18
 R6
 R5
 R7
 R8
-!i122 76
+!i122 467
 l0
-L136 477
-VU0NUNRzLTk[2`gTMY^Y=m1
-!s100 Fd0Pn<H:O3dNf]3zkiol_3
+Z46 L136 477
+Z47 VU0NUNRzLTk[2`gTMY^Y=m1
+Z48 !s100 Fd0Pn<H:O3dNf]3zkiol_3
 R11
 33
-R38
+R44
 !i10b 1
-R39
-R48
-R49
+R35
+R45
+Z49 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd|
 !i113 1
 R16
 R17

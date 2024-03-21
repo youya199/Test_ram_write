@@ -1,0 +1,80 @@
+
+****************
+Macro Parameters
+****************
+
+Name                            : PF_SRAM_AHBL_AXI_C0_PF_DPSRAM_AHB_AXI_0_PF_DPSRAM
+Family                          : PolarFire
+Output Format                   : VERILOG
+Type                            : RAM
+Write Block Enable Polarity     : None
+Read Block Enable Polarity      : Active High
+A_DOUT Enable Polarity          : None
+B_DOUT Enable Polarity          : None
+A_DOUT Sync-reset Polarity      : None
+B_DOUT Sync-reset Polarity      : None
+A_DOUT Async-reset Polarity     : None
+B_DOUT Async-reset Polarity     : None
+Reset Polarity                  : None
+Read Clock Edge                 : Rising
+Write Clock Edge                : Rising
+A_REN Polarity                  : Active High
+B_REN Polarity                  : None
+Write Depth                     : 487424
+Write Width                     : 40
+Read Depth                      : 487424
+Read Width                      : 40
+Portname DataIn                 : 
+Portname DataOut                : 
+Portname WClock                 : 
+Portname RClock                 : 
+Portname WAddress               : 
+Portname RAddress               : 
+Portname Single Clock           : CLK
+Portname Single Async-reset     : 
+Portname DataAIn                : A_DIN
+Portname DataBIn                : B_DIN
+Portname DataAOut               : A_DOUT
+Portname DataBOut               : B_DOUT
+Portname AddressA               : A_ADDR
+Portname AddressB               : B_ADDR
+Portname CLKA                   : A_CLK
+Portname CLKB                   : B_CLK
+Portname RWA                    : A_WEN
+Portname RWB                    : B_WEN
+Portname BLKA                   : A_BLK_EN
+Portname BLKB                   : B_BLK_EN
+Portname A_DOUT_EN              : A_DOUT_EN
+Portname B_DOUT_EN              : B_DOUT_EN
+Portname A_DOUT_SRST_N          : A_DOUT_SRST_N
+Portname B_DOUT_SRST_N          : B_DOUT_SRST_N
+Portname A_DOUT_ARST_N          : A_DOUT_ARST_N
+Portname B_DOUT_ARST_N          : B_DOUT_ARST_N
+Portname Write Enable           : 
+Portname Read Enable            : 
+Portname A_WBYTE_EN             : 
+Portname B_WBYTE_EN             : 
+Portname A_REN                  : A_REN
+Portname B_REN                  : B_REN
+LPM_HINT                        : 
+Device                          : 300
+RAM Type                        : Dual Port
+Optimized for                   : Power
+Initialize RAM                  : False
+Clocks                          : Independent Read and Write Clocks
+Byte Enables                    : Yes
+Read Pipeline A                 : No
+Read Pipeline B                 : No
+Write Mode A                    : Hold Data
+Write Mode B                    : Hold Data
+ECC Type                        : Disabled
+Lock access                     : Off
+ACCESS_BUSY                     : Disabled
+
+Cascade Configuration: 
+     Port A configuration       : 4096x5
+     Port B configuration       : 4096x5
+     Number of blocks depth wise: 119
+     Number of blocks width wise: 8
+
+Wrote Verilog netlist to C:\Users\YanGao\Desktop\Yan\Test_ram_write\component\work\PF_SRAM_AHBL_AXI_C0\PF_DPSRAM_AHB_AXI_0\\PF_SRAM_AHBL_AXI_C0_PF_DPSRAM_AHB_AXI_0_PF_DPSRAM.v.

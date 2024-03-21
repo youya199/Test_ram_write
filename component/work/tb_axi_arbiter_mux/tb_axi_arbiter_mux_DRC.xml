@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>tb_axi_arbiter_mux</header>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message> bus interface data width mismatch</message>
+    <detail> There is a data width mismatch between axi_arbiter_mus_0:BIF_realtime:s_realtime_rdata[0-511] and axi_master_florian_64bits_0:BIF_1:RDATA[0-63] which may result in a loss of data.</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter_mux/pins/axi_arbiter_mus_0:BIF_realtime</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message> bus interface data width mismatch</message>
+    <detail> There is a data width mismatch between axi_arbiter_mus_0:BIF_ddr:m_axi_wdata[0-511] and COREAXI4SRAM_C2_0:AXI4_Slave:WDATA[0-63] which may result in a loss of data.</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter_mux/pins/axi_arbiter_mus_0:BIF_ddr</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message> bus interface data width mismatch</message>
+    <detail> There is a data width mismatch between axi_arbiter_mus_0:BIF_besteffort:s_besteffort_rdata[0-511] and axi_master_florian_64bits_1:BIF_1:RDATA[0-63] which may result in a loss of data.</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter_mux/pins/axi_arbiter_mus_0:BIF_besteffort</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin axi_master_florian_64bits_0:o_data_req</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter_mux/pins/axi_master_florian_64bits_0:o_data_req</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output bus pin axi_master_florian_64bits_0:o_data[63:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter_mux/pins/axi_master_florian_64bits_0:o_data</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin axi_master_florian_64bits_0:o_data_valid</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter_mux/pins/axi_master_florian_64bits_0:o_data_valid</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin axi_master_florian_64bits_1:o_data_req</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter_mux/pins/axi_master_florian_64bits_1:o_data_req</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output bus pin axi_master_florian_64bits_1:o_data[63:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter_mux/pins/axi_master_florian_64bits_1:o_data</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin axi_master_florian_64bits_1:o_data_valid</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter_mux/pins/axi_master_florian_64bits_1:o_data_valid</crossprobe>
+  </drc>
+</drcreport>

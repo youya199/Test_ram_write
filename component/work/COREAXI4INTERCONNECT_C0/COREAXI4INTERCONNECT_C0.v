@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Feb  8 15:12:02 2024
+// Created by SmartDesign Fri Feb 16 12:04:06 2024
 // Version: 2023.2 2023.2.0.8
 //////////////////////////////////////////////////////////////////////
 
@@ -17,14 +17,14 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREAXI4INTERCONNECT:2.8.
 "ADDR_WIDTH:32"  \
 "CROSSBAR_MODE:0"  \
 "DATA_WIDTH:64"  \
-"DWC_ADDR_FIFO_DEPTH_CEILING:10"  \
+"DWC_ADDR_FIFO_DEPTH_CEILING:4"  \
 "ID_WIDTH:1"  \
 "MASTER0_CHAN_RS:true"  \
 "MASTER0_CLOCK_DOMAIN_CROSSING:false"  \
 "MASTER0_DATA_WIDTH:64"  \
 "MASTER0_DWC_DATA_FIFO_DEPTH:16"  \
 "MASTER0_READ_INTERLEAVE:false"  \
-"MASTER0_READ_SLAVE0:true"  \
+"MASTER0_READ_SLAVE0:false"  \
 "MASTER0_READ_SLAVE1:true"  \
 "MASTER0_READ_SLAVE2:true"  \
 "MASTER0_READ_SLAVE3:true"  \
@@ -91,7 +91,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREAXI4INTERCONNECT:2.8.
 "MASTER0_WRITE_SLAVE31:true"  \
 "MASTER1_CHAN_RS:true"  \
 "MASTER1_CLOCK_DOMAIN_CROSSING:false"  \
-"MASTER1_DATA_WIDTH:64"  \
+"MASTER1_DATA_WIDTH:32"  \
 "MASTER1_DWC_DATA_FIFO_DEPTH:16"  \
 "MASTER1_READ_INTERLEAVE:false"  \
 "MASTER1_READ_SLAVE0:true"  \
@@ -127,7 +127,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREAXI4INTERCONNECT:2.8.
 "MASTER1_READ_SLAVE30:true"  \
 "MASTER1_READ_SLAVE31:true"  \
 "MASTER1_TYPE:0"  \
-"MASTER1_WRITE_SLAVE0:true"  \
+"MASTER1_WRITE_SLAVE0:false"  \
 "MASTER1_WRITE_SLAVE1:true"  \
 "MASTER1_WRITE_SLAVE2:true"  \
 "MASTER1_WRITE_SLAVE3:true"  \
@@ -1143,7 +1143,7 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREAXI4INTERCONNECT:2.8.
 "NUM_MASTERS_WIDTH:1"  \
 "NUM_SLAVES:1"  \
 "NUM_THREADS:1"  \
-"OPEN_TRANS_MAX:2"  \
+"OPEN_TRANS_MAX:1"  \
 "OPTIMIZATION:3"  \
 "RD_ARB_EN:true"  \
 "SLAVE0_CHAN_RS:true"  \
@@ -1466,8 +1466,8 @@ create_and_configure_core -core_vlnv {Actel:DirectCore:COREAXI4INTERCONNECT:2.8.
 "SLAVE31_START_ADDR:0x93900000"  \
 "SLAVE31_START_ADDR_UPPER:0x0"  \
 "SLAVE31_TYPE:0"  \
-"SLV_AXI4PRT_ADDRDEPTH:4"  \
-"SLV_AXI4PRT_DATADEPTH:4"  \
+"SLV_AXI4PRT_ADDRDEPTH:2"  \
+"SLV_AXI4PRT_DATADEPTH:2"  \
 "USER_WIDTH:1"   }
 # Exporting Component Description of COREAXI4INTERCONNECT_C0 to TCL done
 */
@@ -1817,7 +1817,7 @@ wire   [2:0]  MASTER1_HBURST_const_net_0;
 wire   [6:0]  MASTER1_HPROT_const_net_0;
 wire   [2:0]  MASTER1_HSIZE_const_net_0;
 wire   [1:0]  MASTER1_HTRANS_const_net_0;
-wire   [63:0] MASTER1_HWDATA_const_net_0;
+wire   [31:0] MASTER1_HWDATA_const_net_0;
 wire   [31:0] MASTER2_HADDR_const_net_0;
 wire   [2:0]  MASTER2_HBURST_const_net_0;
 wire   [6:0]  MASTER2_HPROT_const_net_0;
@@ -2066,8 +2066,8 @@ wire   [3:0]  MASTER1_AWCACHE_const_net_0;
 wire   [2:0]  MASTER1_AWPROT_const_net_0;
 wire   [3:0]  MASTER1_AWQOS_const_net_0;
 wire   [3:0]  MASTER1_AWREGION_const_net_0;
-wire   [63:0] MASTER1_WDATA_const_net_0;
-wire   [7:0]  MASTER1_WSTRB_const_net_0;
+wire   [31:0] MASTER1_WDATA_const_net_0;
+wire   [3:0]  MASTER1_WSTRB_const_net_0;
 wire   [31:0] MASTER1_ARADDR_const_net_0;
 wire   [7:0]  MASTER1_ARLEN_const_net_0;
 wire   [2:0]  MASTER1_ARSIZE_const_net_0;
@@ -2372,7 +2372,7 @@ assign MASTER1_HBURST_const_net_0    = 3'h0;
 assign MASTER1_HPROT_const_net_0     = 7'h00;
 assign MASTER1_HSIZE_const_net_0     = 3'h0;
 assign MASTER1_HTRANS_const_net_0    = 2'h0;
-assign MASTER1_HWDATA_const_net_0    = 64'h0000000000000000;
+assign MASTER1_HWDATA_const_net_0    = 32'h00000000;
 assign MASTER2_HADDR_const_net_0     = 32'h00000000;
 assign MASTER2_HBURST_const_net_0    = 3'h0;
 assign MASTER2_HPROT_const_net_0     = 7'h00;
@@ -2621,8 +2621,8 @@ assign MASTER1_AWCACHE_const_net_0   = 4'h0;
 assign MASTER1_AWPROT_const_net_0    = 3'h0;
 assign MASTER1_AWQOS_const_net_0     = 4'h0;
 assign MASTER1_AWREGION_const_net_0  = 4'h0;
-assign MASTER1_WDATA_const_net_0     = 64'h0000000000000000;
-assign MASTER1_WSTRB_const_net_0     = 8'hFF;
+assign MASTER1_WDATA_const_net_0     = 32'h00000000;
+assign MASTER1_WSTRB_const_net_0     = 4'hF;
 assign MASTER1_ARADDR_const_net_0    = 32'h00000000;
 assign MASTER1_ARLEN_const_net_0     = 8'h00;
 assign MASTER1_ARSIZE_const_net_0    = 3'h0;
@@ -3010,7 +3010,7 @@ COREAXI4INTERCONNECT #(
         .ADDR_WIDTH                     ( 32 ),
         .CROSSBAR_MODE                  ( 0 ),
         .DATA_WIDTH                     ( 64 ),
-        .DWC_ADDR_FIFO_DEPTH_CEILING    ( 10 ),
+        .DWC_ADDR_FIFO_DEPTH_CEILING    ( 4 ),
         .FAMILY                         ( 19 ),
         .ID_WIDTH                       ( 1 ),
         .MASTER0_CHAN_RS                ( 1 ),
@@ -3018,7 +3018,7 @@ COREAXI4INTERCONNECT #(
         .MASTER0_DATA_WIDTH             ( 64 ),
         .MASTER0_DWC_DATA_FIFO_DEPTH    ( 16 ),
         .MASTER0_READ_INTERLEAVE        ( 0 ),
-        .MASTER0_READ_SLAVE0            ( 1 ),
+        .MASTER0_READ_SLAVE0            ( 0 ),
         .MASTER0_READ_SLAVE1            ( 1 ),
         .MASTER0_READ_SLAVE2            ( 1 ),
         .MASTER0_READ_SLAVE3            ( 1 ),
@@ -3085,7 +3085,7 @@ COREAXI4INTERCONNECT #(
         .MASTER0_WRITE_SLAVE31          ( 1 ),
         .MASTER1_CHAN_RS                ( 1 ),
         .MASTER1_CLOCK_DOMAIN_CROSSING  ( 0 ),
-        .MASTER1_DATA_WIDTH             ( 64 ),
+        .MASTER1_DATA_WIDTH             ( 32 ),
         .MASTER1_DWC_DATA_FIFO_DEPTH    ( 16 ),
         .MASTER1_READ_INTERLEAVE        ( 0 ),
         .MASTER1_READ_SLAVE0            ( 1 ),
@@ -3121,7 +3121,7 @@ COREAXI4INTERCONNECT #(
         .MASTER1_READ_SLAVE30           ( 1 ),
         .MASTER1_READ_SLAVE31           ( 1 ),
         .MASTER1_TYPE                   ( 0 ),
-        .MASTER1_WRITE_SLAVE0           ( 1 ),
+        .MASTER1_WRITE_SLAVE0           ( 0 ),
         .MASTER1_WRITE_SLAVE1           ( 1 ),
         .MASTER1_WRITE_SLAVE2           ( 1 ),
         .MASTER1_WRITE_SLAVE3           ( 1 ),
@@ -4137,7 +4137,7 @@ COREAXI4INTERCONNECT #(
         .NUM_MASTERS_WIDTH              ( 1 ),
         .NUM_SLAVES                     ( 1 ),
         .NUM_THREADS                    ( 1 ),
-        .OPEN_TRANS_MAX                 ( 2 ),
+        .OPEN_TRANS_MAX                 ( 1 ),
         .OPTIMIZATION                   ( 3 ),
         .RD_ARB_EN                      ( 1 ),
         .SLAVE0_CHAN_RS                 ( 1 ),
@@ -4460,301 +4460,61 @@ COREAXI4INTERCONNECT #(
         .SLAVE31_START_ADDR             ( 'h93900000 ),
         .SLAVE31_START_ADDR_UPPER       ( 'h0 ),
         .SLAVE31_TYPE                   ( 0 ),
-        .SLV_AXI4PRT_ADDRDEPTH          ( 4 ),
-        .SLV_AXI4PRT_DATADEPTH          ( 4 ),
+        .SLV_AXI4PRT_ADDRDEPTH          ( 2 ),
+        .SLV_AXI4PRT_DATADEPTH          ( 2 ),
         .TGIGEN_DISPLAY_SYMBOL          ( 1 ),
         .USER_WIDTH                     ( 1 ) )
 COREAXI4INTERCONNECT_C0_0(
         // Inputs
         .ACLK               ( ACLK ),
         .ARESETN            ( ARESETN ),
-        .MASTER0_AWID       ( MASTER0_AWID ),
-        .MASTER0_AWADDR     ( MASTER0_AWADDR ),
-        .MASTER0_AWLEN      ( MASTER0_AWLEN ),
-        .MASTER0_AWSIZE     ( MASTER0_AWSIZE ),
-        .MASTER0_AWBURST    ( MASTER0_AWBURST ),
-        .MASTER0_AWLOCK     ( MASTER0_AWLOCK ),
-        .MASTER0_AWCACHE    ( MASTER0_AWCACHE ),
-        .MASTER0_AWPROT     ( MASTER0_AWPROT ),
-        .MASTER0_AWREGION   ( MASTER0_AWREGION ),
-        .MASTER0_AWQOS      ( MASTER0_AWQOS ),
-        .MASTER0_AWUSER     ( MASTER0_AWUSER ),
         .MASTER0_AWVALID    ( MASTER0_AWVALID ),
-        .MASTER1_AWID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER1_AWADDR     ( MASTER1_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER1_AWLEN      ( MASTER1_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER1_AWSIZE     ( MASTER1_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER1_AWBURST    ( MASTER1_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER1_AWLOCK     ( MASTER1_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER1_AWCACHE    ( MASTER1_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER1_AWPROT     ( MASTER1_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER1_AWREGION   ( MASTER1_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER1_AWQOS      ( MASTER1_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER1_AWUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER1_AWVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER2_AWID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER2_AWADDR     ( MASTER2_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER2_AWLEN      ( MASTER2_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER2_AWSIZE     ( MASTER2_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER2_AWBURST    ( MASTER2_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER2_AWLOCK     ( MASTER2_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER2_AWCACHE    ( MASTER2_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER2_AWPROT     ( MASTER2_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER2_AWREGION   ( MASTER2_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER2_AWQOS      ( MASTER2_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER2_AWUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER2_AWVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER3_AWID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER3_AWADDR     ( MASTER3_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER3_AWLEN      ( MASTER3_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER3_AWSIZE     ( MASTER3_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER3_AWBURST    ( MASTER3_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER3_AWLOCK     ( MASTER3_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER3_AWCACHE    ( MASTER3_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER3_AWPROT     ( MASTER3_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER3_AWREGION   ( MASTER3_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER3_AWQOS      ( MASTER3_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER3_AWUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER3_AWVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER4_AWID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER4_AWADDR     ( MASTER4_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER4_AWLEN      ( MASTER4_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER4_AWSIZE     ( MASTER4_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER4_AWBURST    ( MASTER4_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER4_AWLOCK     ( MASTER4_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER4_AWCACHE    ( MASTER4_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER4_AWPROT     ( MASTER4_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER4_AWREGION   ( MASTER4_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER4_AWQOS      ( MASTER4_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER4_AWUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER4_AWVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER5_AWID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER5_AWADDR     ( MASTER5_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER5_AWLEN      ( MASTER5_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER5_AWSIZE     ( MASTER5_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER5_AWBURST    ( MASTER5_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER5_AWLOCK     ( MASTER5_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER5_AWCACHE    ( MASTER5_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER5_AWPROT     ( MASTER5_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER5_AWREGION   ( MASTER5_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER5_AWQOS      ( MASTER5_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER5_AWUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER5_AWVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER6_AWID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER6_AWADDR     ( MASTER6_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER6_AWLEN      ( MASTER6_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER6_AWSIZE     ( MASTER6_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER6_AWBURST    ( MASTER6_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER6_AWLOCK     ( MASTER6_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER6_AWCACHE    ( MASTER6_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER6_AWPROT     ( MASTER6_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER6_AWREGION   ( MASTER6_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER6_AWQOS      ( MASTER6_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER6_AWUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER6_AWVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER7_AWID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER7_AWADDR     ( MASTER7_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER7_AWLEN      ( MASTER7_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER7_AWSIZE     ( MASTER7_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER7_AWBURST    ( MASTER7_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER7_AWLOCK     ( MASTER7_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER7_AWCACHE    ( MASTER7_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER7_AWPROT     ( MASTER7_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER7_AWREGION   ( MASTER7_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER7_AWQOS      ( MASTER7_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER7_AWUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER7_AWVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER8_AWID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER8_AWADDR     ( MASTER8_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER8_AWLEN      ( MASTER8_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER8_AWSIZE     ( MASTER8_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER8_AWBURST    ( MASTER8_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER8_AWLOCK     ( MASTER8_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER8_AWCACHE    ( MASTER8_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER8_AWPROT     ( MASTER8_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER8_AWREGION   ( MASTER8_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER8_AWQOS      ( MASTER8_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER8_AWUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER8_AWVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER9_AWID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER9_AWADDR     ( MASTER9_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER9_AWLEN      ( MASTER9_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER9_AWSIZE     ( MASTER9_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER9_AWBURST    ( MASTER9_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER9_AWLOCK     ( MASTER9_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER9_AWCACHE    ( MASTER9_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER9_AWPROT     ( MASTER9_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER9_AWREGION   ( MASTER9_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER9_AWQOS      ( MASTER9_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER9_AWUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER9_AWVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER10_AWID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER10_AWADDR    ( MASTER10_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER10_AWLEN     ( MASTER10_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER10_AWSIZE    ( MASTER10_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER10_AWBURST   ( MASTER10_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER10_AWLOCK    ( MASTER10_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER10_AWCACHE   ( MASTER10_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER10_AWPROT    ( MASTER10_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER10_AWREGION  ( MASTER10_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER10_AWQOS     ( MASTER10_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER10_AWUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER10_AWVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER11_AWID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER11_AWADDR    ( MASTER11_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER11_AWLEN     ( MASTER11_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER11_AWSIZE    ( MASTER11_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER11_AWBURST   ( MASTER11_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER11_AWLOCK    ( MASTER11_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER11_AWCACHE   ( MASTER11_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER11_AWPROT    ( MASTER11_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER11_AWREGION  ( MASTER11_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER11_AWQOS     ( MASTER11_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER11_AWUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER11_AWVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER12_AWID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER12_AWADDR    ( MASTER12_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER12_AWLEN     ( MASTER12_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER12_AWSIZE    ( MASTER12_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER12_AWBURST   ( MASTER12_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER12_AWLOCK    ( MASTER12_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER12_AWCACHE   ( MASTER12_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER12_AWPROT    ( MASTER12_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER12_AWREGION  ( MASTER12_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER12_AWQOS     ( MASTER12_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER12_AWUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER12_AWVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER13_AWID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER13_AWADDR    ( MASTER13_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER13_AWLEN     ( MASTER13_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER13_AWSIZE    ( MASTER13_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER13_AWBURST   ( MASTER13_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER13_AWLOCK    ( MASTER13_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER13_AWCACHE   ( MASTER13_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER13_AWPROT    ( MASTER13_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER13_AWREGION  ( MASTER13_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER13_AWQOS     ( MASTER13_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER13_AWUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER13_AWVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER14_AWID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER14_AWADDR    ( MASTER14_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER14_AWLEN     ( MASTER14_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER14_AWSIZE    ( MASTER14_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER14_AWBURST   ( MASTER14_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER14_AWLOCK    ( MASTER14_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER14_AWCACHE   ( MASTER14_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER14_AWPROT    ( MASTER14_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER14_AWREGION  ( MASTER14_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER14_AWQOS     ( MASTER14_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER14_AWUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER14_AWVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER15_AWID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER15_AWADDR    ( MASTER15_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER15_AWLEN     ( MASTER15_AWLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER15_AWSIZE    ( MASTER15_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER15_AWBURST   ( MASTER15_AWBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER15_AWLOCK    ( MASTER15_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER15_AWCACHE   ( MASTER15_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER15_AWPROT    ( MASTER15_AWPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER15_AWREGION  ( MASTER15_AWREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER15_AWQOS     ( MASTER15_AWQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER15_AWUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER15_AWVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER0_WDATA      ( MASTER0_WDATA ),
-        .MASTER0_WSTRB      ( MASTER0_WSTRB ),
         .MASTER0_WLAST      ( MASTER0_WLAST ),
-        .MASTER0_WUSER      ( MASTER0_WUSER ),
-        .MASTER0_WID        ( GND_net ), // tied to 1'b0 from definition
         .MASTER0_WVALID     ( MASTER0_WVALID ),
-        .MASTER1_WDATA      ( MASTER1_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER1_WSTRB      ( MASTER1_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER1_WLAST      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER1_WUSER      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER1_WID        ( GND_net ), // tied to 1'b0 from definition
         .MASTER1_WVALID     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER2_WDATA      ( MASTER2_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER2_WSTRB      ( MASTER2_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER2_WLAST      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER2_WUSER      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER2_WID        ( GND_net ), // tied to 1'b0 from definition
         .MASTER2_WVALID     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER3_WDATA      ( MASTER3_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER3_WSTRB      ( MASTER3_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER3_WLAST      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER3_WUSER      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER3_WID        ( GND_net ), // tied to 1'b0 from definition
         .MASTER3_WVALID     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER4_WDATA      ( MASTER4_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER4_WSTRB      ( MASTER4_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER4_WLAST      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER4_WUSER      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER4_WID        ( GND_net ), // tied to 1'b0 from definition
         .MASTER4_WVALID     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER5_WDATA      ( MASTER5_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER5_WSTRB      ( MASTER5_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER5_WLAST      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER5_WUSER      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER5_WID        ( GND_net ), // tied to 1'b0 from definition
         .MASTER5_WVALID     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER6_WDATA      ( MASTER6_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER6_WSTRB      ( MASTER6_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER6_WLAST      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER6_WUSER      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER6_WID        ( GND_net ), // tied to 1'b0 from definition
         .MASTER6_WVALID     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER7_WDATA      ( MASTER7_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER7_WSTRB      ( MASTER7_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER7_WLAST      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER7_WUSER      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER7_WID        ( GND_net ), // tied to 1'b0 from definition
         .MASTER7_WVALID     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER8_WDATA      ( MASTER8_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER8_WSTRB      ( MASTER8_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER8_WLAST      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER8_WUSER      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER8_WID        ( GND_net ), // tied to 1'b0 from definition
         .MASTER8_WVALID     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER9_WDATA      ( MASTER9_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER9_WSTRB      ( MASTER9_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER9_WLAST      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER9_WUSER      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER9_WID        ( GND_net ), // tied to 1'b0 from definition
         .MASTER9_WVALID     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER10_WDATA     ( MASTER10_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER10_WSTRB     ( MASTER10_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER10_WLAST     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER10_WUSER     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER10_WID       ( GND_net ), // tied to 1'b0 from definition
         .MASTER10_WVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER11_WDATA     ( MASTER11_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER11_WSTRB     ( MASTER11_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER11_WLAST     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER11_WUSER     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER11_WID       ( GND_net ), // tied to 1'b0 from definition
         .MASTER11_WVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER12_WDATA     ( MASTER12_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER12_WSTRB     ( MASTER12_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER12_WLAST     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER12_WUSER     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER12_WID       ( GND_net ), // tied to 1'b0 from definition
         .MASTER12_WVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER13_WDATA     ( MASTER13_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER13_WSTRB     ( MASTER13_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER13_WLAST     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER13_WUSER     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER13_WID       ( GND_net ), // tied to 1'b0 from definition
         .MASTER13_WVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER14_WDATA     ( MASTER14_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER14_WSTRB     ( MASTER14_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER14_WLAST     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER14_WUSER     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER14_WID       ( GND_net ), // tied to 1'b0 from definition
         .MASTER14_WVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER15_WDATA     ( MASTER15_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .MASTER15_WSTRB     ( MASTER15_WSTRB_const_net_0 ), // tied to 8'hFF from definition
         .MASTER15_WLAST     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER15_WUSER     ( GND_net ), // tied to 1'b0 from definition
-        .MASTER15_WID       ( GND_net ), // tied to 1'b0 from definition
         .MASTER15_WVALID    ( GND_net ), // tied to 1'b0 from definition
         .MASTER0_BREADY     ( MASTER0_BREADY ),
         .MASTER1_BREADY     ( GND_net ), // tied to 1'b0 from definition
@@ -4772,197 +4532,21 @@ COREAXI4INTERCONNECT_C0_0(
         .MASTER13_BREADY    ( GND_net ), // tied to 1'b0 from definition
         .MASTER14_BREADY    ( GND_net ), // tied to 1'b0 from definition
         .MASTER15_BREADY    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER0_ARID       ( MASTER0_ARID ),
-        .MASTER0_ARADDR     ( MASTER0_ARADDR ),
-        .MASTER0_ARLEN      ( MASTER0_ARLEN ),
-        .MASTER0_ARSIZE     ( MASTER0_ARSIZE ),
-        .MASTER0_ARBURST    ( MASTER0_ARBURST ),
-        .MASTER0_ARLOCK     ( MASTER0_ARLOCK ),
-        .MASTER0_ARCACHE    ( MASTER0_ARCACHE ),
-        .MASTER0_ARPROT     ( MASTER0_ARPROT ),
-        .MASTER0_ARREGION   ( MASTER0_ARREGION ),
-        .MASTER0_ARQOS      ( MASTER0_ARQOS ),
-        .MASTER0_ARUSER     ( MASTER0_ARUSER ),
         .MASTER0_ARVALID    ( MASTER0_ARVALID ),
-        .MASTER1_ARID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER1_ARADDR     ( MASTER1_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER1_ARLEN      ( MASTER1_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER1_ARSIZE     ( MASTER1_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER1_ARBURST    ( MASTER1_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER1_ARLOCK     ( MASTER1_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER1_ARCACHE    ( MASTER1_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER1_ARPROT     ( MASTER1_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER1_ARREGION   ( MASTER1_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER1_ARQOS      ( MASTER1_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER1_ARUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER1_ARVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER2_ARID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER2_ARADDR     ( MASTER2_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER2_ARLEN      ( MASTER2_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER2_ARSIZE     ( MASTER2_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER2_ARBURST    ( MASTER2_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER2_ARLOCK     ( MASTER2_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER2_ARCACHE    ( MASTER2_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER2_ARPROT     ( MASTER2_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER2_ARREGION   ( MASTER2_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER2_ARQOS      ( MASTER2_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER2_ARUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER2_ARVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER3_ARID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER3_ARADDR     ( MASTER3_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER3_ARLEN      ( MASTER3_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER3_ARSIZE     ( MASTER3_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER3_ARBURST    ( MASTER3_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER3_ARLOCK     ( MASTER3_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER3_ARCACHE    ( MASTER3_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER3_ARPROT     ( MASTER3_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER3_ARREGION   ( MASTER3_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER3_ARQOS      ( MASTER3_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER3_ARUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER3_ARVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER4_ARID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER4_ARADDR     ( MASTER4_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER4_ARLEN      ( MASTER4_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER4_ARSIZE     ( MASTER4_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER4_ARBURST    ( MASTER4_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER4_ARLOCK     ( MASTER4_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER4_ARCACHE    ( MASTER4_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER4_ARPROT     ( MASTER4_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER4_ARREGION   ( MASTER4_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER4_ARQOS      ( MASTER4_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER4_ARUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER4_ARVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER5_ARID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER5_ARADDR     ( MASTER5_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER5_ARLEN      ( MASTER5_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER5_ARSIZE     ( MASTER5_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER5_ARBURST    ( MASTER5_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER5_ARLOCK     ( MASTER5_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER5_ARCACHE    ( MASTER5_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER5_ARPROT     ( MASTER5_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER5_ARREGION   ( MASTER5_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER5_ARQOS      ( MASTER5_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER5_ARUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER5_ARVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER6_ARID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER6_ARADDR     ( MASTER6_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER6_ARLEN      ( MASTER6_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER6_ARSIZE     ( MASTER6_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER6_ARBURST    ( MASTER6_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER6_ARLOCK     ( MASTER6_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER6_ARCACHE    ( MASTER6_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER6_ARPROT     ( MASTER6_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER6_ARREGION   ( MASTER6_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER6_ARQOS      ( MASTER6_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER6_ARUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER6_ARVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER7_ARID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER7_ARADDR     ( MASTER7_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER7_ARLEN      ( MASTER7_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER7_ARSIZE     ( MASTER7_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER7_ARBURST    ( MASTER7_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER7_ARLOCK     ( MASTER7_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER7_ARCACHE    ( MASTER7_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER7_ARPROT     ( MASTER7_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER7_ARREGION   ( MASTER7_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER7_ARQOS      ( MASTER7_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER7_ARUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER7_ARVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER8_ARID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER8_ARADDR     ( MASTER8_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER8_ARLEN      ( MASTER8_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER8_ARSIZE     ( MASTER8_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER8_ARBURST    ( MASTER8_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER8_ARLOCK     ( MASTER8_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER8_ARCACHE    ( MASTER8_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER8_ARPROT     ( MASTER8_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER8_ARREGION   ( MASTER8_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER8_ARQOS      ( MASTER8_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER8_ARUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER8_ARVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER9_ARID       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER9_ARADDR     ( MASTER9_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER9_ARLEN      ( MASTER9_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER9_ARSIZE     ( MASTER9_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER9_ARBURST    ( MASTER9_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER9_ARLOCK     ( MASTER9_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER9_ARCACHE    ( MASTER9_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER9_ARPROT     ( MASTER9_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER9_ARREGION   ( MASTER9_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER9_ARQOS      ( MASTER9_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER9_ARUSER     ( GND_net ), // tied to 1'b0 from definition
         .MASTER9_ARVALID    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER10_ARID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER10_ARADDR    ( MASTER10_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER10_ARLEN     ( MASTER10_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER10_ARSIZE    ( MASTER10_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER10_ARBURST   ( MASTER10_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER10_ARLOCK    ( MASTER10_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER10_ARCACHE   ( MASTER10_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER10_ARPROT    ( MASTER10_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER10_ARREGION  ( MASTER10_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER10_ARQOS     ( MASTER10_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER10_ARUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER10_ARVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER11_ARID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER11_ARADDR    ( MASTER11_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER11_ARLEN     ( MASTER11_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER11_ARSIZE    ( MASTER11_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER11_ARBURST   ( MASTER11_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER11_ARLOCK    ( MASTER11_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER11_ARCACHE   ( MASTER11_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER11_ARPROT    ( MASTER11_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER11_ARREGION  ( MASTER11_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER11_ARQOS     ( MASTER11_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER11_ARUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER11_ARVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER12_ARID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER12_ARADDR    ( MASTER12_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER12_ARLEN     ( MASTER12_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER12_ARSIZE    ( MASTER12_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER12_ARBURST   ( MASTER12_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER12_ARLOCK    ( MASTER12_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER12_ARCACHE   ( MASTER12_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER12_ARPROT    ( MASTER12_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER12_ARREGION  ( MASTER12_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER12_ARQOS     ( MASTER12_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER12_ARUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER12_ARVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER13_ARID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER13_ARADDR    ( MASTER13_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER13_ARLEN     ( MASTER13_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER13_ARSIZE    ( MASTER13_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER13_ARBURST   ( MASTER13_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER13_ARLOCK    ( MASTER13_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER13_ARCACHE   ( MASTER13_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER13_ARPROT    ( MASTER13_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER13_ARREGION  ( MASTER13_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER13_ARQOS     ( MASTER13_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER13_ARUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER13_ARVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER14_ARID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER14_ARADDR    ( MASTER14_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER14_ARLEN     ( MASTER14_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER14_ARSIZE    ( MASTER14_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER14_ARBURST   ( MASTER14_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER14_ARLOCK    ( MASTER14_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER14_ARCACHE   ( MASTER14_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER14_ARPROT    ( MASTER14_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER14_ARREGION  ( MASTER14_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER14_ARQOS     ( MASTER14_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER14_ARUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER14_ARVALID   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER15_ARID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER15_ARADDR    ( MASTER15_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER15_ARLEN     ( MASTER15_ARLEN_const_net_0 ), // tied to 8'h00 from definition
-        .MASTER15_ARSIZE    ( MASTER15_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER15_ARBURST   ( MASTER15_ARBURST_const_net_0 ), // tied to 2'h3 from definition
-        .MASTER15_ARLOCK    ( MASTER15_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER15_ARCACHE   ( MASTER15_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER15_ARPROT    ( MASTER15_ARPROT_const_net_0 ), // tied to 3'h0 from definition
-        .MASTER15_ARREGION  ( MASTER15_ARREGION_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER15_ARQOS     ( MASTER15_ARQOS_const_net_0 ), // tied to 4'h0 from definition
-        .MASTER15_ARUSER    ( GND_net ), // tied to 1'b0 from definition
         .MASTER15_ARVALID   ( GND_net ), // tied to 1'b0 from definition
         .MASTER0_RREADY     ( MASTER0_RREADY ),
         .MASTER1_RREADY     ( GND_net ), // tied to 1'b0 from definition
@@ -4996,37 +4580,13 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE5_WREADY      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE6_WREADY      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE7_WREADY      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE0_BID         ( SLAVE0_BID ),
-        .SLAVE0_BRESP       ( SLAVE0_BRESP ),
-        .SLAVE0_BUSER       ( SLAVE0_BUSER ),
         .SLAVE0_BVALID      ( SLAVE0_BVALID ),
-        .SLAVE1_BID         ( SLAVE1_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE1_BRESP       ( SLAVE1_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE1_BUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE1_BVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE2_BID         ( SLAVE2_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE2_BRESP       ( SLAVE2_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE2_BUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE2_BVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE3_BID         ( SLAVE3_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE3_BRESP       ( SLAVE3_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE3_BUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE3_BVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE4_BID         ( SLAVE4_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE4_BRESP       ( SLAVE4_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE4_BUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE4_BVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE5_BID         ( SLAVE5_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE5_BRESP       ( SLAVE5_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE5_BUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE5_BVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE6_BID         ( SLAVE6_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE6_BRESP       ( SLAVE6_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE6_BUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE6_BVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE7_BID         ( SLAVE7_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE7_BRESP       ( SLAVE7_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE7_BUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE7_BVALID      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE0_ARREADY     ( SLAVE0_ARREADY ),
         .SLAVE1_ARREADY     ( GND_net ), // tied to 1'b0 from definition
@@ -5036,212 +4596,84 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE5_ARREADY     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE6_ARREADY     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE7_ARREADY     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE0_RID         ( SLAVE0_RID ),
-        .SLAVE0_RDATA       ( SLAVE0_RDATA ),
-        .SLAVE0_RRESP       ( SLAVE0_RRESP ),
         .SLAVE0_RLAST       ( SLAVE0_RLAST ),
-        .SLAVE0_RUSER       ( SLAVE0_RUSER ),
         .SLAVE0_RVALID      ( SLAVE0_RVALID ),
-        .SLAVE1_RID         ( SLAVE1_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE1_RDATA       ( SLAVE1_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE1_RRESP       ( SLAVE1_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE1_RLAST       ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE1_RUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE1_RVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE2_RID         ( SLAVE2_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE2_RDATA       ( SLAVE2_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE2_RRESP       ( SLAVE2_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE2_RLAST       ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE2_RUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE2_RVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE3_RID         ( SLAVE3_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE3_RDATA       ( SLAVE3_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE3_RRESP       ( SLAVE3_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE3_RLAST       ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE3_RUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE3_RVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE4_RID         ( SLAVE4_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE4_RDATA       ( SLAVE4_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE4_RRESP       ( SLAVE4_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE4_RLAST       ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE4_RUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE4_RVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE5_RID         ( SLAVE5_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE5_RDATA       ( SLAVE5_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE5_RRESP       ( SLAVE5_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE5_RLAST       ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE5_RUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE5_RVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE6_RID         ( SLAVE6_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE6_RDATA       ( SLAVE6_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE6_RRESP       ( SLAVE6_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE6_RLAST       ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE6_RUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE6_RVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE7_RID         ( SLAVE7_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE7_RDATA       ( SLAVE7_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE7_RRESP       ( SLAVE7_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE7_RLAST       ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE7_RUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE7_RVALID      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER0_HADDR      ( MASTER0_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER0_HBURST     ( MASTER0_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER0_HMASTLOCK  ( GND_net ), // tied to 1'b0 from definition
-        .MASTER0_HPROT      ( MASTER0_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER0_HSIZE      ( MASTER0_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER0_HNONSEC    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER0_HTRANS     ( MASTER0_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER0_HWDATA     ( MASTER0_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER0_HWRITE     ( GND_net ), // tied to 1'b0 from definition
         .MASTER0_HSEL       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER1_HADDR      ( MASTER1_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER1_HBURST     ( MASTER1_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER1_HMASTLOCK  ( GND_net ), // tied to 1'b0 from definition
-        .MASTER1_HPROT      ( MASTER1_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER1_HSIZE      ( MASTER1_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER1_HNONSEC    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER1_HTRANS     ( MASTER1_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER1_HWDATA     ( MASTER1_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER1_HWRITE     ( GND_net ), // tied to 1'b0 from definition
         .MASTER1_HSEL       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER2_HADDR      ( MASTER2_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER2_HBURST     ( MASTER2_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER2_HMASTLOCK  ( GND_net ), // tied to 1'b0 from definition
-        .MASTER2_HPROT      ( MASTER2_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER2_HSIZE      ( MASTER2_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER2_HNONSEC    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER2_HTRANS     ( MASTER2_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER2_HWDATA     ( MASTER2_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER2_HWRITE     ( GND_net ), // tied to 1'b0 from definition
         .MASTER2_HSEL       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER3_HADDR      ( MASTER3_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER3_HBURST     ( MASTER3_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER3_HMASTLOCK  ( GND_net ), // tied to 1'b0 from definition
-        .MASTER3_HPROT      ( MASTER3_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER3_HSIZE      ( MASTER3_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER3_HNONSEC    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER3_HTRANS     ( MASTER3_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER3_HWDATA     ( MASTER3_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER3_HWRITE     ( GND_net ), // tied to 1'b0 from definition
         .MASTER3_HSEL       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER4_HADDR      ( MASTER4_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER4_HBURST     ( MASTER4_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER4_HMASTLOCK  ( GND_net ), // tied to 1'b0 from definition
-        .MASTER4_HPROT      ( MASTER4_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER4_HSIZE      ( MASTER4_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER4_HNONSEC    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER4_HTRANS     ( MASTER4_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER4_HWDATA     ( MASTER4_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER4_HWRITE     ( GND_net ), // tied to 1'b0 from definition
         .MASTER4_HSEL       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER5_HADDR      ( MASTER5_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER5_HBURST     ( MASTER5_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER5_HMASTLOCK  ( GND_net ), // tied to 1'b0 from definition
-        .MASTER5_HPROT      ( MASTER5_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER5_HSIZE      ( MASTER5_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER5_HNONSEC    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER5_HTRANS     ( MASTER5_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER5_HWDATA     ( MASTER5_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER5_HWRITE     ( GND_net ), // tied to 1'b0 from definition
         .MASTER5_HSEL       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER6_HADDR      ( MASTER6_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER6_HBURST     ( MASTER6_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER6_HMASTLOCK  ( GND_net ), // tied to 1'b0 from definition
-        .MASTER6_HPROT      ( MASTER6_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER6_HSIZE      ( MASTER6_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER6_HNONSEC    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER6_HTRANS     ( MASTER6_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER6_HWDATA     ( MASTER6_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER6_HWRITE     ( GND_net ), // tied to 1'b0 from definition
         .MASTER6_HSEL       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER7_HADDR      ( MASTER7_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER7_HBURST     ( MASTER7_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER7_HMASTLOCK  ( GND_net ), // tied to 1'b0 from definition
-        .MASTER7_HPROT      ( MASTER7_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER7_HSIZE      ( MASTER7_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER7_HNONSEC    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER7_HTRANS     ( MASTER7_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER7_HWDATA     ( MASTER7_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER7_HWRITE     ( GND_net ), // tied to 1'b0 from definition
         .MASTER7_HSEL       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER8_HADDR      ( MASTER8_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER8_HBURST     ( MASTER8_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER8_HMASTLOCK  ( GND_net ), // tied to 1'b0 from definition
-        .MASTER8_HPROT      ( MASTER8_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER8_HSIZE      ( MASTER8_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER8_HNONSEC    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER8_HTRANS     ( MASTER8_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER8_HWDATA     ( MASTER8_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER8_HWRITE     ( GND_net ), // tied to 1'b0 from definition
         .MASTER8_HSEL       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER9_HADDR      ( MASTER9_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER9_HBURST     ( MASTER9_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER9_HMASTLOCK  ( GND_net ), // tied to 1'b0 from definition
-        .MASTER9_HPROT      ( MASTER9_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER9_HSIZE      ( MASTER9_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER9_HNONSEC    ( GND_net ), // tied to 1'b0 from definition
-        .MASTER9_HTRANS     ( MASTER9_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER9_HWDATA     ( MASTER9_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER9_HWRITE     ( GND_net ), // tied to 1'b0 from definition
         .MASTER9_HSEL       ( GND_net ), // tied to 1'b0 from definition
-        .MASTER10_HADDR     ( MASTER10_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER10_HBURST    ( MASTER10_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER10_HMASTLOCK ( GND_net ), // tied to 1'b0 from definition
-        .MASTER10_HPROT     ( MASTER10_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER10_HSIZE     ( MASTER10_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER10_HNONSEC   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER10_HTRANS    ( MASTER10_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER10_HWDATA    ( MASTER10_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER10_HWRITE    ( GND_net ), // tied to 1'b0 from definition
         .MASTER10_HSEL      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER11_HADDR     ( MASTER11_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER11_HBURST    ( MASTER11_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER11_HMASTLOCK ( GND_net ), // tied to 1'b0 from definition
-        .MASTER11_HPROT     ( MASTER11_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER11_HSIZE     ( MASTER11_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER11_HNONSEC   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER11_HTRANS    ( MASTER11_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER11_HWDATA    ( MASTER11_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER11_HWRITE    ( GND_net ), // tied to 1'b0 from definition
         .MASTER11_HSEL      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER12_HADDR     ( MASTER12_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER12_HBURST    ( MASTER12_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER12_HMASTLOCK ( GND_net ), // tied to 1'b0 from definition
-        .MASTER12_HPROT     ( MASTER12_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER12_HSIZE     ( MASTER12_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER12_HNONSEC   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER12_HTRANS    ( MASTER12_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER12_HWDATA    ( MASTER12_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER12_HWRITE    ( GND_net ), // tied to 1'b0 from definition
         .MASTER12_HSEL      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER13_HADDR     ( MASTER13_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER13_HBURST    ( MASTER13_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER13_HMASTLOCK ( GND_net ), // tied to 1'b0 from definition
-        .MASTER13_HPROT     ( MASTER13_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER13_HSIZE     ( MASTER13_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER13_HNONSEC   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER13_HTRANS    ( MASTER13_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER13_HWDATA    ( MASTER13_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER13_HWRITE    ( GND_net ), // tied to 1'b0 from definition
         .MASTER13_HSEL      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER14_HADDR     ( MASTER14_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER14_HBURST    ( MASTER14_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER14_HMASTLOCK ( GND_net ), // tied to 1'b0 from definition
-        .MASTER14_HPROT     ( MASTER14_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER14_HSIZE     ( MASTER14_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER14_HNONSEC   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER14_HTRANS    ( MASTER14_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER14_HWDATA    ( MASTER14_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER14_HWRITE    ( GND_net ), // tied to 1'b0 from definition
         .MASTER14_HSEL      ( GND_net ), // tied to 1'b0 from definition
-        .MASTER15_HADDR     ( MASTER15_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
-        .MASTER15_HBURST    ( MASTER15_HBURST_const_net_0 ), // tied to 3'h0 from definition
         .MASTER15_HMASTLOCK ( GND_net ), // tied to 1'b0 from definition
-        .MASTER15_HPROT     ( MASTER15_HPROT_const_net_0 ), // tied to 7'h00 from definition
-        .MASTER15_HSIZE     ( MASTER15_HSIZE_const_net_0 ), // tied to 3'h0 from definition
         .MASTER15_HNONSEC   ( GND_net ), // tied to 1'b0 from definition
-        .MASTER15_HTRANS    ( MASTER15_HTRANS_const_net_0 ), // tied to 2'h0 from definition
-        .MASTER15_HWDATA    ( MASTER15_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
         .MASTER15_HWRITE    ( GND_net ), // tied to 1'b0 from definition
         .MASTER15_HSEL      ( GND_net ), // tied to 1'b0 from definition
         .M_CLK0             ( GND_net ), // tied to 1'b0 from definition
@@ -5284,37 +4716,13 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE13_WREADY     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE14_WREADY     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE15_WREADY     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE8_BID         ( SLAVE8_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE8_BRESP       ( SLAVE8_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE8_BUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE8_BVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE9_BID         ( SLAVE9_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE9_BRESP       ( SLAVE9_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE9_BUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE9_BVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE10_BID        ( SLAVE10_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE10_BRESP      ( SLAVE10_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE10_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE10_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE11_BID        ( SLAVE11_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE11_BRESP      ( SLAVE11_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE11_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE11_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE12_BID        ( SLAVE12_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE12_BRESP      ( SLAVE12_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE12_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE12_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE13_BID        ( SLAVE13_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE13_BRESP      ( SLAVE13_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE13_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE13_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE14_BID        ( SLAVE14_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE14_BRESP      ( SLAVE14_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE14_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE14_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE15_BID        ( SLAVE15_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE15_BRESP      ( SLAVE15_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE15_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE15_BVALID     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE8_ARREADY     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE9_ARREADY     ( GND_net ), // tied to 1'b0 from definition
@@ -5324,53 +4732,21 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE13_ARREADY    ( GND_net ), // tied to 1'b0 from definition
         .SLAVE14_ARREADY    ( GND_net ), // tied to 1'b0 from definition
         .SLAVE15_ARREADY    ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE8_RID         ( SLAVE8_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE8_RDATA       ( SLAVE8_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE8_RRESP       ( SLAVE8_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE8_RLAST       ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE8_RUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE8_RVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE9_RID         ( SLAVE9_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE9_RDATA       ( SLAVE9_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE9_RRESP       ( SLAVE9_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE9_RLAST       ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE9_RUSER       ( GND_net ), // tied to 1'b0 from definition
         .SLAVE9_RVALID      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE10_RID        ( SLAVE10_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE10_RDATA      ( SLAVE10_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE10_RRESP      ( SLAVE10_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE10_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE10_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE10_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE11_RID        ( SLAVE11_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE11_RDATA      ( SLAVE11_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE11_RRESP      ( SLAVE11_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE11_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE11_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE11_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE12_RID        ( SLAVE12_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE12_RDATA      ( SLAVE12_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE12_RRESP      ( SLAVE12_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE12_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE12_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE12_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE13_RID        ( SLAVE13_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE13_RDATA      ( SLAVE13_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE13_RRESP      ( SLAVE13_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE13_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE13_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE13_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE14_RID        ( SLAVE14_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE14_RDATA      ( SLAVE14_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE14_RRESP      ( SLAVE14_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE14_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE14_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE14_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE15_RID        ( SLAVE15_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE15_RDATA      ( SLAVE15_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE15_RRESP      ( SLAVE15_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE15_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE15_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE15_RVALID     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE16_AWREADY    ( GND_net ), // tied to 1'b0 from definition
         .SLAVE17_AWREADY    ( GND_net ), // tied to 1'b0 from definition
@@ -5388,37 +4764,13 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE21_WREADY     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE22_WREADY     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE23_WREADY     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE16_BID        ( SLAVE16_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE16_BRESP      ( SLAVE16_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE16_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE16_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE17_BID        ( SLAVE17_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE17_BRESP      ( SLAVE17_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE17_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE17_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE18_BID        ( SLAVE18_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE18_BRESP      ( SLAVE18_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE18_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE18_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE19_BID        ( SLAVE19_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE19_BRESP      ( SLAVE19_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE19_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE19_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE20_BID        ( SLAVE20_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE20_BRESP      ( SLAVE20_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE20_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE20_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE21_BID        ( SLAVE21_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE21_BRESP      ( SLAVE21_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE21_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE21_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE22_BID        ( SLAVE22_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE22_BRESP      ( SLAVE22_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE22_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE22_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE23_BID        ( SLAVE23_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE23_BRESP      ( SLAVE23_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE23_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE23_BVALID     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE16_ARREADY    ( GND_net ), // tied to 1'b0 from definition
         .SLAVE17_ARREADY    ( GND_net ), // tied to 1'b0 from definition
@@ -5428,53 +4780,21 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE21_ARREADY    ( GND_net ), // tied to 1'b0 from definition
         .SLAVE22_ARREADY    ( GND_net ), // tied to 1'b0 from definition
         .SLAVE23_ARREADY    ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE16_RID        ( SLAVE16_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE16_RDATA      ( SLAVE16_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE16_RRESP      ( SLAVE16_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE16_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE16_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE16_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE17_RID        ( SLAVE17_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE17_RDATA      ( SLAVE17_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE17_RRESP      ( SLAVE17_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE17_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE17_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE17_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE18_RID        ( SLAVE18_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE18_RDATA      ( SLAVE18_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE18_RRESP      ( SLAVE18_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE18_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE18_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE18_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE19_RID        ( SLAVE19_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE19_RDATA      ( SLAVE19_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE19_RRESP      ( SLAVE19_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE19_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE19_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE19_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE20_RID        ( SLAVE20_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE20_RDATA      ( SLAVE20_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE20_RRESP      ( SLAVE20_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE20_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE20_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE20_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE21_RID        ( SLAVE21_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE21_RDATA      ( SLAVE21_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE21_RRESP      ( SLAVE21_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE21_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE21_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE21_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE22_RID        ( SLAVE22_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE22_RDATA      ( SLAVE22_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE22_RRESP      ( SLAVE22_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE22_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE22_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE22_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE23_RID        ( SLAVE23_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE23_RDATA      ( SLAVE23_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE23_RRESP      ( SLAVE23_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE23_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE23_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE23_RVALID     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE24_AWREADY    ( GND_net ), // tied to 1'b0 from definition
         .SLAVE25_AWREADY    ( GND_net ), // tied to 1'b0 from definition
@@ -5492,37 +4812,13 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE29_WREADY     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE30_WREADY     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE31_WREADY     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE24_BID        ( SLAVE24_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE24_BRESP      ( SLAVE24_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE24_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE24_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE25_BID        ( SLAVE25_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE25_BRESP      ( SLAVE25_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE25_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE25_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE26_BID        ( SLAVE26_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE26_BRESP      ( SLAVE26_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE26_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE26_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE27_BID        ( SLAVE27_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE27_BRESP      ( SLAVE27_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE27_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE27_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE28_BID        ( SLAVE28_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE28_BRESP      ( SLAVE28_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE28_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE28_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE29_BID        ( SLAVE29_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE29_BRESP      ( SLAVE29_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE29_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE29_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE30_BID        ( SLAVE30_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE30_BRESP      ( SLAVE30_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE30_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE30_BVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE31_BID        ( SLAVE31_BID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE31_BRESP      ( SLAVE31_BRESP_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE31_BUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE31_BVALID     ( GND_net ), // tied to 1'b0 from definition
         .SLAVE24_ARREADY    ( GND_net ), // tied to 1'b0 from definition
         .SLAVE25_ARREADY    ( GND_net ), // tied to 1'b0 from definition
@@ -5532,53 +4828,21 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE29_ARREADY    ( GND_net ), // tied to 1'b0 from definition
         .SLAVE30_ARREADY    ( GND_net ), // tied to 1'b0 from definition
         .SLAVE31_ARREADY    ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE24_RID        ( SLAVE24_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE24_RDATA      ( SLAVE24_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE24_RRESP      ( SLAVE24_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE24_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE24_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE24_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE25_RID        ( SLAVE25_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE25_RDATA      ( SLAVE25_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE25_RRESP      ( SLAVE25_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE25_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE25_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE25_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE26_RID        ( SLAVE26_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE26_RDATA      ( SLAVE26_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE26_RRESP      ( SLAVE26_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE26_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE26_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE26_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE27_RID        ( SLAVE27_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE27_RDATA      ( SLAVE27_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE27_RRESP      ( SLAVE27_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE27_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE27_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE27_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE28_RID        ( SLAVE28_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE28_RDATA      ( SLAVE28_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE28_RRESP      ( SLAVE28_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE28_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE28_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE28_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE29_RID        ( SLAVE29_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE29_RDATA      ( SLAVE29_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE29_RRESP      ( SLAVE29_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE29_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE29_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE29_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE30_RID        ( SLAVE30_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE30_RDATA      ( SLAVE30_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE30_RRESP      ( SLAVE30_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE30_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE30_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE30_RVALID     ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE31_RID        ( SLAVE31_RID_const_net_0 ), // tied to 2'h0 from definition
-        .SLAVE31_RDATA      ( SLAVE31_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
-        .SLAVE31_RRESP      ( SLAVE31_RRESP_const_net_0 ), // tied to 2'h0 from definition
         .SLAVE31_RLAST      ( GND_net ), // tied to 1'b0 from definition
-        .SLAVE31_RUSER      ( GND_net ), // tied to 1'b0 from definition
         .SLAVE31_RVALID     ( GND_net ), // tied to 1'b0 from definition
         .S_CLK8             ( GND_net ), // tied to 1'b0 from definition
         .S_CLK9             ( GND_net ), // tied to 1'b0 from definition
@@ -5604,6 +4868,742 @@ COREAXI4INTERCONNECT_C0_0(
         .S_CLK29            ( GND_net ), // tied to 1'b0 from definition
         .S_CLK30            ( GND_net ), // tied to 1'b0 from definition
         .S_CLK31            ( GND_net ), // tied to 1'b0 from definition
+        .MASTER0_AWID       ( MASTER0_AWID ),
+        .MASTER0_AWADDR     ( MASTER0_AWADDR ),
+        .MASTER0_AWLEN      ( MASTER0_AWLEN ),
+        .MASTER0_AWSIZE     ( MASTER0_AWSIZE ),
+        .MASTER0_AWBURST    ( MASTER0_AWBURST ),
+        .MASTER0_AWLOCK     ( MASTER0_AWLOCK ),
+        .MASTER0_AWCACHE    ( MASTER0_AWCACHE ),
+        .MASTER0_AWPROT     ( MASTER0_AWPROT ),
+        .MASTER0_AWREGION   ( MASTER0_AWREGION ),
+        .MASTER0_AWQOS      ( MASTER0_AWQOS ),
+        .MASTER0_AWUSER     ( MASTER0_AWUSER ),
+        .MASTER1_AWID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER1_AWADDR     ( MASTER1_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER1_AWLEN      ( MASTER1_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER1_AWSIZE     ( MASTER1_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER1_AWBURST    ( MASTER1_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER1_AWLOCK     ( MASTER1_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER1_AWCACHE    ( MASTER1_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER1_AWPROT     ( MASTER1_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER1_AWREGION   ( MASTER1_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER1_AWQOS      ( MASTER1_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER1_AWUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER2_AWID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER2_AWADDR     ( MASTER2_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER2_AWLEN      ( MASTER2_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER2_AWSIZE     ( MASTER2_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER2_AWBURST    ( MASTER2_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER2_AWLOCK     ( MASTER2_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER2_AWCACHE    ( MASTER2_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER2_AWPROT     ( MASTER2_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER2_AWREGION   ( MASTER2_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER2_AWQOS      ( MASTER2_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER2_AWUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER3_AWID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER3_AWADDR     ( MASTER3_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER3_AWLEN      ( MASTER3_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER3_AWSIZE     ( MASTER3_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER3_AWBURST    ( MASTER3_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER3_AWLOCK     ( MASTER3_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER3_AWCACHE    ( MASTER3_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER3_AWPROT     ( MASTER3_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER3_AWREGION   ( MASTER3_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER3_AWQOS      ( MASTER3_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER3_AWUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER4_AWID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER4_AWADDR     ( MASTER4_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER4_AWLEN      ( MASTER4_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER4_AWSIZE     ( MASTER4_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER4_AWBURST    ( MASTER4_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER4_AWLOCK     ( MASTER4_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER4_AWCACHE    ( MASTER4_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER4_AWPROT     ( MASTER4_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER4_AWREGION   ( MASTER4_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER4_AWQOS      ( MASTER4_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER4_AWUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER5_AWID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER5_AWADDR     ( MASTER5_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER5_AWLEN      ( MASTER5_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER5_AWSIZE     ( MASTER5_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER5_AWBURST    ( MASTER5_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER5_AWLOCK     ( MASTER5_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER5_AWCACHE    ( MASTER5_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER5_AWPROT     ( MASTER5_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER5_AWREGION   ( MASTER5_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER5_AWQOS      ( MASTER5_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER5_AWUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER6_AWID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER6_AWADDR     ( MASTER6_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER6_AWLEN      ( MASTER6_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER6_AWSIZE     ( MASTER6_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER6_AWBURST    ( MASTER6_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER6_AWLOCK     ( MASTER6_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER6_AWCACHE    ( MASTER6_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER6_AWPROT     ( MASTER6_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER6_AWREGION   ( MASTER6_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER6_AWQOS      ( MASTER6_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER6_AWUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER7_AWID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER7_AWADDR     ( MASTER7_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER7_AWLEN      ( MASTER7_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER7_AWSIZE     ( MASTER7_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER7_AWBURST    ( MASTER7_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER7_AWLOCK     ( MASTER7_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER7_AWCACHE    ( MASTER7_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER7_AWPROT     ( MASTER7_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER7_AWREGION   ( MASTER7_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER7_AWQOS      ( MASTER7_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER7_AWUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER8_AWID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER8_AWADDR     ( MASTER8_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER8_AWLEN      ( MASTER8_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER8_AWSIZE     ( MASTER8_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER8_AWBURST    ( MASTER8_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER8_AWLOCK     ( MASTER8_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER8_AWCACHE    ( MASTER8_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER8_AWPROT     ( MASTER8_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER8_AWREGION   ( MASTER8_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER8_AWQOS      ( MASTER8_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER8_AWUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER9_AWID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER9_AWADDR     ( MASTER9_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER9_AWLEN      ( MASTER9_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER9_AWSIZE     ( MASTER9_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER9_AWBURST    ( MASTER9_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER9_AWLOCK     ( MASTER9_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER9_AWCACHE    ( MASTER9_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER9_AWPROT     ( MASTER9_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER9_AWREGION   ( MASTER9_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER9_AWQOS      ( MASTER9_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER9_AWUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER10_AWID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER10_AWADDR    ( MASTER10_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER10_AWLEN     ( MASTER10_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER10_AWSIZE    ( MASTER10_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER10_AWBURST   ( MASTER10_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER10_AWLOCK    ( MASTER10_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER10_AWCACHE   ( MASTER10_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER10_AWPROT    ( MASTER10_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER10_AWREGION  ( MASTER10_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER10_AWQOS     ( MASTER10_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER10_AWUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER11_AWID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER11_AWADDR    ( MASTER11_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER11_AWLEN     ( MASTER11_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER11_AWSIZE    ( MASTER11_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER11_AWBURST   ( MASTER11_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER11_AWLOCK    ( MASTER11_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER11_AWCACHE   ( MASTER11_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER11_AWPROT    ( MASTER11_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER11_AWREGION  ( MASTER11_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER11_AWQOS     ( MASTER11_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER11_AWUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER12_AWID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER12_AWADDR    ( MASTER12_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER12_AWLEN     ( MASTER12_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER12_AWSIZE    ( MASTER12_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER12_AWBURST   ( MASTER12_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER12_AWLOCK    ( MASTER12_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER12_AWCACHE   ( MASTER12_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER12_AWPROT    ( MASTER12_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER12_AWREGION  ( MASTER12_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER12_AWQOS     ( MASTER12_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER12_AWUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER13_AWID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER13_AWADDR    ( MASTER13_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER13_AWLEN     ( MASTER13_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER13_AWSIZE    ( MASTER13_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER13_AWBURST   ( MASTER13_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER13_AWLOCK    ( MASTER13_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER13_AWCACHE   ( MASTER13_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER13_AWPROT    ( MASTER13_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER13_AWREGION  ( MASTER13_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER13_AWQOS     ( MASTER13_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER13_AWUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER14_AWID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER14_AWADDR    ( MASTER14_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER14_AWLEN     ( MASTER14_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER14_AWSIZE    ( MASTER14_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER14_AWBURST   ( MASTER14_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER14_AWLOCK    ( MASTER14_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER14_AWCACHE   ( MASTER14_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER14_AWPROT    ( MASTER14_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER14_AWREGION  ( MASTER14_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER14_AWQOS     ( MASTER14_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER14_AWUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER15_AWID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER15_AWADDR    ( MASTER15_AWADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER15_AWLEN     ( MASTER15_AWLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER15_AWSIZE    ( MASTER15_AWSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER15_AWBURST   ( MASTER15_AWBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER15_AWLOCK    ( MASTER15_AWLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER15_AWCACHE   ( MASTER15_AWCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER15_AWPROT    ( MASTER15_AWPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER15_AWREGION  ( MASTER15_AWREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER15_AWQOS     ( MASTER15_AWQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER15_AWUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER0_WDATA      ( MASTER0_WDATA ),
+        .MASTER0_WSTRB      ( MASTER0_WSTRB ),
+        .MASTER0_WUSER      ( MASTER0_WUSER ),
+        .MASTER0_WID        ( GND_net ), // tied to 1'b0 from definition
+        .MASTER1_WDATA      ( MASTER1_WDATA_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER1_WSTRB      ( MASTER1_WSTRB_const_net_0 ), // tied to 4'hF from definition
+        .MASTER1_WUSER      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER1_WID        ( GND_net ), // tied to 1'b0 from definition
+        .MASTER2_WDATA      ( MASTER2_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER2_WSTRB      ( MASTER2_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER2_WUSER      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER2_WID        ( GND_net ), // tied to 1'b0 from definition
+        .MASTER3_WDATA      ( MASTER3_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER3_WSTRB      ( MASTER3_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER3_WUSER      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER3_WID        ( GND_net ), // tied to 1'b0 from definition
+        .MASTER4_WDATA      ( MASTER4_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER4_WSTRB      ( MASTER4_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER4_WUSER      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER4_WID        ( GND_net ), // tied to 1'b0 from definition
+        .MASTER5_WDATA      ( MASTER5_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER5_WSTRB      ( MASTER5_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER5_WUSER      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER5_WID        ( GND_net ), // tied to 1'b0 from definition
+        .MASTER6_WDATA      ( MASTER6_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER6_WSTRB      ( MASTER6_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER6_WUSER      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER6_WID        ( GND_net ), // tied to 1'b0 from definition
+        .MASTER7_WDATA      ( MASTER7_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER7_WSTRB      ( MASTER7_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER7_WUSER      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER7_WID        ( GND_net ), // tied to 1'b0 from definition
+        .MASTER8_WDATA      ( MASTER8_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER8_WSTRB      ( MASTER8_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER8_WUSER      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER8_WID        ( GND_net ), // tied to 1'b0 from definition
+        .MASTER9_WDATA      ( MASTER9_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER9_WSTRB      ( MASTER9_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER9_WUSER      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER9_WID        ( GND_net ), // tied to 1'b0 from definition
+        .MASTER10_WDATA     ( MASTER10_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER10_WSTRB     ( MASTER10_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER10_WUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER10_WID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER11_WDATA     ( MASTER11_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER11_WSTRB     ( MASTER11_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER11_WUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER11_WID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER12_WDATA     ( MASTER12_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER12_WSTRB     ( MASTER12_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER12_WUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER12_WID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER13_WDATA     ( MASTER13_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER13_WSTRB     ( MASTER13_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER13_WUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER13_WID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER14_WDATA     ( MASTER14_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER14_WSTRB     ( MASTER14_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER14_WUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER14_WID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER15_WDATA     ( MASTER15_WDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER15_WSTRB     ( MASTER15_WSTRB_const_net_0 ), // tied to 8'hFF from definition
+        .MASTER15_WUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER15_WID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER0_ARID       ( MASTER0_ARID ),
+        .MASTER0_ARADDR     ( MASTER0_ARADDR ),
+        .MASTER0_ARLEN      ( MASTER0_ARLEN ),
+        .MASTER0_ARSIZE     ( MASTER0_ARSIZE ),
+        .MASTER0_ARBURST    ( MASTER0_ARBURST ),
+        .MASTER0_ARLOCK     ( MASTER0_ARLOCK ),
+        .MASTER0_ARCACHE    ( MASTER0_ARCACHE ),
+        .MASTER0_ARPROT     ( MASTER0_ARPROT ),
+        .MASTER0_ARREGION   ( MASTER0_ARREGION ),
+        .MASTER0_ARQOS      ( MASTER0_ARQOS ),
+        .MASTER0_ARUSER     ( MASTER0_ARUSER ),
+        .MASTER1_ARID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER1_ARADDR     ( MASTER1_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER1_ARLEN      ( MASTER1_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER1_ARSIZE     ( MASTER1_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER1_ARBURST    ( MASTER1_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER1_ARLOCK     ( MASTER1_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER1_ARCACHE    ( MASTER1_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER1_ARPROT     ( MASTER1_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER1_ARREGION   ( MASTER1_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER1_ARQOS      ( MASTER1_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER1_ARUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER2_ARID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER2_ARADDR     ( MASTER2_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER2_ARLEN      ( MASTER2_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER2_ARSIZE     ( MASTER2_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER2_ARBURST    ( MASTER2_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER2_ARLOCK     ( MASTER2_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER2_ARCACHE    ( MASTER2_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER2_ARPROT     ( MASTER2_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER2_ARREGION   ( MASTER2_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER2_ARQOS      ( MASTER2_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER2_ARUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER3_ARID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER3_ARADDR     ( MASTER3_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER3_ARLEN      ( MASTER3_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER3_ARSIZE     ( MASTER3_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER3_ARBURST    ( MASTER3_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER3_ARLOCK     ( MASTER3_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER3_ARCACHE    ( MASTER3_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER3_ARPROT     ( MASTER3_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER3_ARREGION   ( MASTER3_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER3_ARQOS      ( MASTER3_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER3_ARUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER4_ARID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER4_ARADDR     ( MASTER4_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER4_ARLEN      ( MASTER4_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER4_ARSIZE     ( MASTER4_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER4_ARBURST    ( MASTER4_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER4_ARLOCK     ( MASTER4_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER4_ARCACHE    ( MASTER4_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER4_ARPROT     ( MASTER4_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER4_ARREGION   ( MASTER4_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER4_ARQOS      ( MASTER4_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER4_ARUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER5_ARID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER5_ARADDR     ( MASTER5_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER5_ARLEN      ( MASTER5_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER5_ARSIZE     ( MASTER5_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER5_ARBURST    ( MASTER5_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER5_ARLOCK     ( MASTER5_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER5_ARCACHE    ( MASTER5_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER5_ARPROT     ( MASTER5_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER5_ARREGION   ( MASTER5_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER5_ARQOS      ( MASTER5_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER5_ARUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER6_ARID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER6_ARADDR     ( MASTER6_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER6_ARLEN      ( MASTER6_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER6_ARSIZE     ( MASTER6_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER6_ARBURST    ( MASTER6_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER6_ARLOCK     ( MASTER6_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER6_ARCACHE    ( MASTER6_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER6_ARPROT     ( MASTER6_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER6_ARREGION   ( MASTER6_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER6_ARQOS      ( MASTER6_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER6_ARUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER7_ARID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER7_ARADDR     ( MASTER7_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER7_ARLEN      ( MASTER7_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER7_ARSIZE     ( MASTER7_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER7_ARBURST    ( MASTER7_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER7_ARLOCK     ( MASTER7_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER7_ARCACHE    ( MASTER7_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER7_ARPROT     ( MASTER7_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER7_ARREGION   ( MASTER7_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER7_ARQOS      ( MASTER7_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER7_ARUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER8_ARID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER8_ARADDR     ( MASTER8_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER8_ARLEN      ( MASTER8_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER8_ARSIZE     ( MASTER8_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER8_ARBURST    ( MASTER8_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER8_ARLOCK     ( MASTER8_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER8_ARCACHE    ( MASTER8_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER8_ARPROT     ( MASTER8_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER8_ARREGION   ( MASTER8_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER8_ARQOS      ( MASTER8_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER8_ARUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER9_ARID       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER9_ARADDR     ( MASTER9_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER9_ARLEN      ( MASTER9_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER9_ARSIZE     ( MASTER9_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER9_ARBURST    ( MASTER9_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER9_ARLOCK     ( MASTER9_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER9_ARCACHE    ( MASTER9_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER9_ARPROT     ( MASTER9_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER9_ARREGION   ( MASTER9_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER9_ARQOS      ( MASTER9_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER9_ARUSER     ( GND_net ), // tied to 1'b0 from definition
+        .MASTER10_ARID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER10_ARADDR    ( MASTER10_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER10_ARLEN     ( MASTER10_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER10_ARSIZE    ( MASTER10_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER10_ARBURST   ( MASTER10_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER10_ARLOCK    ( MASTER10_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER10_ARCACHE   ( MASTER10_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER10_ARPROT    ( MASTER10_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER10_ARREGION  ( MASTER10_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER10_ARQOS     ( MASTER10_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER10_ARUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER11_ARID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER11_ARADDR    ( MASTER11_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER11_ARLEN     ( MASTER11_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER11_ARSIZE    ( MASTER11_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER11_ARBURST   ( MASTER11_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER11_ARLOCK    ( MASTER11_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER11_ARCACHE   ( MASTER11_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER11_ARPROT    ( MASTER11_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER11_ARREGION  ( MASTER11_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER11_ARQOS     ( MASTER11_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER11_ARUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER12_ARID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER12_ARADDR    ( MASTER12_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER12_ARLEN     ( MASTER12_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER12_ARSIZE    ( MASTER12_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER12_ARBURST   ( MASTER12_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER12_ARLOCK    ( MASTER12_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER12_ARCACHE   ( MASTER12_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER12_ARPROT    ( MASTER12_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER12_ARREGION  ( MASTER12_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER12_ARQOS     ( MASTER12_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER12_ARUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER13_ARID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER13_ARADDR    ( MASTER13_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER13_ARLEN     ( MASTER13_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER13_ARSIZE    ( MASTER13_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER13_ARBURST   ( MASTER13_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER13_ARLOCK    ( MASTER13_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER13_ARCACHE   ( MASTER13_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER13_ARPROT    ( MASTER13_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER13_ARREGION  ( MASTER13_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER13_ARQOS     ( MASTER13_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER13_ARUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER14_ARID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER14_ARADDR    ( MASTER14_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER14_ARLEN     ( MASTER14_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER14_ARSIZE    ( MASTER14_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER14_ARBURST   ( MASTER14_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER14_ARLOCK    ( MASTER14_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER14_ARCACHE   ( MASTER14_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER14_ARPROT    ( MASTER14_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER14_ARREGION  ( MASTER14_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER14_ARQOS     ( MASTER14_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER14_ARUSER    ( GND_net ), // tied to 1'b0 from definition
+        .MASTER15_ARID      ( GND_net ), // tied to 1'b0 from definition
+        .MASTER15_ARADDR    ( MASTER15_ARADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER15_ARLEN     ( MASTER15_ARLEN_const_net_0 ), // tied to 8'h00 from definition
+        .MASTER15_ARSIZE    ( MASTER15_ARSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER15_ARBURST   ( MASTER15_ARBURST_const_net_0 ), // tied to 2'h3 from definition
+        .MASTER15_ARLOCK    ( MASTER15_ARLOCK_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER15_ARCACHE   ( MASTER15_ARCACHE_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER15_ARPROT    ( MASTER15_ARPROT_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER15_ARREGION  ( MASTER15_ARREGION_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER15_ARQOS     ( MASTER15_ARQOS_const_net_0 ), // tied to 4'h0 from definition
+        .MASTER15_ARUSER    ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE0_BID         ( SLAVE0_BID ),
+        .SLAVE0_BRESP       ( SLAVE0_BRESP ),
+        .SLAVE0_BUSER       ( SLAVE0_BUSER ),
+        .SLAVE1_BID         ( SLAVE1_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE1_BRESP       ( SLAVE1_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE1_BUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE2_BID         ( SLAVE2_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE2_BRESP       ( SLAVE2_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE2_BUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE3_BID         ( SLAVE3_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE3_BRESP       ( SLAVE3_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE3_BUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE4_BID         ( SLAVE4_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE4_BRESP       ( SLAVE4_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE4_BUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE5_BID         ( SLAVE5_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE5_BRESP       ( SLAVE5_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE5_BUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE6_BID         ( SLAVE6_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE6_BRESP       ( SLAVE6_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE6_BUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE7_BID         ( SLAVE7_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE7_BRESP       ( SLAVE7_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE7_BUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE0_RID         ( SLAVE0_RID ),
+        .SLAVE0_RDATA       ( SLAVE0_RDATA ),
+        .SLAVE0_RRESP       ( SLAVE0_RRESP ),
+        .SLAVE0_RUSER       ( SLAVE0_RUSER ),
+        .SLAVE1_RID         ( SLAVE1_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE1_RDATA       ( SLAVE1_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE1_RRESP       ( SLAVE1_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE1_RUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE2_RID         ( SLAVE2_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE2_RDATA       ( SLAVE2_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE2_RRESP       ( SLAVE2_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE2_RUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE3_RID         ( SLAVE3_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE3_RDATA       ( SLAVE3_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE3_RRESP       ( SLAVE3_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE3_RUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE4_RID         ( SLAVE4_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE4_RDATA       ( SLAVE4_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE4_RRESP       ( SLAVE4_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE4_RUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE5_RID         ( SLAVE5_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE5_RDATA       ( SLAVE5_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE5_RRESP       ( SLAVE5_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE5_RUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE6_RID         ( SLAVE6_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE6_RDATA       ( SLAVE6_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE6_RRESP       ( SLAVE6_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE6_RUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE7_RID         ( SLAVE7_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE7_RDATA       ( SLAVE7_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE7_RRESP       ( SLAVE7_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE7_RUSER       ( GND_net ), // tied to 1'b0 from definition
+        .MASTER0_HADDR      ( MASTER0_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER0_HBURST     ( MASTER0_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER0_HPROT      ( MASTER0_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER0_HSIZE      ( MASTER0_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER0_HTRANS     ( MASTER0_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER0_HWDATA     ( MASTER0_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER1_HADDR      ( MASTER1_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER1_HBURST     ( MASTER1_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER1_HPROT      ( MASTER1_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER1_HSIZE      ( MASTER1_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER1_HTRANS     ( MASTER1_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER1_HWDATA     ( MASTER1_HWDATA_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER2_HADDR      ( MASTER2_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER2_HBURST     ( MASTER2_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER2_HPROT      ( MASTER2_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER2_HSIZE      ( MASTER2_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER2_HTRANS     ( MASTER2_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER2_HWDATA     ( MASTER2_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER3_HADDR      ( MASTER3_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER3_HBURST     ( MASTER3_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER3_HPROT      ( MASTER3_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER3_HSIZE      ( MASTER3_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER3_HTRANS     ( MASTER3_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER3_HWDATA     ( MASTER3_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER4_HADDR      ( MASTER4_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER4_HBURST     ( MASTER4_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER4_HPROT      ( MASTER4_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER4_HSIZE      ( MASTER4_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER4_HTRANS     ( MASTER4_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER4_HWDATA     ( MASTER4_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER5_HADDR      ( MASTER5_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER5_HBURST     ( MASTER5_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER5_HPROT      ( MASTER5_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER5_HSIZE      ( MASTER5_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER5_HTRANS     ( MASTER5_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER5_HWDATA     ( MASTER5_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER6_HADDR      ( MASTER6_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER6_HBURST     ( MASTER6_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER6_HPROT      ( MASTER6_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER6_HSIZE      ( MASTER6_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER6_HTRANS     ( MASTER6_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER6_HWDATA     ( MASTER6_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER7_HADDR      ( MASTER7_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER7_HBURST     ( MASTER7_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER7_HPROT      ( MASTER7_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER7_HSIZE      ( MASTER7_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER7_HTRANS     ( MASTER7_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER7_HWDATA     ( MASTER7_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER8_HADDR      ( MASTER8_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER8_HBURST     ( MASTER8_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER8_HPROT      ( MASTER8_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER8_HSIZE      ( MASTER8_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER8_HTRANS     ( MASTER8_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER8_HWDATA     ( MASTER8_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER9_HADDR      ( MASTER9_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER9_HBURST     ( MASTER9_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER9_HPROT      ( MASTER9_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER9_HSIZE      ( MASTER9_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER9_HTRANS     ( MASTER9_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER9_HWDATA     ( MASTER9_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER10_HADDR     ( MASTER10_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER10_HBURST    ( MASTER10_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER10_HPROT     ( MASTER10_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER10_HSIZE     ( MASTER10_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER10_HTRANS    ( MASTER10_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER10_HWDATA    ( MASTER10_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER11_HADDR     ( MASTER11_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER11_HBURST    ( MASTER11_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER11_HPROT     ( MASTER11_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER11_HSIZE     ( MASTER11_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER11_HTRANS    ( MASTER11_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER11_HWDATA    ( MASTER11_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER12_HADDR     ( MASTER12_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER12_HBURST    ( MASTER12_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER12_HPROT     ( MASTER12_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER12_HSIZE     ( MASTER12_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER12_HTRANS    ( MASTER12_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER12_HWDATA    ( MASTER12_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER13_HADDR     ( MASTER13_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER13_HBURST    ( MASTER13_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER13_HPROT     ( MASTER13_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER13_HSIZE     ( MASTER13_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER13_HTRANS    ( MASTER13_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER13_HWDATA    ( MASTER13_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER14_HADDR     ( MASTER14_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER14_HBURST    ( MASTER14_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER14_HPROT     ( MASTER14_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER14_HSIZE     ( MASTER14_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER14_HTRANS    ( MASTER14_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER14_HWDATA    ( MASTER14_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .MASTER15_HADDR     ( MASTER15_HADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .MASTER15_HBURST    ( MASTER15_HBURST_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER15_HPROT     ( MASTER15_HPROT_const_net_0 ), // tied to 7'h00 from definition
+        .MASTER15_HSIZE     ( MASTER15_HSIZE_const_net_0 ), // tied to 3'h0 from definition
+        .MASTER15_HTRANS    ( MASTER15_HTRANS_const_net_0 ), // tied to 2'h0 from definition
+        .MASTER15_HWDATA    ( MASTER15_HWDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE8_BID         ( SLAVE8_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE8_BRESP       ( SLAVE8_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE8_BUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE9_BID         ( SLAVE9_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE9_BRESP       ( SLAVE9_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE9_BUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE10_BID        ( SLAVE10_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE10_BRESP      ( SLAVE10_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE10_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE11_BID        ( SLAVE11_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE11_BRESP      ( SLAVE11_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE11_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE12_BID        ( SLAVE12_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE12_BRESP      ( SLAVE12_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE12_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE13_BID        ( SLAVE13_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE13_BRESP      ( SLAVE13_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE13_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE14_BID        ( SLAVE14_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE14_BRESP      ( SLAVE14_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE14_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE15_BID        ( SLAVE15_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE15_BRESP      ( SLAVE15_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE15_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE8_RID         ( SLAVE8_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE8_RDATA       ( SLAVE8_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE8_RRESP       ( SLAVE8_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE8_RUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE9_RID         ( SLAVE9_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE9_RDATA       ( SLAVE9_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE9_RRESP       ( SLAVE9_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE9_RUSER       ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE10_RID        ( SLAVE10_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE10_RDATA      ( SLAVE10_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE10_RRESP      ( SLAVE10_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE10_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE11_RID        ( SLAVE11_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE11_RDATA      ( SLAVE11_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE11_RRESP      ( SLAVE11_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE11_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE12_RID        ( SLAVE12_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE12_RDATA      ( SLAVE12_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE12_RRESP      ( SLAVE12_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE12_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE13_RID        ( SLAVE13_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE13_RDATA      ( SLAVE13_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE13_RRESP      ( SLAVE13_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE13_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE14_RID        ( SLAVE14_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE14_RDATA      ( SLAVE14_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE14_RRESP      ( SLAVE14_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE14_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE15_RID        ( SLAVE15_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE15_RDATA      ( SLAVE15_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE15_RRESP      ( SLAVE15_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE15_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE16_BID        ( SLAVE16_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE16_BRESP      ( SLAVE16_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE16_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE17_BID        ( SLAVE17_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE17_BRESP      ( SLAVE17_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE17_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE18_BID        ( SLAVE18_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE18_BRESP      ( SLAVE18_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE18_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE19_BID        ( SLAVE19_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE19_BRESP      ( SLAVE19_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE19_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE20_BID        ( SLAVE20_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE20_BRESP      ( SLAVE20_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE20_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE21_BID        ( SLAVE21_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE21_BRESP      ( SLAVE21_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE21_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE22_BID        ( SLAVE22_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE22_BRESP      ( SLAVE22_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE22_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE23_BID        ( SLAVE23_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE23_BRESP      ( SLAVE23_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE23_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE16_RID        ( SLAVE16_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE16_RDATA      ( SLAVE16_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE16_RRESP      ( SLAVE16_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE16_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE17_RID        ( SLAVE17_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE17_RDATA      ( SLAVE17_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE17_RRESP      ( SLAVE17_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE17_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE18_RID        ( SLAVE18_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE18_RDATA      ( SLAVE18_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE18_RRESP      ( SLAVE18_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE18_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE19_RID        ( SLAVE19_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE19_RDATA      ( SLAVE19_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE19_RRESP      ( SLAVE19_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE19_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE20_RID        ( SLAVE20_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE20_RDATA      ( SLAVE20_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE20_RRESP      ( SLAVE20_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE20_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE21_RID        ( SLAVE21_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE21_RDATA      ( SLAVE21_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE21_RRESP      ( SLAVE21_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE21_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE22_RID        ( SLAVE22_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE22_RDATA      ( SLAVE22_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE22_RRESP      ( SLAVE22_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE22_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE23_RID        ( SLAVE23_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE23_RDATA      ( SLAVE23_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE23_RRESP      ( SLAVE23_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE23_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE24_BID        ( SLAVE24_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE24_BRESP      ( SLAVE24_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE24_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE25_BID        ( SLAVE25_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE25_BRESP      ( SLAVE25_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE25_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE26_BID        ( SLAVE26_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE26_BRESP      ( SLAVE26_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE26_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE27_BID        ( SLAVE27_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE27_BRESP      ( SLAVE27_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE27_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE28_BID        ( SLAVE28_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE28_BRESP      ( SLAVE28_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE28_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE29_BID        ( SLAVE29_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE29_BRESP      ( SLAVE29_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE29_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE30_BID        ( SLAVE30_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE30_BRESP      ( SLAVE30_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE30_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE31_BID        ( SLAVE31_BID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE31_BRESP      ( SLAVE31_BRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE31_BUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE24_RID        ( SLAVE24_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE24_RDATA      ( SLAVE24_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE24_RRESP      ( SLAVE24_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE24_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE25_RID        ( SLAVE25_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE25_RDATA      ( SLAVE25_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE25_RRESP      ( SLAVE25_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE25_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE26_RID        ( SLAVE26_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE26_RDATA      ( SLAVE26_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE26_RRESP      ( SLAVE26_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE26_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE27_RID        ( SLAVE27_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE27_RDATA      ( SLAVE27_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE27_RRESP      ( SLAVE27_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE27_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE28_RID        ( SLAVE28_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE28_RDATA      ( SLAVE28_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE28_RRESP      ( SLAVE28_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE28_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE29_RID        ( SLAVE29_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE29_RDATA      ( SLAVE29_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE29_RRESP      ( SLAVE29_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE29_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE30_RID        ( SLAVE30_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE30_RDATA      ( SLAVE30_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE30_RRESP      ( SLAVE30_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE30_RUSER      ( GND_net ), // tied to 1'b0 from definition
+        .SLAVE31_RID        ( SLAVE31_RID_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE31_RDATA      ( SLAVE31_RDATA_const_net_0 ), // tied to 64'h0000000000000000 from definition
+        .SLAVE31_RRESP      ( SLAVE31_RRESP_const_net_0 ), // tied to 2'h0 from definition
+        .SLAVE31_RUSER      ( GND_net ), // tied to 1'b0 from definition
         // Outputs
         .MASTER0_AWREADY    ( AXI4mmaster0_AWREADY ),
         .MASTER1_AWREADY    (  ),
@@ -5637,69 +5637,21 @@ COREAXI4INTERCONNECT_C0_0(
         .MASTER13_WREADY    (  ),
         .MASTER14_WREADY    (  ),
         .MASTER15_WREADY    (  ),
-        .MASTER0_BID        ( AXI4mmaster0_BID ),
-        .MASTER0_BRESP      ( AXI4mmaster0_BRESP ),
-        .MASTER0_BUSER      ( AXI4mmaster0_BUSER ),
         .MASTER0_BVALID     ( AXI4mmaster0_BVALID ),
-        .MASTER1_BID        (  ),
-        .MASTER1_BRESP      (  ),
-        .MASTER1_BUSER      (  ),
         .MASTER1_BVALID     (  ),
-        .MASTER2_BID        (  ),
-        .MASTER2_BRESP      (  ),
-        .MASTER2_BUSER      (  ),
         .MASTER2_BVALID     (  ),
-        .MASTER3_BID        (  ),
-        .MASTER3_BRESP      (  ),
-        .MASTER3_BUSER      (  ),
         .MASTER3_BVALID     (  ),
-        .MASTER4_BID        (  ),
-        .MASTER4_BRESP      (  ),
-        .MASTER4_BUSER      (  ),
         .MASTER4_BVALID     (  ),
-        .MASTER5_BID        (  ),
-        .MASTER5_BRESP      (  ),
-        .MASTER5_BUSER      (  ),
         .MASTER5_BVALID     (  ),
-        .MASTER6_BID        (  ),
-        .MASTER6_BRESP      (  ),
-        .MASTER6_BUSER      (  ),
         .MASTER6_BVALID     (  ),
-        .MASTER7_BID        (  ),
-        .MASTER7_BRESP      (  ),
-        .MASTER7_BUSER      (  ),
         .MASTER7_BVALID     (  ),
-        .MASTER8_BID        (  ),
-        .MASTER8_BRESP      (  ),
-        .MASTER8_BUSER      (  ),
         .MASTER8_BVALID     (  ),
-        .MASTER9_BID        (  ),
-        .MASTER9_BRESP      (  ),
-        .MASTER9_BUSER      (  ),
         .MASTER9_BVALID     (  ),
-        .MASTER10_BID       (  ),
-        .MASTER10_BRESP     (  ),
-        .MASTER10_BUSER     (  ),
         .MASTER10_BVALID    (  ),
-        .MASTER11_BID       (  ),
-        .MASTER11_BRESP     (  ),
-        .MASTER11_BUSER     (  ),
         .MASTER11_BVALID    (  ),
-        .MASTER12_BID       (  ),
-        .MASTER12_BRESP     (  ),
-        .MASTER12_BUSER     (  ),
         .MASTER12_BVALID    (  ),
-        .MASTER13_BID       (  ),
-        .MASTER13_BRESP     (  ),
-        .MASTER13_BUSER     (  ),
         .MASTER13_BVALID    (  ),
-        .MASTER14_BID       (  ),
-        .MASTER14_BRESP     (  ),
-        .MASTER14_BUSER     (  ),
         .MASTER14_BVALID    (  ),
-        .MASTER15_BID       (  ),
-        .MASTER15_BRESP     (  ),
-        .MASTER15_BUSER     (  ),
         .MASTER15_BVALID    (  ),
         .MASTER0_ARREADY    ( AXI4mmaster0_ARREADY ),
         .MASTER1_ARREADY    (  ),
@@ -5717,102 +5669,374 @@ COREAXI4INTERCONNECT_C0_0(
         .MASTER13_ARREADY   (  ),
         .MASTER14_ARREADY   (  ),
         .MASTER15_ARREADY   (  ),
+        .MASTER0_RLAST      ( AXI4mmaster0_RLAST ),
+        .MASTER0_RVALID     ( AXI4mmaster0_RVALID ),
+        .MASTER1_RLAST      (  ),
+        .MASTER1_RVALID     (  ),
+        .MASTER2_RLAST      (  ),
+        .MASTER2_RVALID     (  ),
+        .MASTER3_RLAST      (  ),
+        .MASTER3_RVALID     (  ),
+        .MASTER4_RLAST      (  ),
+        .MASTER4_RVALID     (  ),
+        .MASTER5_RLAST      (  ),
+        .MASTER5_RVALID     (  ),
+        .MASTER6_RLAST      (  ),
+        .MASTER6_RVALID     (  ),
+        .MASTER7_RLAST      (  ),
+        .MASTER7_RVALID     (  ),
+        .MASTER8_RLAST      (  ),
+        .MASTER8_RVALID     (  ),
+        .MASTER9_RLAST      (  ),
+        .MASTER9_RVALID     (  ),
+        .MASTER10_RLAST     (  ),
+        .MASTER10_RVALID    (  ),
+        .MASTER11_RLAST     (  ),
+        .MASTER11_RVALID    (  ),
+        .MASTER12_RLAST     (  ),
+        .MASTER12_RVALID    (  ),
+        .MASTER13_RLAST     (  ),
+        .MASTER13_RVALID    (  ),
+        .MASTER14_RLAST     (  ),
+        .MASTER14_RVALID    (  ),
+        .MASTER15_RLAST     (  ),
+        .MASTER15_RVALID    (  ),
+        .SLAVE0_AWVALID     ( AXI4mslave0_AWVALID ),
+        .SLAVE1_AWVALID     (  ),
+        .SLAVE2_AWVALID     (  ),
+        .SLAVE3_AWVALID     (  ),
+        .SLAVE4_AWVALID     (  ),
+        .SLAVE5_AWVALID     (  ),
+        .SLAVE6_AWVALID     (  ),
+        .SLAVE7_AWVALID     (  ),
+        .SLAVE0_WLAST       ( AXI4mslave0_WLAST ),
+        .SLAVE0_WVALID      ( AXI4mslave0_WVALID ),
+        .SLAVE1_WLAST       (  ),
+        .SLAVE1_WVALID      (  ),
+        .SLAVE2_WLAST       (  ),
+        .SLAVE2_WVALID      (  ),
+        .SLAVE3_WLAST       (  ),
+        .SLAVE3_WVALID      (  ),
+        .SLAVE4_WLAST       (  ),
+        .SLAVE4_WVALID      (  ),
+        .SLAVE5_WLAST       (  ),
+        .SLAVE5_WVALID      (  ),
+        .SLAVE6_WLAST       (  ),
+        .SLAVE6_WVALID      (  ),
+        .SLAVE7_WLAST       (  ),
+        .SLAVE7_WVALID      (  ),
+        .SLAVE0_BREADY      ( AXI4mslave0_BREADY ),
+        .SLAVE1_BREADY      (  ),
+        .SLAVE2_BREADY      (  ),
+        .SLAVE3_BREADY      (  ),
+        .SLAVE4_BREADY      (  ),
+        .SLAVE5_BREADY      (  ),
+        .SLAVE6_BREADY      (  ),
+        .SLAVE7_BREADY      (  ),
+        .SLAVE0_ARVALID     ( AXI4mslave0_ARVALID ),
+        .SLAVE1_ARVALID     (  ),
+        .SLAVE2_ARVALID     (  ),
+        .SLAVE3_ARVALID     (  ),
+        .SLAVE4_ARVALID     (  ),
+        .SLAVE5_ARVALID     (  ),
+        .SLAVE6_ARVALID     (  ),
+        .SLAVE7_ARVALID     (  ),
+        .SLAVE0_RREADY      ( AXI4mslave0_RREADY ),
+        .SLAVE1_RREADY      (  ),
+        .SLAVE2_RREADY      (  ),
+        .SLAVE3_RREADY      (  ),
+        .SLAVE4_RREADY      (  ),
+        .SLAVE5_RREADY      (  ),
+        .SLAVE6_RREADY      (  ),
+        .SLAVE7_RREADY      (  ),
+        .MASTER0_HREADY     (  ),
+        .MASTER0_HRESP      (  ),
+        .MASTER1_HREADY     (  ),
+        .MASTER1_HRESP      (  ),
+        .MASTER2_HREADY     (  ),
+        .MASTER2_HRESP      (  ),
+        .MASTER3_HREADY     (  ),
+        .MASTER3_HRESP      (  ),
+        .MASTER4_HREADY     (  ),
+        .MASTER4_HRESP      (  ),
+        .MASTER5_HREADY     (  ),
+        .MASTER5_HRESP      (  ),
+        .MASTER6_HREADY     (  ),
+        .MASTER6_HRESP      (  ),
+        .MASTER7_HREADY     (  ),
+        .MASTER7_HRESP      (  ),
+        .MASTER8_HREADY     (  ),
+        .MASTER8_HRESP      (  ),
+        .MASTER9_HREADY     (  ),
+        .MASTER9_HRESP      (  ),
+        .MASTER10_HREADY    (  ),
+        .MASTER10_HRESP     (  ),
+        .MASTER11_HREADY    (  ),
+        .MASTER11_HRESP     (  ),
+        .MASTER12_HREADY    (  ),
+        .MASTER12_HRESP     (  ),
+        .MASTER13_HREADY    (  ),
+        .MASTER13_HRESP     (  ),
+        .MASTER14_HREADY    (  ),
+        .MASTER14_HRESP     (  ),
+        .MASTER15_HREADY    (  ),
+        .MASTER15_HRESP     (  ),
+        .SLAVE8_AWVALID     (  ),
+        .SLAVE9_AWVALID     (  ),
+        .SLAVE10_AWVALID    (  ),
+        .SLAVE11_AWVALID    (  ),
+        .SLAVE12_AWVALID    (  ),
+        .SLAVE13_AWVALID    (  ),
+        .SLAVE14_AWVALID    (  ),
+        .SLAVE15_AWVALID    (  ),
+        .SLAVE8_WLAST       (  ),
+        .SLAVE8_WVALID      (  ),
+        .SLAVE9_WLAST       (  ),
+        .SLAVE9_WVALID      (  ),
+        .SLAVE10_WLAST      (  ),
+        .SLAVE10_WVALID     (  ),
+        .SLAVE11_WLAST      (  ),
+        .SLAVE11_WVALID     (  ),
+        .SLAVE12_WLAST      (  ),
+        .SLAVE12_WVALID     (  ),
+        .SLAVE13_WLAST      (  ),
+        .SLAVE13_WVALID     (  ),
+        .SLAVE14_WLAST      (  ),
+        .SLAVE14_WVALID     (  ),
+        .SLAVE15_WLAST      (  ),
+        .SLAVE15_WVALID     (  ),
+        .SLAVE8_BREADY      (  ),
+        .SLAVE9_BREADY      (  ),
+        .SLAVE10_BREADY     (  ),
+        .SLAVE11_BREADY     (  ),
+        .SLAVE12_BREADY     (  ),
+        .SLAVE13_BREADY     (  ),
+        .SLAVE14_BREADY     (  ),
+        .SLAVE15_BREADY     (  ),
+        .SLAVE8_ARVALID     (  ),
+        .SLAVE9_ARVALID     (  ),
+        .SLAVE10_ARVALID    (  ),
+        .SLAVE11_ARVALID    (  ),
+        .SLAVE12_ARVALID    (  ),
+        .SLAVE13_ARVALID    (  ),
+        .SLAVE14_ARVALID    (  ),
+        .SLAVE15_ARVALID    (  ),
+        .SLAVE8_RREADY      (  ),
+        .SLAVE9_RREADY      (  ),
+        .SLAVE10_RREADY     (  ),
+        .SLAVE11_RREADY     (  ),
+        .SLAVE12_RREADY     (  ),
+        .SLAVE13_RREADY     (  ),
+        .SLAVE14_RREADY     (  ),
+        .SLAVE15_RREADY     (  ),
+        .SLAVE16_AWVALID    (  ),
+        .SLAVE17_AWVALID    (  ),
+        .SLAVE18_AWVALID    (  ),
+        .SLAVE19_AWVALID    (  ),
+        .SLAVE20_AWVALID    (  ),
+        .SLAVE21_AWVALID    (  ),
+        .SLAVE22_AWVALID    (  ),
+        .SLAVE23_AWVALID    (  ),
+        .SLAVE16_WLAST      (  ),
+        .SLAVE16_WVALID     (  ),
+        .SLAVE17_WLAST      (  ),
+        .SLAVE17_WVALID     (  ),
+        .SLAVE18_WLAST      (  ),
+        .SLAVE18_WVALID     (  ),
+        .SLAVE19_WLAST      (  ),
+        .SLAVE19_WVALID     (  ),
+        .SLAVE20_WLAST      (  ),
+        .SLAVE20_WVALID     (  ),
+        .SLAVE21_WLAST      (  ),
+        .SLAVE21_WVALID     (  ),
+        .SLAVE22_WLAST      (  ),
+        .SLAVE22_WVALID     (  ),
+        .SLAVE23_WLAST      (  ),
+        .SLAVE23_WVALID     (  ),
+        .SLAVE16_BREADY     (  ),
+        .SLAVE17_BREADY     (  ),
+        .SLAVE18_BREADY     (  ),
+        .SLAVE19_BREADY     (  ),
+        .SLAVE20_BREADY     (  ),
+        .SLAVE21_BREADY     (  ),
+        .SLAVE22_BREADY     (  ),
+        .SLAVE23_BREADY     (  ),
+        .SLAVE16_ARVALID    (  ),
+        .SLAVE17_ARVALID    (  ),
+        .SLAVE18_ARVALID    (  ),
+        .SLAVE19_ARVALID    (  ),
+        .SLAVE20_ARVALID    (  ),
+        .SLAVE21_ARVALID    (  ),
+        .SLAVE22_ARVALID    (  ),
+        .SLAVE23_ARVALID    (  ),
+        .SLAVE16_RREADY     (  ),
+        .SLAVE17_RREADY     (  ),
+        .SLAVE18_RREADY     (  ),
+        .SLAVE19_RREADY     (  ),
+        .SLAVE20_RREADY     (  ),
+        .SLAVE21_RREADY     (  ),
+        .SLAVE22_RREADY     (  ),
+        .SLAVE23_RREADY     (  ),
+        .SLAVE24_AWVALID    (  ),
+        .SLAVE25_AWVALID    (  ),
+        .SLAVE26_AWVALID    (  ),
+        .SLAVE27_AWVALID    (  ),
+        .SLAVE28_AWVALID    (  ),
+        .SLAVE29_AWVALID    (  ),
+        .SLAVE30_AWVALID    (  ),
+        .SLAVE31_AWVALID    (  ),
+        .SLAVE24_WLAST      (  ),
+        .SLAVE24_WVALID     (  ),
+        .SLAVE25_WLAST      (  ),
+        .SLAVE25_WVALID     (  ),
+        .SLAVE26_WLAST      (  ),
+        .SLAVE26_WVALID     (  ),
+        .SLAVE27_WLAST      (  ),
+        .SLAVE27_WVALID     (  ),
+        .SLAVE28_WLAST      (  ),
+        .SLAVE28_WVALID     (  ),
+        .SLAVE29_WLAST      (  ),
+        .SLAVE29_WVALID     (  ),
+        .SLAVE30_WLAST      (  ),
+        .SLAVE30_WVALID     (  ),
+        .SLAVE31_WLAST      (  ),
+        .SLAVE31_WVALID     (  ),
+        .SLAVE24_BREADY     (  ),
+        .SLAVE25_BREADY     (  ),
+        .SLAVE26_BREADY     (  ),
+        .SLAVE27_BREADY     (  ),
+        .SLAVE28_BREADY     (  ),
+        .SLAVE29_BREADY     (  ),
+        .SLAVE30_BREADY     (  ),
+        .SLAVE31_BREADY     (  ),
+        .SLAVE24_ARVALID    (  ),
+        .SLAVE25_ARVALID    (  ),
+        .SLAVE26_ARVALID    (  ),
+        .SLAVE27_ARVALID    (  ),
+        .SLAVE28_ARVALID    (  ),
+        .SLAVE29_ARVALID    (  ),
+        .SLAVE30_ARVALID    (  ),
+        .SLAVE31_ARVALID    (  ),
+        .SLAVE24_RREADY     (  ),
+        .SLAVE25_RREADY     (  ),
+        .SLAVE26_RREADY     (  ),
+        .SLAVE27_RREADY     (  ),
+        .SLAVE28_RREADY     (  ),
+        .SLAVE29_RREADY     (  ),
+        .SLAVE30_RREADY     (  ),
+        .SLAVE31_RREADY     (  ),
+        .MASTER0_BID        ( AXI4mmaster0_BID ),
+        .MASTER0_BRESP      ( AXI4mmaster0_BRESP ),
+        .MASTER0_BUSER      ( AXI4mmaster0_BUSER ),
+        .MASTER1_BID        (  ),
+        .MASTER1_BRESP      (  ),
+        .MASTER1_BUSER      (  ),
+        .MASTER2_BID        (  ),
+        .MASTER2_BRESP      (  ),
+        .MASTER2_BUSER      (  ),
+        .MASTER3_BID        (  ),
+        .MASTER3_BRESP      (  ),
+        .MASTER3_BUSER      (  ),
+        .MASTER4_BID        (  ),
+        .MASTER4_BRESP      (  ),
+        .MASTER4_BUSER      (  ),
+        .MASTER5_BID        (  ),
+        .MASTER5_BRESP      (  ),
+        .MASTER5_BUSER      (  ),
+        .MASTER6_BID        (  ),
+        .MASTER6_BRESP      (  ),
+        .MASTER6_BUSER      (  ),
+        .MASTER7_BID        (  ),
+        .MASTER7_BRESP      (  ),
+        .MASTER7_BUSER      (  ),
+        .MASTER8_BID        (  ),
+        .MASTER8_BRESP      (  ),
+        .MASTER8_BUSER      (  ),
+        .MASTER9_BID        (  ),
+        .MASTER9_BRESP      (  ),
+        .MASTER9_BUSER      (  ),
+        .MASTER10_BID       (  ),
+        .MASTER10_BRESP     (  ),
+        .MASTER10_BUSER     (  ),
+        .MASTER11_BID       (  ),
+        .MASTER11_BRESP     (  ),
+        .MASTER11_BUSER     (  ),
+        .MASTER12_BID       (  ),
+        .MASTER12_BRESP     (  ),
+        .MASTER12_BUSER     (  ),
+        .MASTER13_BID       (  ),
+        .MASTER13_BRESP     (  ),
+        .MASTER13_BUSER     (  ),
+        .MASTER14_BID       (  ),
+        .MASTER14_BRESP     (  ),
+        .MASTER14_BUSER     (  ),
+        .MASTER15_BID       (  ),
+        .MASTER15_BRESP     (  ),
+        .MASTER15_BUSER     (  ),
         .MASTER0_RID        ( AXI4mmaster0_RID ),
         .MASTER0_RDATA      ( AXI4mmaster0_RDATA ),
         .MASTER0_RRESP      ( AXI4mmaster0_RRESP ),
-        .MASTER0_RLAST      ( AXI4mmaster0_RLAST ),
         .MASTER0_RUSER      ( AXI4mmaster0_RUSER ),
-        .MASTER0_RVALID     ( AXI4mmaster0_RVALID ),
         .MASTER1_RID        (  ),
         .MASTER1_RDATA      (  ),
         .MASTER1_RRESP      (  ),
-        .MASTER1_RLAST      (  ),
         .MASTER1_RUSER      (  ),
-        .MASTER1_RVALID     (  ),
         .MASTER2_RID        (  ),
         .MASTER2_RDATA      (  ),
         .MASTER2_RRESP      (  ),
-        .MASTER2_RLAST      (  ),
         .MASTER2_RUSER      (  ),
-        .MASTER2_RVALID     (  ),
         .MASTER3_RID        (  ),
         .MASTER3_RDATA      (  ),
         .MASTER3_RRESP      (  ),
-        .MASTER3_RLAST      (  ),
         .MASTER3_RUSER      (  ),
-        .MASTER3_RVALID     (  ),
         .MASTER4_RID        (  ),
         .MASTER4_RDATA      (  ),
         .MASTER4_RRESP      (  ),
-        .MASTER4_RLAST      (  ),
         .MASTER4_RUSER      (  ),
-        .MASTER4_RVALID     (  ),
         .MASTER5_RID        (  ),
         .MASTER5_RDATA      (  ),
         .MASTER5_RRESP      (  ),
-        .MASTER5_RLAST      (  ),
         .MASTER5_RUSER      (  ),
-        .MASTER5_RVALID     (  ),
         .MASTER6_RID        (  ),
         .MASTER6_RDATA      (  ),
         .MASTER6_RRESP      (  ),
-        .MASTER6_RLAST      (  ),
         .MASTER6_RUSER      (  ),
-        .MASTER6_RVALID     (  ),
         .MASTER7_RID        (  ),
         .MASTER7_RDATA      (  ),
         .MASTER7_RRESP      (  ),
-        .MASTER7_RLAST      (  ),
         .MASTER7_RUSER      (  ),
-        .MASTER7_RVALID     (  ),
         .MASTER8_RID        (  ),
         .MASTER8_RDATA      (  ),
         .MASTER8_RRESP      (  ),
-        .MASTER8_RLAST      (  ),
         .MASTER8_RUSER      (  ),
-        .MASTER8_RVALID     (  ),
         .MASTER9_RID        (  ),
         .MASTER9_RDATA      (  ),
         .MASTER9_RRESP      (  ),
-        .MASTER9_RLAST      (  ),
         .MASTER9_RUSER      (  ),
-        .MASTER9_RVALID     (  ),
         .MASTER10_RID       (  ),
         .MASTER10_RDATA     (  ),
         .MASTER10_RRESP     (  ),
-        .MASTER10_RLAST     (  ),
         .MASTER10_RUSER     (  ),
-        .MASTER10_RVALID    (  ),
         .MASTER11_RID       (  ),
         .MASTER11_RDATA     (  ),
         .MASTER11_RRESP     (  ),
-        .MASTER11_RLAST     (  ),
         .MASTER11_RUSER     (  ),
-        .MASTER11_RVALID    (  ),
         .MASTER12_RID       (  ),
         .MASTER12_RDATA     (  ),
         .MASTER12_RRESP     (  ),
-        .MASTER12_RLAST     (  ),
         .MASTER12_RUSER     (  ),
-        .MASTER12_RVALID    (  ),
         .MASTER13_RID       (  ),
         .MASTER13_RDATA     (  ),
         .MASTER13_RRESP     (  ),
-        .MASTER13_RLAST     (  ),
         .MASTER13_RUSER     (  ),
-        .MASTER13_RVALID    (  ),
         .MASTER14_RID       (  ),
         .MASTER14_RDATA     (  ),
         .MASTER14_RRESP     (  ),
-        .MASTER14_RLAST     (  ),
         .MASTER14_RUSER     (  ),
-        .MASTER14_RVALID    (  ),
         .MASTER15_RID       (  ),
         .MASTER15_RDATA     (  ),
         .MASTER15_RRESP     (  ),
-        .MASTER15_RLAST     (  ),
         .MASTER15_RUSER     (  ),
-        .MASTER15_RVALID    (  ),
         .SLAVE0_AWID        ( AXI4mslave0_AWID ),
         .SLAVE0_AWADDR      ( AXI4mslave0_AWADDR ),
         .SLAVE0_AWLEN       ( AXI4mslave0_AWLEN ),
@@ -5824,7 +6048,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE0_AWREGION    ( AXI4mslave0_AWREGION ),
         .SLAVE0_AWQOS       ( AXI4mslave0_AWQOS ),
         .SLAVE0_AWUSER      ( AXI4mslave0_AWUSER ),
-        .SLAVE0_AWVALID     ( AXI4mslave0_AWVALID ),
         .SLAVE1_AWID        (  ),
         .SLAVE1_AWADDR      (  ),
         .SLAVE1_AWLEN       (  ),
@@ -5836,7 +6059,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE1_AWREGION    (  ),
         .SLAVE1_AWQOS       (  ),
         .SLAVE1_AWUSER      (  ),
-        .SLAVE1_AWVALID     (  ),
         .SLAVE2_AWID        (  ),
         .SLAVE2_AWADDR      (  ),
         .SLAVE2_AWLEN       (  ),
@@ -5848,7 +6070,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE2_AWREGION    (  ),
         .SLAVE2_AWQOS       (  ),
         .SLAVE2_AWUSER      (  ),
-        .SLAVE2_AWVALID     (  ),
         .SLAVE3_AWID        (  ),
         .SLAVE3_AWADDR      (  ),
         .SLAVE3_AWLEN       (  ),
@@ -5860,7 +6081,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE3_AWREGION    (  ),
         .SLAVE3_AWQOS       (  ),
         .SLAVE3_AWUSER      (  ),
-        .SLAVE3_AWVALID     (  ),
         .SLAVE4_AWID        (  ),
         .SLAVE4_AWADDR      (  ),
         .SLAVE4_AWLEN       (  ),
@@ -5872,7 +6092,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE4_AWREGION    (  ),
         .SLAVE4_AWQOS       (  ),
         .SLAVE4_AWUSER      (  ),
-        .SLAVE4_AWVALID     (  ),
         .SLAVE5_AWID        (  ),
         .SLAVE5_AWADDR      (  ),
         .SLAVE5_AWLEN       (  ),
@@ -5884,7 +6103,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE5_AWREGION    (  ),
         .SLAVE5_AWQOS       (  ),
         .SLAVE5_AWUSER      (  ),
-        .SLAVE5_AWVALID     (  ),
         .SLAVE6_AWID        (  ),
         .SLAVE6_AWADDR      (  ),
         .SLAVE6_AWLEN       (  ),
@@ -5896,7 +6114,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE6_AWREGION    (  ),
         .SLAVE6_AWQOS       (  ),
         .SLAVE6_AWUSER      (  ),
-        .SLAVE6_AWVALID     (  ),
         .SLAVE7_AWID        (  ),
         .SLAVE7_AWADDR      (  ),
         .SLAVE7_AWLEN       (  ),
@@ -5908,63 +6125,38 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE7_AWREGION    (  ),
         .SLAVE7_AWQOS       (  ),
         .SLAVE7_AWUSER      (  ),
-        .SLAVE7_AWVALID     (  ),
         .SLAVE0_WID         (  ),
         .SLAVE0_WDATA       ( AXI4mslave0_WDATA ),
         .SLAVE0_WSTRB       ( AXI4mslave0_WSTRB ),
-        .SLAVE0_WLAST       ( AXI4mslave0_WLAST ),
         .SLAVE0_WUSER       ( AXI4mslave0_WUSER ),
-        .SLAVE0_WVALID      ( AXI4mslave0_WVALID ),
         .SLAVE1_WID         (  ),
         .SLAVE1_WDATA       (  ),
         .SLAVE1_WSTRB       (  ),
-        .SLAVE1_WLAST       (  ),
         .SLAVE1_WUSER       (  ),
-        .SLAVE1_WVALID      (  ),
         .SLAVE2_WID         (  ),
         .SLAVE2_WDATA       (  ),
         .SLAVE2_WSTRB       (  ),
-        .SLAVE2_WLAST       (  ),
         .SLAVE2_WUSER       (  ),
-        .SLAVE2_WVALID      (  ),
         .SLAVE3_WID         (  ),
         .SLAVE3_WDATA       (  ),
         .SLAVE3_WSTRB       (  ),
-        .SLAVE3_WLAST       (  ),
         .SLAVE3_WUSER       (  ),
-        .SLAVE3_WVALID      (  ),
         .SLAVE4_WID         (  ),
         .SLAVE4_WDATA       (  ),
         .SLAVE4_WSTRB       (  ),
-        .SLAVE4_WLAST       (  ),
         .SLAVE4_WUSER       (  ),
-        .SLAVE4_WVALID      (  ),
         .SLAVE5_WID         (  ),
         .SLAVE5_WDATA       (  ),
         .SLAVE5_WSTRB       (  ),
-        .SLAVE5_WLAST       (  ),
         .SLAVE5_WUSER       (  ),
-        .SLAVE5_WVALID      (  ),
         .SLAVE6_WID         (  ),
         .SLAVE6_WDATA       (  ),
         .SLAVE6_WSTRB       (  ),
-        .SLAVE6_WLAST       (  ),
         .SLAVE6_WUSER       (  ),
-        .SLAVE6_WVALID      (  ),
         .SLAVE7_WID         (  ),
         .SLAVE7_WDATA       (  ),
         .SLAVE7_WSTRB       (  ),
-        .SLAVE7_WLAST       (  ),
         .SLAVE7_WUSER       (  ),
-        .SLAVE7_WVALID      (  ),
-        .SLAVE0_BREADY      ( AXI4mslave0_BREADY ),
-        .SLAVE1_BREADY      (  ),
-        .SLAVE2_BREADY      (  ),
-        .SLAVE3_BREADY      (  ),
-        .SLAVE4_BREADY      (  ),
-        .SLAVE5_BREADY      (  ),
-        .SLAVE6_BREADY      (  ),
-        .SLAVE7_BREADY      (  ),
         .SLAVE0_ARID        ( AXI4mslave0_ARID ),
         .SLAVE0_ARADDR      ( AXI4mslave0_ARADDR ),
         .SLAVE0_ARLEN       ( AXI4mslave0_ARLEN ),
@@ -5976,7 +6168,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE0_ARREGION    ( AXI4mslave0_ARREGION ),
         .SLAVE0_ARQOS       ( AXI4mslave0_ARQOS ),
         .SLAVE0_ARUSER      ( AXI4mslave0_ARUSER ),
-        .SLAVE0_ARVALID     ( AXI4mslave0_ARVALID ),
         .SLAVE1_ARID        (  ),
         .SLAVE1_ARADDR      (  ),
         .SLAVE1_ARLEN       (  ),
@@ -5988,7 +6179,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE1_ARREGION    (  ),
         .SLAVE1_ARQOS       (  ),
         .SLAVE1_ARUSER      (  ),
-        .SLAVE1_ARVALID     (  ),
         .SLAVE2_ARID        (  ),
         .SLAVE2_ARADDR      (  ),
         .SLAVE2_ARLEN       (  ),
@@ -6000,7 +6190,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE2_ARREGION    (  ),
         .SLAVE2_ARQOS       (  ),
         .SLAVE2_ARUSER      (  ),
-        .SLAVE2_ARVALID     (  ),
         .SLAVE3_ARID        (  ),
         .SLAVE3_ARADDR      (  ),
         .SLAVE3_ARLEN       (  ),
@@ -6012,7 +6201,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE3_ARREGION    (  ),
         .SLAVE3_ARQOS       (  ),
         .SLAVE3_ARUSER      (  ),
-        .SLAVE3_ARVALID     (  ),
         .SLAVE4_ARID        (  ),
         .SLAVE4_ARADDR      (  ),
         .SLAVE4_ARLEN       (  ),
@@ -6024,7 +6212,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE4_ARREGION    (  ),
         .SLAVE4_ARQOS       (  ),
         .SLAVE4_ARUSER      (  ),
-        .SLAVE4_ARVALID     (  ),
         .SLAVE5_ARID        (  ),
         .SLAVE5_ARADDR      (  ),
         .SLAVE5_ARLEN       (  ),
@@ -6036,7 +6223,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE5_ARREGION    (  ),
         .SLAVE5_ARQOS       (  ),
         .SLAVE5_ARUSER      (  ),
-        .SLAVE5_ARVALID     (  ),
         .SLAVE6_ARID        (  ),
         .SLAVE6_ARADDR      (  ),
         .SLAVE6_ARLEN       (  ),
@@ -6048,7 +6234,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE6_ARREGION    (  ),
         .SLAVE6_ARQOS       (  ),
         .SLAVE6_ARUSER      (  ),
-        .SLAVE6_ARVALID     (  ),
         .SLAVE7_ARID        (  ),
         .SLAVE7_ARADDR      (  ),
         .SLAVE7_ARLEN       (  ),
@@ -6060,63 +6245,22 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE7_ARREGION    (  ),
         .SLAVE7_ARQOS       (  ),
         .SLAVE7_ARUSER      (  ),
-        .SLAVE7_ARVALID     (  ),
-        .SLAVE0_RREADY      ( AXI4mslave0_RREADY ),
-        .SLAVE1_RREADY      (  ),
-        .SLAVE2_RREADY      (  ),
-        .SLAVE3_RREADY      (  ),
-        .SLAVE4_RREADY      (  ),
-        .SLAVE5_RREADY      (  ),
-        .SLAVE6_RREADY      (  ),
-        .SLAVE7_RREADY      (  ),
         .MASTER0_HRDATA     (  ),
-        .MASTER0_HREADY     (  ),
-        .MASTER0_HRESP      (  ),
         .MASTER1_HRDATA     (  ),
-        .MASTER1_HREADY     (  ),
-        .MASTER1_HRESP      (  ),
         .MASTER2_HRDATA     (  ),
-        .MASTER2_HREADY     (  ),
-        .MASTER2_HRESP      (  ),
         .MASTER3_HRDATA     (  ),
-        .MASTER3_HREADY     (  ),
-        .MASTER3_HRESP      (  ),
         .MASTER4_HRDATA     (  ),
-        .MASTER4_HREADY     (  ),
-        .MASTER4_HRESP      (  ),
         .MASTER5_HRDATA     (  ),
-        .MASTER5_HREADY     (  ),
-        .MASTER5_HRESP      (  ),
         .MASTER6_HRDATA     (  ),
-        .MASTER6_HREADY     (  ),
-        .MASTER6_HRESP      (  ),
         .MASTER7_HRDATA     (  ),
-        .MASTER7_HREADY     (  ),
-        .MASTER7_HRESP      (  ),
         .MASTER8_HRDATA     (  ),
-        .MASTER8_HREADY     (  ),
-        .MASTER8_HRESP      (  ),
         .MASTER9_HRDATA     (  ),
-        .MASTER9_HREADY     (  ),
-        .MASTER9_HRESP      (  ),
         .MASTER10_HRDATA    (  ),
-        .MASTER10_HREADY    (  ),
-        .MASTER10_HRESP     (  ),
         .MASTER11_HRDATA    (  ),
-        .MASTER11_HREADY    (  ),
-        .MASTER11_HRESP     (  ),
         .MASTER12_HRDATA    (  ),
-        .MASTER12_HREADY    (  ),
-        .MASTER12_HRESP     (  ),
         .MASTER13_HRDATA    (  ),
-        .MASTER13_HREADY    (  ),
-        .MASTER13_HRESP     (  ),
         .MASTER14_HRDATA    (  ),
-        .MASTER14_HREADY    (  ),
-        .MASTER14_HRESP     (  ),
         .MASTER15_HRDATA    (  ),
-        .MASTER15_HREADY    (  ),
-        .MASTER15_HRESP     (  ),
         .SLAVE8_AWID        (  ),
         .SLAVE8_AWADDR      (  ),
         .SLAVE8_AWLEN       (  ),
@@ -6128,7 +6272,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE8_AWREGION    (  ),
         .SLAVE8_AWQOS       (  ),
         .SLAVE8_AWUSER      (  ),
-        .SLAVE8_AWVALID     (  ),
         .SLAVE9_AWID        (  ),
         .SLAVE9_AWADDR      (  ),
         .SLAVE9_AWLEN       (  ),
@@ -6140,7 +6283,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE9_AWREGION    (  ),
         .SLAVE9_AWQOS       (  ),
         .SLAVE9_AWUSER      (  ),
-        .SLAVE9_AWVALID     (  ),
         .SLAVE10_AWID       (  ),
         .SLAVE10_AWADDR     (  ),
         .SLAVE10_AWLEN      (  ),
@@ -6152,7 +6294,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE10_AWREGION   (  ),
         .SLAVE10_AWQOS      (  ),
         .SLAVE10_AWUSER     (  ),
-        .SLAVE10_AWVALID    (  ),
         .SLAVE11_AWID       (  ),
         .SLAVE11_AWADDR     (  ),
         .SLAVE11_AWLEN      (  ),
@@ -6164,7 +6305,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE11_AWREGION   (  ),
         .SLAVE11_AWQOS      (  ),
         .SLAVE11_AWUSER     (  ),
-        .SLAVE11_AWVALID    (  ),
         .SLAVE12_AWID       (  ),
         .SLAVE12_AWADDR     (  ),
         .SLAVE12_AWLEN      (  ),
@@ -6176,7 +6316,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE12_AWREGION   (  ),
         .SLAVE12_AWQOS      (  ),
         .SLAVE12_AWUSER     (  ),
-        .SLAVE12_AWVALID    (  ),
         .SLAVE13_AWID       (  ),
         .SLAVE13_AWADDR     (  ),
         .SLAVE13_AWLEN      (  ),
@@ -6188,7 +6327,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE13_AWREGION   (  ),
         .SLAVE13_AWQOS      (  ),
         .SLAVE13_AWUSER     (  ),
-        .SLAVE13_AWVALID    (  ),
         .SLAVE14_AWID       (  ),
         .SLAVE14_AWADDR     (  ),
         .SLAVE14_AWLEN      (  ),
@@ -6200,7 +6338,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE14_AWREGION   (  ),
         .SLAVE14_AWQOS      (  ),
         .SLAVE14_AWUSER     (  ),
-        .SLAVE14_AWVALID    (  ),
         .SLAVE15_AWID       (  ),
         .SLAVE15_AWADDR     (  ),
         .SLAVE15_AWLEN      (  ),
@@ -6212,63 +6349,38 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE15_AWREGION   (  ),
         .SLAVE15_AWQOS      (  ),
         .SLAVE15_AWUSER     (  ),
-        .SLAVE15_AWVALID    (  ),
         .SLAVE8_WID         (  ),
         .SLAVE8_WDATA       (  ),
         .SLAVE8_WSTRB       (  ),
-        .SLAVE8_WLAST       (  ),
         .SLAVE8_WUSER       (  ),
-        .SLAVE8_WVALID      (  ),
         .SLAVE9_WID         (  ),
         .SLAVE9_WDATA       (  ),
         .SLAVE9_WSTRB       (  ),
-        .SLAVE9_WLAST       (  ),
         .SLAVE9_WUSER       (  ),
-        .SLAVE9_WVALID      (  ),
         .SLAVE10_WID        (  ),
         .SLAVE10_WDATA      (  ),
         .SLAVE10_WSTRB      (  ),
-        .SLAVE10_WLAST      (  ),
         .SLAVE10_WUSER      (  ),
-        .SLAVE10_WVALID     (  ),
         .SLAVE11_WID        (  ),
         .SLAVE11_WDATA      (  ),
         .SLAVE11_WSTRB      (  ),
-        .SLAVE11_WLAST      (  ),
         .SLAVE11_WUSER      (  ),
-        .SLAVE11_WVALID     (  ),
         .SLAVE12_WID        (  ),
         .SLAVE12_WDATA      (  ),
         .SLAVE12_WSTRB      (  ),
-        .SLAVE12_WLAST      (  ),
         .SLAVE12_WUSER      (  ),
-        .SLAVE12_WVALID     (  ),
         .SLAVE13_WID        (  ),
         .SLAVE13_WDATA      (  ),
         .SLAVE13_WSTRB      (  ),
-        .SLAVE13_WLAST      (  ),
         .SLAVE13_WUSER      (  ),
-        .SLAVE13_WVALID     (  ),
         .SLAVE14_WID        (  ),
         .SLAVE14_WDATA      (  ),
         .SLAVE14_WSTRB      (  ),
-        .SLAVE14_WLAST      (  ),
         .SLAVE14_WUSER      (  ),
-        .SLAVE14_WVALID     (  ),
         .SLAVE15_WID        (  ),
         .SLAVE15_WDATA      (  ),
         .SLAVE15_WSTRB      (  ),
-        .SLAVE15_WLAST      (  ),
         .SLAVE15_WUSER      (  ),
-        .SLAVE15_WVALID     (  ),
-        .SLAVE8_BREADY      (  ),
-        .SLAVE9_BREADY      (  ),
-        .SLAVE10_BREADY     (  ),
-        .SLAVE11_BREADY     (  ),
-        .SLAVE12_BREADY     (  ),
-        .SLAVE13_BREADY     (  ),
-        .SLAVE14_BREADY     (  ),
-        .SLAVE15_BREADY     (  ),
         .SLAVE8_ARID        (  ),
         .SLAVE8_ARADDR      (  ),
         .SLAVE8_ARLEN       (  ),
@@ -6280,7 +6392,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE8_ARREGION    (  ),
         .SLAVE8_ARQOS       (  ),
         .SLAVE8_ARUSER      (  ),
-        .SLAVE8_ARVALID     (  ),
         .SLAVE9_ARID        (  ),
         .SLAVE9_ARADDR      (  ),
         .SLAVE9_ARLEN       (  ),
@@ -6292,7 +6403,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE9_ARREGION    (  ),
         .SLAVE9_ARQOS       (  ),
         .SLAVE9_ARUSER      (  ),
-        .SLAVE9_ARVALID     (  ),
         .SLAVE10_ARID       (  ),
         .SLAVE10_ARADDR     (  ),
         .SLAVE10_ARLEN      (  ),
@@ -6304,7 +6414,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE10_ARREGION   (  ),
         .SLAVE10_ARQOS      (  ),
         .SLAVE10_ARUSER     (  ),
-        .SLAVE10_ARVALID    (  ),
         .SLAVE11_ARID       (  ),
         .SLAVE11_ARADDR     (  ),
         .SLAVE11_ARLEN      (  ),
@@ -6316,7 +6425,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE11_ARREGION   (  ),
         .SLAVE11_ARQOS      (  ),
         .SLAVE11_ARUSER     (  ),
-        .SLAVE11_ARVALID    (  ),
         .SLAVE12_ARID       (  ),
         .SLAVE12_ARADDR     (  ),
         .SLAVE12_ARLEN      (  ),
@@ -6328,7 +6436,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE12_ARREGION   (  ),
         .SLAVE12_ARQOS      (  ),
         .SLAVE12_ARUSER     (  ),
-        .SLAVE12_ARVALID    (  ),
         .SLAVE13_ARID       (  ),
         .SLAVE13_ARADDR     (  ),
         .SLAVE13_ARLEN      (  ),
@@ -6340,7 +6447,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE13_ARREGION   (  ),
         .SLAVE13_ARQOS      (  ),
         .SLAVE13_ARUSER     (  ),
-        .SLAVE13_ARVALID    (  ),
         .SLAVE14_ARID       (  ),
         .SLAVE14_ARADDR     (  ),
         .SLAVE14_ARLEN      (  ),
@@ -6352,7 +6458,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE14_ARREGION   (  ),
         .SLAVE14_ARQOS      (  ),
         .SLAVE14_ARUSER     (  ),
-        .SLAVE14_ARVALID    (  ),
         .SLAVE15_ARID       (  ),
         .SLAVE15_ARADDR     (  ),
         .SLAVE15_ARLEN      (  ),
@@ -6364,15 +6469,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE15_ARREGION   (  ),
         .SLAVE15_ARQOS      (  ),
         .SLAVE15_ARUSER     (  ),
-        .SLAVE15_ARVALID    (  ),
-        .SLAVE8_RREADY      (  ),
-        .SLAVE9_RREADY      (  ),
-        .SLAVE10_RREADY     (  ),
-        .SLAVE11_RREADY     (  ),
-        .SLAVE12_RREADY     (  ),
-        .SLAVE13_RREADY     (  ),
-        .SLAVE14_RREADY     (  ),
-        .SLAVE15_RREADY     (  ),
         .SLAVE16_AWID       (  ),
         .SLAVE16_AWADDR     (  ),
         .SLAVE16_AWLEN      (  ),
@@ -6384,7 +6480,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE16_AWREGION   (  ),
         .SLAVE16_AWQOS      (  ),
         .SLAVE16_AWUSER     (  ),
-        .SLAVE16_AWVALID    (  ),
         .SLAVE17_AWID       (  ),
         .SLAVE17_AWADDR     (  ),
         .SLAVE17_AWLEN      (  ),
@@ -6396,7 +6491,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE17_AWREGION   (  ),
         .SLAVE17_AWQOS      (  ),
         .SLAVE17_AWUSER     (  ),
-        .SLAVE17_AWVALID    (  ),
         .SLAVE18_AWID       (  ),
         .SLAVE18_AWADDR     (  ),
         .SLAVE18_AWLEN      (  ),
@@ -6408,7 +6502,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE18_AWREGION   (  ),
         .SLAVE18_AWQOS      (  ),
         .SLAVE18_AWUSER     (  ),
-        .SLAVE18_AWVALID    (  ),
         .SLAVE19_AWID       (  ),
         .SLAVE19_AWADDR     (  ),
         .SLAVE19_AWLEN      (  ),
@@ -6420,7 +6513,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE19_AWREGION   (  ),
         .SLAVE19_AWQOS      (  ),
         .SLAVE19_AWUSER     (  ),
-        .SLAVE19_AWVALID    (  ),
         .SLAVE20_AWID       (  ),
         .SLAVE20_AWADDR     (  ),
         .SLAVE20_AWLEN      (  ),
@@ -6432,7 +6524,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE20_AWREGION   (  ),
         .SLAVE20_AWQOS      (  ),
         .SLAVE20_AWUSER     (  ),
-        .SLAVE20_AWVALID    (  ),
         .SLAVE21_AWID       (  ),
         .SLAVE21_AWADDR     (  ),
         .SLAVE21_AWLEN      (  ),
@@ -6444,7 +6535,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE21_AWREGION   (  ),
         .SLAVE21_AWQOS      (  ),
         .SLAVE21_AWUSER     (  ),
-        .SLAVE21_AWVALID    (  ),
         .SLAVE22_AWID       (  ),
         .SLAVE22_AWADDR     (  ),
         .SLAVE22_AWLEN      (  ),
@@ -6456,7 +6546,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE22_AWREGION   (  ),
         .SLAVE22_AWQOS      (  ),
         .SLAVE22_AWUSER     (  ),
-        .SLAVE22_AWVALID    (  ),
         .SLAVE23_AWID       (  ),
         .SLAVE23_AWADDR     (  ),
         .SLAVE23_AWLEN      (  ),
@@ -6468,63 +6557,38 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE23_AWREGION   (  ),
         .SLAVE23_AWQOS      (  ),
         .SLAVE23_AWUSER     (  ),
-        .SLAVE23_AWVALID    (  ),
         .SLAVE16_WID        (  ),
         .SLAVE16_WDATA      (  ),
         .SLAVE16_WSTRB      (  ),
-        .SLAVE16_WLAST      (  ),
         .SLAVE16_WUSER      (  ),
-        .SLAVE16_WVALID     (  ),
         .SLAVE17_WID        (  ),
         .SLAVE17_WDATA      (  ),
         .SLAVE17_WSTRB      (  ),
-        .SLAVE17_WLAST      (  ),
         .SLAVE17_WUSER      (  ),
-        .SLAVE17_WVALID     (  ),
         .SLAVE18_WID        (  ),
         .SLAVE18_WDATA      (  ),
         .SLAVE18_WSTRB      (  ),
-        .SLAVE18_WLAST      (  ),
         .SLAVE18_WUSER      (  ),
-        .SLAVE18_WVALID     (  ),
         .SLAVE19_WID        (  ),
         .SLAVE19_WDATA      (  ),
         .SLAVE19_WSTRB      (  ),
-        .SLAVE19_WLAST      (  ),
         .SLAVE19_WUSER      (  ),
-        .SLAVE19_WVALID     (  ),
         .SLAVE20_WID        (  ),
         .SLAVE20_WDATA      (  ),
         .SLAVE20_WSTRB      (  ),
-        .SLAVE20_WLAST      (  ),
         .SLAVE20_WUSER      (  ),
-        .SLAVE20_WVALID     (  ),
         .SLAVE21_WID        (  ),
         .SLAVE21_WDATA      (  ),
         .SLAVE21_WSTRB      (  ),
-        .SLAVE21_WLAST      (  ),
         .SLAVE21_WUSER      (  ),
-        .SLAVE21_WVALID     (  ),
         .SLAVE22_WID        (  ),
         .SLAVE22_WDATA      (  ),
         .SLAVE22_WSTRB      (  ),
-        .SLAVE22_WLAST      (  ),
         .SLAVE22_WUSER      (  ),
-        .SLAVE22_WVALID     (  ),
         .SLAVE23_WID        (  ),
         .SLAVE23_WDATA      (  ),
         .SLAVE23_WSTRB      (  ),
-        .SLAVE23_WLAST      (  ),
         .SLAVE23_WUSER      (  ),
-        .SLAVE23_WVALID     (  ),
-        .SLAVE16_BREADY     (  ),
-        .SLAVE17_BREADY     (  ),
-        .SLAVE18_BREADY     (  ),
-        .SLAVE19_BREADY     (  ),
-        .SLAVE20_BREADY     (  ),
-        .SLAVE21_BREADY     (  ),
-        .SLAVE22_BREADY     (  ),
-        .SLAVE23_BREADY     (  ),
         .SLAVE16_ARID       (  ),
         .SLAVE16_ARADDR     (  ),
         .SLAVE16_ARLEN      (  ),
@@ -6536,7 +6600,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE16_ARREGION   (  ),
         .SLAVE16_ARQOS      (  ),
         .SLAVE16_ARUSER     (  ),
-        .SLAVE16_ARVALID    (  ),
         .SLAVE17_ARID       (  ),
         .SLAVE17_ARADDR     (  ),
         .SLAVE17_ARLEN      (  ),
@@ -6548,7 +6611,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE17_ARREGION   (  ),
         .SLAVE17_ARQOS      (  ),
         .SLAVE17_ARUSER     (  ),
-        .SLAVE17_ARVALID    (  ),
         .SLAVE18_ARID       (  ),
         .SLAVE18_ARADDR     (  ),
         .SLAVE18_ARLEN      (  ),
@@ -6560,7 +6622,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE18_ARREGION   (  ),
         .SLAVE18_ARQOS      (  ),
         .SLAVE18_ARUSER     (  ),
-        .SLAVE18_ARVALID    (  ),
         .SLAVE19_ARID       (  ),
         .SLAVE19_ARADDR     (  ),
         .SLAVE19_ARLEN      (  ),
@@ -6572,7 +6633,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE19_ARREGION   (  ),
         .SLAVE19_ARQOS      (  ),
         .SLAVE19_ARUSER     (  ),
-        .SLAVE19_ARVALID    (  ),
         .SLAVE20_ARID       (  ),
         .SLAVE20_ARADDR     (  ),
         .SLAVE20_ARLEN      (  ),
@@ -6584,7 +6644,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE20_ARREGION   (  ),
         .SLAVE20_ARQOS      (  ),
         .SLAVE20_ARUSER     (  ),
-        .SLAVE20_ARVALID    (  ),
         .SLAVE21_ARID       (  ),
         .SLAVE21_ARADDR     (  ),
         .SLAVE21_ARLEN      (  ),
@@ -6596,7 +6655,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE21_ARREGION   (  ),
         .SLAVE21_ARQOS      (  ),
         .SLAVE21_ARUSER     (  ),
-        .SLAVE21_ARVALID    (  ),
         .SLAVE22_ARID       (  ),
         .SLAVE22_ARADDR     (  ),
         .SLAVE22_ARLEN      (  ),
@@ -6608,7 +6666,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE22_ARREGION   (  ),
         .SLAVE22_ARQOS      (  ),
         .SLAVE22_ARUSER     (  ),
-        .SLAVE22_ARVALID    (  ),
         .SLAVE23_ARID       (  ),
         .SLAVE23_ARADDR     (  ),
         .SLAVE23_ARLEN      (  ),
@@ -6620,15 +6677,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE23_ARREGION   (  ),
         .SLAVE23_ARQOS      (  ),
         .SLAVE23_ARUSER     (  ),
-        .SLAVE23_ARVALID    (  ),
-        .SLAVE16_RREADY     (  ),
-        .SLAVE17_RREADY     (  ),
-        .SLAVE18_RREADY     (  ),
-        .SLAVE19_RREADY     (  ),
-        .SLAVE20_RREADY     (  ),
-        .SLAVE21_RREADY     (  ),
-        .SLAVE22_RREADY     (  ),
-        .SLAVE23_RREADY     (  ),
         .SLAVE24_AWID       (  ),
         .SLAVE24_AWADDR     (  ),
         .SLAVE24_AWLEN      (  ),
@@ -6640,7 +6688,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE24_AWREGION   (  ),
         .SLAVE24_AWQOS      (  ),
         .SLAVE24_AWUSER     (  ),
-        .SLAVE24_AWVALID    (  ),
         .SLAVE25_AWID       (  ),
         .SLAVE25_AWADDR     (  ),
         .SLAVE25_AWLEN      (  ),
@@ -6652,7 +6699,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE25_AWREGION   (  ),
         .SLAVE25_AWQOS      (  ),
         .SLAVE25_AWUSER     (  ),
-        .SLAVE25_AWVALID    (  ),
         .SLAVE26_AWID       (  ),
         .SLAVE26_AWADDR     (  ),
         .SLAVE26_AWLEN      (  ),
@@ -6664,7 +6710,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE26_AWREGION   (  ),
         .SLAVE26_AWQOS      (  ),
         .SLAVE26_AWUSER     (  ),
-        .SLAVE26_AWVALID    (  ),
         .SLAVE27_AWID       (  ),
         .SLAVE27_AWADDR     (  ),
         .SLAVE27_AWLEN      (  ),
@@ -6676,7 +6721,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE27_AWREGION   (  ),
         .SLAVE27_AWQOS      (  ),
         .SLAVE27_AWUSER     (  ),
-        .SLAVE27_AWVALID    (  ),
         .SLAVE28_AWID       (  ),
         .SLAVE28_AWADDR     (  ),
         .SLAVE28_AWLEN      (  ),
@@ -6688,7 +6732,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE28_AWREGION   (  ),
         .SLAVE28_AWQOS      (  ),
         .SLAVE28_AWUSER     (  ),
-        .SLAVE28_AWVALID    (  ),
         .SLAVE29_AWID       (  ),
         .SLAVE29_AWADDR     (  ),
         .SLAVE29_AWLEN      (  ),
@@ -6700,7 +6743,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE29_AWREGION   (  ),
         .SLAVE29_AWQOS      (  ),
         .SLAVE29_AWUSER     (  ),
-        .SLAVE29_AWVALID    (  ),
         .SLAVE30_AWID       (  ),
         .SLAVE30_AWADDR     (  ),
         .SLAVE30_AWLEN      (  ),
@@ -6712,7 +6754,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE30_AWREGION   (  ),
         .SLAVE30_AWQOS      (  ),
         .SLAVE30_AWUSER     (  ),
-        .SLAVE30_AWVALID    (  ),
         .SLAVE31_AWID       (  ),
         .SLAVE31_AWADDR     (  ),
         .SLAVE31_AWLEN      (  ),
@@ -6724,63 +6765,38 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE31_AWREGION   (  ),
         .SLAVE31_AWQOS      (  ),
         .SLAVE31_AWUSER     (  ),
-        .SLAVE31_AWVALID    (  ),
         .SLAVE24_WID        (  ),
         .SLAVE24_WDATA      (  ),
         .SLAVE24_WSTRB      (  ),
-        .SLAVE24_WLAST      (  ),
         .SLAVE24_WUSER      (  ),
-        .SLAVE24_WVALID     (  ),
         .SLAVE25_WID        (  ),
         .SLAVE25_WDATA      (  ),
         .SLAVE25_WSTRB      (  ),
-        .SLAVE25_WLAST      (  ),
         .SLAVE25_WUSER      (  ),
-        .SLAVE25_WVALID     (  ),
         .SLAVE26_WID        (  ),
         .SLAVE26_WDATA      (  ),
         .SLAVE26_WSTRB      (  ),
-        .SLAVE26_WLAST      (  ),
         .SLAVE26_WUSER      (  ),
-        .SLAVE26_WVALID     (  ),
         .SLAVE27_WID        (  ),
         .SLAVE27_WDATA      (  ),
         .SLAVE27_WSTRB      (  ),
-        .SLAVE27_WLAST      (  ),
         .SLAVE27_WUSER      (  ),
-        .SLAVE27_WVALID     (  ),
         .SLAVE28_WID        (  ),
         .SLAVE28_WDATA      (  ),
         .SLAVE28_WSTRB      (  ),
-        .SLAVE28_WLAST      (  ),
         .SLAVE28_WUSER      (  ),
-        .SLAVE28_WVALID     (  ),
         .SLAVE29_WID        (  ),
         .SLAVE29_WDATA      (  ),
         .SLAVE29_WSTRB      (  ),
-        .SLAVE29_WLAST      (  ),
         .SLAVE29_WUSER      (  ),
-        .SLAVE29_WVALID     (  ),
         .SLAVE30_WID        (  ),
         .SLAVE30_WDATA      (  ),
         .SLAVE30_WSTRB      (  ),
-        .SLAVE30_WLAST      (  ),
         .SLAVE30_WUSER      (  ),
-        .SLAVE30_WVALID     (  ),
         .SLAVE31_WID        (  ),
         .SLAVE31_WDATA      (  ),
         .SLAVE31_WSTRB      (  ),
-        .SLAVE31_WLAST      (  ),
         .SLAVE31_WUSER      (  ),
-        .SLAVE31_WVALID     (  ),
-        .SLAVE24_BREADY     (  ),
-        .SLAVE25_BREADY     (  ),
-        .SLAVE26_BREADY     (  ),
-        .SLAVE27_BREADY     (  ),
-        .SLAVE28_BREADY     (  ),
-        .SLAVE29_BREADY     (  ),
-        .SLAVE30_BREADY     (  ),
-        .SLAVE31_BREADY     (  ),
         .SLAVE24_ARID       (  ),
         .SLAVE24_ARADDR     (  ),
         .SLAVE24_ARLEN      (  ),
@@ -6792,7 +6808,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE24_ARREGION   (  ),
         .SLAVE24_ARQOS      (  ),
         .SLAVE24_ARUSER     (  ),
-        .SLAVE24_ARVALID    (  ),
         .SLAVE25_ARID       (  ),
         .SLAVE25_ARADDR     (  ),
         .SLAVE25_ARLEN      (  ),
@@ -6804,7 +6819,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE25_ARREGION   (  ),
         .SLAVE25_ARQOS      (  ),
         .SLAVE25_ARUSER     (  ),
-        .SLAVE25_ARVALID    (  ),
         .SLAVE26_ARID       (  ),
         .SLAVE26_ARADDR     (  ),
         .SLAVE26_ARLEN      (  ),
@@ -6816,7 +6830,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE26_ARREGION   (  ),
         .SLAVE26_ARQOS      (  ),
         .SLAVE26_ARUSER     (  ),
-        .SLAVE26_ARVALID    (  ),
         .SLAVE27_ARID       (  ),
         .SLAVE27_ARADDR     (  ),
         .SLAVE27_ARLEN      (  ),
@@ -6828,7 +6841,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE27_ARREGION   (  ),
         .SLAVE27_ARQOS      (  ),
         .SLAVE27_ARUSER     (  ),
-        .SLAVE27_ARVALID    (  ),
         .SLAVE28_ARID       (  ),
         .SLAVE28_ARADDR     (  ),
         .SLAVE28_ARLEN      (  ),
@@ -6840,7 +6852,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE28_ARREGION   (  ),
         .SLAVE28_ARQOS      (  ),
         .SLAVE28_ARUSER     (  ),
-        .SLAVE28_ARVALID    (  ),
         .SLAVE29_ARID       (  ),
         .SLAVE29_ARADDR     (  ),
         .SLAVE29_ARLEN      (  ),
@@ -6852,7 +6863,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE29_ARREGION   (  ),
         .SLAVE29_ARQOS      (  ),
         .SLAVE29_ARUSER     (  ),
-        .SLAVE29_ARVALID    (  ),
         .SLAVE30_ARID       (  ),
         .SLAVE30_ARADDR     (  ),
         .SLAVE30_ARLEN      (  ),
@@ -6864,7 +6874,6 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE30_ARREGION   (  ),
         .SLAVE30_ARQOS      (  ),
         .SLAVE30_ARUSER     (  ),
-        .SLAVE30_ARVALID    (  ),
         .SLAVE31_ARID       (  ),
         .SLAVE31_ARADDR     (  ),
         .SLAVE31_ARLEN      (  ),
@@ -6875,16 +6884,7 @@ COREAXI4INTERCONNECT_C0_0(
         .SLAVE31_ARPROT     (  ),
         .SLAVE31_ARREGION   (  ),
         .SLAVE31_ARQOS      (  ),
-        .SLAVE31_ARUSER     (  ),
-        .SLAVE31_ARVALID    (  ),
-        .SLAVE24_RREADY     (  ),
-        .SLAVE25_RREADY     (  ),
-        .SLAVE26_RREADY     (  ),
-        .SLAVE27_RREADY     (  ),
-        .SLAVE28_RREADY     (  ),
-        .SLAVE29_RREADY     (  ),
-        .SLAVE30_RREADY     (  ),
-        .SLAVE31_RREADY     (  ) 
+        .SLAVE31_ARUSER     (  ) 
         );
 
 

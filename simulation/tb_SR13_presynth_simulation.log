@@ -7,8 +7,16 @@
 # Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
 # vmap PolarFire C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/precompiled/vlog/polarfire 
 # Modifying modelsim.ini
+# INFO: Simulation library COREFIFO_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap COREFIFO_LIB COREFIFO_LIB 
+# Modifying modelsim.ini
+# INFO: Simulation library COREAXI4SRAM_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap COREAXI4SRAM_LIB COREAXI4SRAM_LIB 
+# Modifying modelsim.ini
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:43 on Dec 19,2023
+# Start time: 14:02:10 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/combine.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -16,10 +24,10 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity combine
 # -- Compiling architecture rtl of combine
-# End time: 13:50:43 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:10 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:43 on Dec 19,2023
+# Start time: 14:02:10 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/turn_on_writer_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -27,10 +35,10 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity turn_on_writer_block
 # -- Compiling architecture rtl of turn_on_writer_block
-# End time: 13:50:43 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:11 on Mar 15,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:43 on Dec 19,2023
+# Start time: 14:02:11 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/enable_block.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -38,20 +46,119 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity write_en
 # -- Compiling architecture rtl of write_en
-# End time: 13:50:43 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:11 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:43 on Dec 19,2023
+# Start time: 14:02:11 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tow_AND_entop/tow_AND_entop.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity tow_AND_entop
 # -- Compiling architecture RTL of tow_AND_entop
-# End time: 13:50:43 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:11 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:43 on Dec 19,2023
+# Start time: 14:02:11 on Mar 15,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package fifo_pkg
+# -- Compiling package body fifo_pkg
+# -- Loading package fifo_pkg
+# End time: 14:02:11 on Mar 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:02:11 on Mar 15,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/misc_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/misc_pkg.vhd(5): (vcom-1615) Existing package 'misc_pkg' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd(5) will be overwritten.
+# -- Compiling package misc_pkg
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/misc_pkg.vhd(15): (vcom-1615) Existing package body 'misc_pkg(body)' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd(15) will be overwritten.
+# -- Compiling package body misc_pkg
+# -- Loading package misc_pkg
+# End time: 14:02:11 on Mar 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:02:11 on Mar 15,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/XHDL_misc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/XHDL_misc.vhd(33): (vcom-1615) Existing package 'xhdl_misc' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd(33) will be overwritten.
+# -- Compiling package xhdl_misc
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/XHDL_misc.vhd(53): (vcom-1615) Existing package body 'xhdl_misc(body)' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd(53) will be overwritten.
+# -- Compiling package body xhdl_misc
+# -- Loading package xhdl_misc
+# End time: 14:02:11 on Mar 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:02:11 on Mar 15,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/XHDL_std_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/XHDL_std_logic.vhd(43): (vcom-1615) Existing package 'xhdl_std_logic' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd(43) will be overwritten.
+# -- Compiling package xhdl_std_logic
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/XHDL_std_logic.vhd(136): (vcom-1615) Existing package body 'xhdl_std_logic(body)' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd(136) will be overwritten.
+# -- Compiling package body xhdl_std_logic
+# -- Loading package xhdl_std_logic
+# End time: 14:02:11 on Mar 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:02:11 on Mar 15,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd(5): (vcom-1615) Existing package 'misc_pkg' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/misc_pkg.vhd(5) will be overwritten.
+# -- Compiling package misc_pkg
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd(15): (vcom-1615) Existing package body 'misc_pkg(body)' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/misc_pkg.vhd(15) will be overwritten.
+# -- Compiling package body misc_pkg
+# -- Loading package misc_pkg
+# End time: 14:02:11 on Mar 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:02:11 on Mar 15,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd(33): (vcom-1615) Existing package 'xhdl_misc' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/XHDL_misc.vhd(33) will be overwritten.
+# -- Compiling package xhdl_misc
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd(53): (vcom-1615) Existing package body 'xhdl_misc(body)' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/XHDL_misc.vhd(53) will be overwritten.
+# -- Compiling package body xhdl_misc
+# -- Loading package xhdl_misc
+# End time: 14:02:11 on Mar 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:02:11 on Mar 15,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd(43): (vcom-1615) Existing package 'xhdl_std_logic' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/XHDL_std_logic.vhd(43) will be overwritten.
+# -- Compiling package xhdl_std_logic
+# ** Warning: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd(136): (vcom-1615) Existing package body 'xhdl_std_logic(body)' at C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C1/COREAXI4SRAM_C1_0/rtl/vhdl/core/XHDL_std_logic.vhd(136) will be overwritten.
+# -- Compiling package body xhdl_std_logic
+# -- Loading package xhdl_std_logic
+# End time: 14:02:12 on Mar 15,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:02:12 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/CLK_GEN/1.0.1/CLK_GEN.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -59,30 +166,51 @@
 # -- Loading package std_logic_arith
 # -- Compiling entity CLK_GEN
 # -- Compiling architecture behave of CLK_GEN
-# End time: 13:50:43 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:12 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:43 on Dec 19,2023
+# Start time: 14:02:12 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/CLK_GEN_C0/CLK_GEN_C0.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CLK_GEN_C0
 # -- Compiling architecture RTL of CLK_GEN_C0
-# End time: 13:50:43 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:12 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:43 on Dec 19,2023
+# Start time: 14:02:12 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/CLK_GEN_C1/CLK_GEN_C1.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CLK_GEN_C1
 # -- Compiling architecture RTL of CLK_GEN_C1
-# End time: 13:50:43 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:12 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:43 on Dec 19,2023
+# Start time: 14:02:12 on Mar 15,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/PULSE_GEN/1.0.1/PULSE_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity PULSE_GEN
+# -- Compiling architecture behavior of PULSE_GEN
+# End time: 14:02:12 on Mar 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:02:12 on Mar 15,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PULSE_GEN_C4/PULSE_GEN_C4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PULSE_GEN_C4
+# -- Compiling architecture RTL of PULSE_GEN_C4
+# End time: 14:02:12 on Mar 15,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:02:12 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/RESET_GEN/1.0.1/RESET_GEN.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -90,20 +218,20 @@
 # -- Loading package std_logic_arith
 # -- Compiling entity RESET_GEN
 # -- Compiling architecture behavior of RESET_GEN
-# End time: 13:50:44 on Dec 19,2023, Elapsed time: 0:00:01
+# End time: 14:02:12 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:44 on Dec 19,2023
+# Start time: 14:02:12 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/RESET_GEN_C0/RESET_GEN_C0.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity RESET_GEN_C0
 # -- Compiling architecture RTL of RESET_GEN_C0
-# End time: 13:50:44 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:12 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:44 on Dec 19,2023
+# Start time: 14:02:12 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/SR13.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -112,10 +240,10 @@
 # -- Loading package NUMERIC_STD_UNSIGNED
 # -- Compiling entity RamWriter
 # -- Compiling architecture architecture_RamWriter of RamWriter
-# End time: 13:50:44 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:12 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:44 on Dec 19,2023
+# Start time: 14:02:12 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/32bit_counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -124,20 +252,20 @@
 # -- Loading package NUMERIC_STD_UNSIGNED
 # -- Compiling entity bit12_counter
 # -- Compiling architecture Behavioral of bit12_counter
-# End time: 13:50:44 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:12 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
-# Start time: 13:50:44 on Dec 19,2023
+# Start time: 14:02:13 on Mar 15,2024
 # vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_SR13/tb_SR13.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity tb_SR13
 # -- Compiling architecture RTL of tb_SR13
-# End time: 13:50:44 on Dec 19,2023, Elapsed time: 0:00:00
+# End time: 14:02:13 on Mar 15,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -L PolarFire -L presynth -t 1ps -pli "C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll" presynth.tb_SR13 
-# Start time: 13:50:44 on Dec 19,2023
+# vsim -L PolarFire -L presynth -L COREFIFO_LIB -L COREAXI4SRAM_LIB -t 1ps -pli "C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll" presynth.tb_SR13 
+# Start time: 14:02:13 on Mar 15,2024
 # //  ModelSim Microsemi Pro 2023.1 Jan 24 2023
 # //
 # //  Copyright 1991-2023 Mentor Graphics Corporation
@@ -162,23 +290,11 @@
 # Loading ieee.std_logic_arith(body)
 # Loading presynth.clk_gen(behave)
 # Loading presynth.clk_gen_c1(rtl)
+# Loading presynth.pulse_gen_c4(rtl)
+# Loading presynth.pulse_gen(behavior)
 # Loading presynth.ramwriter(architecture_ramwriter)
 # Loading presynth.reset_gen_c0(rtl)
 # Loading presynth.reset_gen(behavior)
 # Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
-add wave -position end  sim:/tb_sr13/RamWriter_0/value_in
-add wave -position end  sim:/tb_sr13/RamWriter_0/value_en
-add wave -position end  sim:/tb_sr13/RamWriter_0/turn_on_writer
-add wave -position end  sim:/tb_sr13/RamWriter_0/write_done
-add wave -position end  sim:/tb_sr13/RamWriter_0/ACLK
-add wave -position end  sim:/tb_sr13/RamWriter_0/ARESETN
-add wave -position end  sim:/tb_sr13/RamWriter_0/B_ADDR
-add wave -position end  sim:/tb_sr13/RamWriter_0/B_WEN
-add wave -position end  sim:/tb_sr13/RamWriter_0/B_DIN
-add wave -position end  sim:/tb_sr13/RamWriter_0/B_DOUT
-add wave -position end  sim:/tb_sr13/RamWriter_0/state
-restart
-# Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
-run
-# End time: 13:52:45 on Dec 19,2023, Elapsed time: 0:02:01
+# End time: 14:02:43 on Mar 15,2024, Elapsed time: 0:00:30
 # Errors: 0, Warnings: 0

@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- Created by SmartDesign Tue Dec 19 13:49:38 2023
+-- Created by SmartDesign Mon Mar 11 16:10:31 2024
 -- Version: 2023.2 2023.2.0.8
 ----------------------------------------------------------------------
 
@@ -60,6 +60,14 @@ component CLK_GEN_C1
         CLK : out std_logic
         );
 end component;
+-- PULSE_GEN_C4
+component PULSE_GEN_C4
+    -- Port list
+    port(
+        -- Outputs
+        PULSE : out std_logic
+        );
+end component;
 -- RamWriter
 component RamWriter
     -- Port list
@@ -95,6 +103,7 @@ signal B_WEN_net_0           : std_logic;
 signal bit12_counter_0_count : std_logic_vector(7 downto 0);
 signal CLK_GEN_C0_0_CLK      : std_logic;
 signal CLK_GEN_C1_0_CLK      : std_logic;
+signal PULSE_GEN_C4_0_PULSE  : std_logic;
 signal RESET_GEN_C0_0_RESET  : std_logic;
 signal write_done_net_0      : std_logic;
 signal B_WEN_net_1           : std_logic;
@@ -161,20 +170,26 @@ CLK_GEN_C1_0 : CLK_GEN_C1
         -- Outputs
         CLK => CLK_GEN_C1_0_CLK 
         );
+-- PULSE_GEN_C4_0
+PULSE_GEN_C4_0 : PULSE_GEN_C4
+    port map( 
+        -- Outputs
+        PULSE => PULSE_GEN_C4_0_PULSE 
+        );
 -- RamWriter_0
 RamWriter_0 : RamWriter
     port map( 
         -- Inputs
-        value_in       => value_in_net_0,
         value_en       => CLK_GEN_C1_0_CLK,
-        turn_on_writer => VCC_net,
+        turn_on_writer => PULSE_GEN_C4_0_PULSE,
         ACLK           => CLK_GEN_C0_0_CLK,
         ARESETN        => VCC_net,
+        value_in       => value_in_net_0,
         B_DIN          => B_DIN_const_net_0,
         -- Outputs
         write_done     => write_done_net_0,
-        B_ADDR         => B_ADDR_net_0,
         B_WEN          => B_WEN_net_0,
+        B_ADDR         => B_ADDR_net_0,
         B_DOUT         => B_DOUT_net_0 
         );
 -- RESET_GEN_C0_0

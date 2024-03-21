@@ -1,0 +1,11 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Tue Feb 20 14:39:37 2024
+Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
+Component :  tb_limited_counter_valid
+Family    :  PolarFire
+
+
+Stimulus files for all Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_limited_counter_valid/tb_limited_counter_valid.vhd
+

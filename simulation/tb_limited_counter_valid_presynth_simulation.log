@@ -1,0 +1,191 @@
+# Reading pref.tcl
+# do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap PolarFire C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/precompiled/vlog/polarfire 
+# Modifying modelsim.ini
+# INFO: Simulation library COREFIFO_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap COREFIFO_LIB COREFIFO_LIB 
+# Modifying modelsim.ini
+# INFO: Simulation library COREAXI4SRAM_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap COREAXI4SRAM_LIB COREAXI4SRAM_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:07 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/datapacker.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package NUMERIC_STD_UNSIGNED
+# -- Compiling entity data_packer
+# -- Compiling architecture Behavioral of data_packer
+# End time: 14:40:07 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:07 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package fifo_pkg
+# -- Compiling package body fifo_pkg
+# -- Loading package fifo_pkg
+# End time: 14:40:08 on Feb 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:08 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package misc_pkg
+# -- Compiling package body misc_pkg
+# -- Loading package misc_pkg
+# End time: 14:40:08 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:08 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package xhdl_misc
+# -- Compiling package body xhdl_misc
+# -- Loading package xhdl_misc
+# End time: 14:40:08 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:08 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package xhdl_std_logic
+# -- Compiling package body xhdl_std_logic
+# -- Loading package xhdl_std_logic
+# End time: 14:40:08 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:08 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/CLK_GEN/1.0.1/CLK_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity CLK_GEN
+# -- Compiling architecture behave of CLK_GEN
+# End time: 14:40:08 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:08 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/CLK_GEN_C0/CLK_GEN_C0.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CLK_GEN_C0
+# -- Compiling architecture RTL of CLK_GEN_C0
+# End time: 14:40:08 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:08 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/RESET_GEN/1.0.1/RESET_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity RESET_GEN
+# -- Compiling architecture behavior of RESET_GEN
+# End time: 14:40:08 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:08 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/RESET_GEN_C1/RESET_GEN_C1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RESET_GEN_C1
+# -- Compiling architecture RTL of RESET_GEN_C1
+# End time: 14:40:08 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:08 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/limited_counter_valid.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package NUMERIC_STD_UNSIGNED
+# -- Compiling entity limited_counter_valid
+# -- Compiling architecture Behavioral of limited_counter_valid
+# End time: 14:40:08 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 14:40:08 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_limited_counter_valid/tb_limited_counter_valid.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_limited_counter_valid
+# -- Compiling architecture RTL of tb_limited_counter_valid
+# End time: 14:40:09 on Feb 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -L PolarFire -L presynth -L COREFIFO_LIB -L COREAXI4SRAM_LIB -t 1ps -pli "C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll" presynth.tb_limited_counter_valid 
+# Start time: 14:40:09 on Feb 20,2024
+# //  ModelSim Microsemi Pro 2023.1 Jan 24 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim Microsemi Pro and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading presynth.tb_limited_counter_valid(rtl)
+# Loading presynth.clk_gen_c0(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading presynth.clk_gen(behave)
+# Loading ieee.numeric_std(body)
+# Loading ieee.numeric_std_unsigned(body)
+# Loading presynth.data_packer(behavioral)
+# Loading presynth.limited_counter_valid(behavioral)
+# Loading presynth.reset_gen_c1(rtl)
+# Loading presynth.reset_gen(behavior)
+# Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
+add wave -position end  sim:/tb_limited_counter_valid/limited_counter_valid_0/clk
+add wave -position end  sim:/tb_limited_counter_valid/limited_counter_valid_0/rst_N
+add wave -position end  sim:/tb_limited_counter_valid/limited_counter_valid_0/button
+add wave -position end  sim:/tb_limited_counter_valid/limited_counter_valid_0/en_val
+add wave -position end  sim:/tb_limited_counter_valid/limited_counter_valid_0/count
+add wave -position end  sim:/tb_limited_counter_valid/limited_counter_valid_0/counter
+add wave -position end  sim:/tb_limited_counter_valid/limited_counter_valid_0/switch
+add wave -position end  sim:/tb_limited_counter_valid/limited_counter_valid_0/current_state
+add wave -position end  sim:/tb_limited_counter_valid/data_packer_0/output_data
+add wave -position end  sim:/tb_limited_counter_valid/data_packer_0/address_out
+add wave -position end  sim:/tb_limited_counter_valid/data_packer_0/output_ready
+restart
+# Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
+run
+force -freeze sim:/tb_limited_counter_valid/limited_counter_valid_0/button 1 0 -cancel 11ns
+# ** Warning: (vsim-8780) Forcing /tb_limited_counter_valid/GND_net as root of /tb_limited_counter_valid/limited_counter_valid_0/button specified in the force.
+run
+# End time: 14:48:05 on Feb 20,2024, Elapsed time: 0:07:56
+# Errors: 0, Warnings: 1

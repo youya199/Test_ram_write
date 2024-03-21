@@ -1,12 +1,13 @@
 Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
 
-Date      :  Wed Feb  7 11:02:17 2024
+Date      :  Tue Feb 20 13:14:20 2024
 Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
 Component :  RESET_GEN_C1
 Family    :  PolarFire
 
 
 Stimulus files for all Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/RESET_GEN_C1/RESET_GEN_C1.vhd
     C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/RESET_GEN/1.0.1/RESET_GEN.vhd
     C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/RESET_GEN_C1/RESET_GEN_C1.vhd
 

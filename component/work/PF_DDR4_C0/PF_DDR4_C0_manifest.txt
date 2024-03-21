@@ -1,0 +1,20 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Wed Mar  6 15:19:00 2024
+Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
+Component :  PF_DDR4_C0
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_DDR4_C0/CCC_0/PF_DDR4_C0_CCC_0_PF_CCC.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_DDR4_C0/DDRCTRL_0/sdram_lb_defines_0.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_DDR4_C0/DDRCTRL_0/CoreDDRMemCtrlr_0.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_DDR4_C0/DLL_0/PF_DDR4_C0_DLL_0_PF_CCC.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/SgCore/PF_DDR_CFG_INIT/1.0.100/cfg_init.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_DDR4_C0/PF_DDR4_C0.v
+
+Constraint files:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_DDR4_C0\CCC_0\PF_DDR4_C0_CCC_0_PF_CCC.sdc
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_DDR4_C0\DLL_0\PF_DDR4_C0_DLL_0_PF_CCC.sdc
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_DDR4_C0\PF_DDR4_C0.sdc

@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- Created by SmartDesign Wed Feb  7 11:02:16 2024
+-- Created by SmartDesign Tue Feb 20 13:14:19 2024
 -- Version: 2023.2 2023.2.0.8
 ----------------------------------------------------------------------
 
@@ -11,7 +11,7 @@
 --# Part Number: MPF300TS-1FCG1152I
 --# Create and Configure the core component RESET_GEN_C1
 --create_and_configure_core -core_vlnv {Actel:Simulation:RESET_GEN:1.0.1} -component_name {RESET_GEN_C1} -params {\
---"DELAY:5"  \
+--"DELAY:0"  \
 --"LOGIC_LEVEL:0"   }
 --# Exporting Component Description of RESET_GEN_C1 to TCL done
 
@@ -43,7 +43,7 @@ architecture RTL of RESET_GEN_C1 is
 -- RESET_GEN   -   Actel:Simulation:RESET_GEN:1.0.1
 component RESET_GEN
     generic( 
-        DELAY       : integer := 5 ;
+        DELAY       : integer := 0 ;
         LOGIC_LEVEL : integer := 0 
         );
     -- Port list
@@ -70,7 +70,7 @@ begin
 -- RESET_GEN_C1_0   -   Actel:Simulation:RESET_GEN:1.0.1
 RESET_GEN_C1_0 : RESET_GEN
     generic map( 
-        DELAY       => ( 5 ),
+        DELAY       => ( 0 ),
         LOGIC_LEVEL => ( 0 )
         )
     port map( 

@@ -1,0 +1,11 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Mon Mar 11 13:57:18 2024
+Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
+Component :  tow_AND_entop
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tow_AND_entop/tow_AND_entop.vhd
+

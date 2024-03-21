@@ -1,6 +1,6 @@
 Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
 
-Date      :  Thu Feb  8 15:12:04 2024
+Date      :  Fri Feb 16 12:04:32 2024
 Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
 Component :  COREAXI4INTERCONNECT_C0
 Family    :  PolarFire

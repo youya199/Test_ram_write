@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Thu Feb  8 15:12:02 2024
+// Created by Microsemi SmartDesign Fri Feb 16 12:04:06 2024
 // Parameters for COREAXI4INTERCONNECT
 //--------------------------------------------------------------------
 
@@ -7,7 +7,7 @@
 parameter ADDR_WIDTH = 32;
 parameter CROSSBAR_MODE = 0;
 parameter DATA_WIDTH = 64;
-parameter DWC_ADDR_FIFO_DEPTH_CEILING = 10;
+parameter DWC_ADDR_FIFO_DEPTH_CEILING = 4;
 parameter FAMILY = 19;
 parameter ID_WIDTH = 1;
 parameter MASTER0_CHAN_RS = 1;
@@ -15,7 +15,7 @@ parameter MASTER0_CLOCK_DOMAIN_CROSSING = 0;
 parameter MASTER0_DATA_WIDTH = 64;
 parameter MASTER0_DWC_DATA_FIFO_DEPTH = 16;
 parameter MASTER0_READ_INTERLEAVE = 0;
-parameter MASTER0_READ_SLAVE0 = 1;
+parameter MASTER0_READ_SLAVE0 = 0;
 parameter MASTER0_READ_SLAVE1 = 1;
 parameter MASTER0_READ_SLAVE2 = 1;
 parameter MASTER0_READ_SLAVE3 = 1;
@@ -82,7 +82,7 @@ parameter MASTER0_WRITE_SLAVE30 = 1;
 parameter MASTER0_WRITE_SLAVE31 = 1;
 parameter MASTER1_CHAN_RS = 1;
 parameter MASTER1_CLOCK_DOMAIN_CROSSING = 0;
-parameter MASTER1_DATA_WIDTH = 64;
+parameter MASTER1_DATA_WIDTH = 32;
 parameter MASTER1_DWC_DATA_FIFO_DEPTH = 16;
 parameter MASTER1_READ_INTERLEAVE = 0;
 parameter MASTER1_READ_SLAVE0 = 1;
@@ -118,7 +118,7 @@ parameter MASTER1_READ_SLAVE29 = 1;
 parameter MASTER1_READ_SLAVE30 = 1;
 parameter MASTER1_READ_SLAVE31 = 1;
 parameter MASTER1_TYPE = 0;
-parameter MASTER1_WRITE_SLAVE0 = 1;
+parameter MASTER1_WRITE_SLAVE0 = 0;
 parameter MASTER1_WRITE_SLAVE1 = 1;
 parameter MASTER1_WRITE_SLAVE2 = 1;
 parameter MASTER1_WRITE_SLAVE3 = 1;
@@ -1134,7 +1134,7 @@ parameter NUM_MASTERS = 1;
 parameter NUM_MASTERS_WIDTH = 1;
 parameter NUM_SLAVES = 1;
 parameter NUM_THREADS = 1;
-parameter OPEN_TRANS_MAX = 2;
+parameter OPEN_TRANS_MAX = 1;
 parameter OPTIMIZATION = 3;
 parameter RD_ARB_EN = 1;
 parameter SLAVE0_CHAN_RS = 1;
@@ -1457,7 +1457,7 @@ parameter SLAVE31_READ_INTERLEAVE = 0;
 parameter SLAVE31_START_ADDR = 'h93900000;
 parameter SLAVE31_START_ADDR_UPPER = 'h0;
 parameter SLAVE31_TYPE = 0;
-parameter SLV_AXI4PRT_ADDRDEPTH = 4;
-parameter SLV_AXI4PRT_DATADEPTH = 4;
+parameter SLV_AXI4PRT_ADDRDEPTH = 2;
+parameter SLV_AXI4PRT_DATADEPTH = 2;
 parameter TGIGEN_DISPLAY_SYMBOL = 1;
 parameter USER_WIDTH = 1;

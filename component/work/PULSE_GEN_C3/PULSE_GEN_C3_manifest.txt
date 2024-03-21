@@ -1,0 +1,12 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Fri Feb 16 13:03:10 2024
+Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
+Component :  PULSE_GEN_C3
+Family    :  PolarFire
+
+
+Stimulus files for all Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PULSE_GEN_C3/PULSE_GEN_C3.vhd
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/PULSE_GEN/1.0.1/PULSE_GEN.vhd
+

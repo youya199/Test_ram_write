@@ -1,0 +1,11 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Fri Feb 16 13:36:22 2024
+Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
+Component :  tb_clk_giving
+Family    :  PolarFire
+
+
+Stimulus files for all Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_clk_giving/tb_clk_giving.vhd
+

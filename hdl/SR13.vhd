@@ -87,7 +87,7 @@ begin
                         --end if;
                         B_ADDR <= curr_address(17 downto 0);
                         B_WEN <= '1';
-                        if (curr_address = X"3FFFF") then
+                        if (curr_address = X"3F") then --should be X"3FFFF", for test change to X"3F"
                             curr_address <= (others=>'0');
                             state <= pending;
                         else

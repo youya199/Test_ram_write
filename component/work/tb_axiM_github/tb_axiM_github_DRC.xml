@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>tb_axiM_github</header>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Unused Instance</message>
+    <detail>AndOfThree_0 output pins are not being used.  Connect or mark them unused</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/instances/AndOfThree_0</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected input pin AndOfThree_0:input_valid</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/AndOfThree_0:input_valid</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin AndOfThree_0:start_write</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/AndOfThree_0:start_write</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output bus pin AndOfThree_0:addr[31:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/AndOfThree_0:addr</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected input pin axi4_master_0:write_start</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/axi4_master_0:write_start</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin axi4_master_0:write_complete</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/axi4_master_0:write_complete</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected input pin axi4_master_0:write_addr[31:2]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/axi4_master_0:write_addr</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected input pin axi4_master_0:write_data[31:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/axi4_master_0:write_data</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output bus pin axi4_master_0:write_result[1:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/axi4_master_0:write_result</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\error.png</status>
+    <StatusMessage>Error</StatusMessage>
+    <message>Undriven Pin</message>
+    <detail>Unconnected input pin axi4_master_0:write_mask[3:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/axi4_master_0:write_mask</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message> bus interface ID width mismatch</message>
+    <detail> There is an ID width mismatch between axi4_master_0:BIF_1:M_AXI_AWID[0-2] and COREAXI4INTERCONNECT_C0_0:AXI4mmaster0:MASTER0_AWID[0-0] which may result in a loss of data.</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/axi4_master_0:BIF_1</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message> bus interface ID width mismatch</message>
+    <detail> There is an ID width mismatch between COREAXI4SRAM_C2_0:AXI4_Slave:RID[0-3] and COREAXI4INTERCONNECT_C0_0:AXI4mslave0:SLAVE0_RID[0-1] which may result in a loss of data.</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axiM_github/pins/COREAXI4SRAM_C2_0:AXI4_Slave</crossprobe>
+  </drc>
+</drcreport>

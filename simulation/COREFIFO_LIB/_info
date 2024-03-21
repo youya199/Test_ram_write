@@ -365,7 +365,7 @@ R5
 R6
 R7
 R8
-!i122 70
+!i122 137
 Z45 w1707301522
 R0
 Z46 8C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd
@@ -377,9 +377,9 @@ V@MLFzo3Ljf1?QCaNB1T;D3
 R11
 33
 b1
-Z48 !s110 1707749881
+Z48 !s110 1710507731
 !i10b 1
-Z49 !s108 1707749881.000000
+Z49 !s108 1710507731.000000
 Z50 !s90 -reportprogress|300|-2008|-explicit|-work|COREFIFO_LIB|C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd|
 Z51 !s107 C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd|
 !i113 1
@@ -391,7 +391,7 @@ R5
 R6
 R7
 R8
-!i122 70
+!i122 137
 l0
 Z52 L13 61
 Z53 V3jLTCPHMf79zR0Un`ba9[1

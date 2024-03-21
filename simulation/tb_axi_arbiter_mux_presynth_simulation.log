@@ -1,0 +1,611 @@
+# Reading pref.tcl
+# do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap PolarFire C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/precompiled/vlog/polarfire 
+# Modifying modelsim.ini
+# INFO: Simulation library COREFIFO_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap COREFIFO_LIB COREFIFO_LIB 
+# Modifying modelsim.ini
+# INFO: Simulation library COREAXI4SRAM_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2023.1 Lib Mapping Utility 2023.01 Jan 24 2023
+# vmap COREAXI4SRAM_LIB COREAXI4SRAM_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:42 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/logictest.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package NUMERIC_STD_UNSIGNED
+# -- Compiling entity AndOfThree
+# -- Compiling architecture Behavioral of AndOfThree
+# End time: 13:15:42 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:42 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREFIFO_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vhdl/core/fifo_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package fifo_pkg
+# -- Compiling package body fifo_pkg
+# -- Loading package fifo_pkg
+# End time: 13:15:42 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:42 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/misc_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package misc_pkg
+# -- Compiling package body misc_pkg
+# -- Loading package misc_pkg
+# End time: 13:15:42 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:42 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_misc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package xhdl_misc
+# -- Compiling package body xhdl_misc
+# -- Loading package xhdl_misc
+# End time: 13:15:42 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:42 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/XHDL_std_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package xhdl_std_logic
+# -- Compiling package body xhdl_std_logic
+# -- Loading package xhdl_std_logic
+# End time: 13:15:42 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:42 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/CLK_GEN/1.0.1/CLK_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity CLK_GEN
+# -- Compiling architecture behave of CLK_GEN
+# End time: 13:15:42 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:42 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/CLK_GEN_C0/CLK_GEN_C0.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CLK_GEN_C0
+# -- Compiling architecture RTL of CLK_GEN_C0
+# End time: 13:15:42 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:42 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/test/user/misc_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package misc_pkg
+# -- Compiling package body misc_pkg
+# -- Loading package misc_pkg
+# End time: 13:15:42 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:43 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vhdl/test/user/XHDL_std_logic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package xhdl_std_logic
+# -- Compiling package body xhdl_std_logic
+# -- Loading package xhdl_std_logic
+# End time: 13:15:43 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:43 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MAINCTRL.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package misc_pkg
+# -- Loading package xhdl_std_logic
+# -- Compiling entity COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# -- Compiling architecture trans of COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# End time: 13:15:43 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:43 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package misc_pkg
+# -- Compiling entity COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MEMIF
+# -- Compiling architecture trans of COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MEMIF
+# End time: 13:15:43 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:43 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_SLVIF.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package misc_pkg
+# -- Compiling entity COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_SLVIF
+# -- Compiling architecture trans of COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_SLVIF
+# End time: 13:15:43 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:43 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work COREAXI4SRAM_LIB C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Loading package misc_pkg
+# -- Compiling entity COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_COREAXI4SRAM
+# -- Compiling architecture trans of COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_COREAXI4SRAM
+# End time: 13:15:43 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:43 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity COREAXI4SRAM_C2
+# -- Compiling architecture RTL of COREAXI4SRAM_C2
+# End time: 13:15:43 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:43 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/Actel/Simulation/RESET_GEN/1.0.1/RESET_GEN.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling entity RESET_GEN
+# -- Compiling architecture behavior of RESET_GEN
+# End time: 13:15:43 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:43 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/RESET_GEN_C1/RESET_GEN_C1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity RESET_GEN_C1
+# -- Compiling architecture RTL of RESET_GEN_C1
+# End time: 13:15:43 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:43 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/axi_arbiter_mux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity axi_arbiter_mus
+# -- Compiling architecture rtl of axi_arbiter_mus
+# End time: 13:15:44 on Feb 20,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:44 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/hdl/axi_master_florian_64bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity axi_master_florian_64bits
+# -- Compiling architecture architecture_axi_master_florian_64bits of axi_master_florian_64bits
+# End time: 13:15:44 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vcom 2023.1 Compiler 2023.01 Jan 24 2023
+# Start time: 13:15:44 on Feb 20,2024
+# vcom -reportprogress 300 -2008 -explicit -work presynth C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/tb_axi_arbiter_mux/tb_axi_arbiter_mux.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_axi_arbiter_mux
+# -- Compiling architecture RTL of tb_axi_arbiter_mux
+# -- Loading entity axi_arbiter_mus
+# -- Loading package NUMERIC_STD
+# -- Loading entity axi_master_florian_64bits
+# End time: 13:15:44 on Feb 20,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -L PolarFire -L presynth -L COREFIFO_LIB -L COREAXI4SRAM_LIB -t 1ps -pli "C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll" presynth.tb_axi_arbiter_mux 
+# Start time: 13:15:44 on Feb 20,2024
+# //  ModelSim Microsemi Pro 2023.1 Jan 24 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim Microsemi Pro and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading presynth.tb_axi_arbiter_mux(rtl)
+# Loading ieee.numeric_std_unsigned(body)
+# Loading presynth.andofthree(behavioral)
+# Loading presynth.axi_arbiter_mus(rtl)
+# Loading presynth.axi_master_florian_64bits(architecture_axi_master_florian_64bits)
+# Loading presynth.clk_gen_c0(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading presynth.clk_gen(behave)
+# Loading presynth.coreaxi4sram_c2(rtl)
+# Loading ieee.std_logic_unsigned(body)
+# Loading synopsys.attributes
+# Loading ieee.std_logic_misc(body)
+# Loading COREAXI4SRAM_LIB.misc_pkg(body)
+# Loading COREAXI4SRAM_LIB.coreaxi4sram_c2_coreaxi4sram_c2_0_coreaxi4sram(trans)
+# Loading COREAXI4SRAM_LIB.coreaxi4sram_c2_coreaxi4sram_c2_0_coreaxi4sram_slvif(trans)
+# Loading COREAXI4SRAM_LIB.xhdl_std_logic(body)
+# Loading COREAXI4SRAM_LIB.coreaxi4sram_c2_coreaxi4sram_c2_0_coreaxi4sram_mainctrl(trans)
+# Loading COREAXI4SRAM_LIB.coreaxi4sram_c2_coreaxi4sram_c2_0_coreaxi4sram_memif(trans)
+# ** Warning: (vsim-3473) Component instance "U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_ram_wrapper : COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_ram_wrapper" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MEMIF File: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd
+# Loading presynth.reset_gen_c1(rtl)
+# Loading presynth.reset_gen(behavior)
+# Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_0/ARADDR(31 downto 0) has no driver.
+# This port will contribute value (XXXXXXXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_0/ARSIZE(2 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_0/ARBURST(1 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_0/ARVALID has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_0/RREADY has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_1/ARADDR(31 downto 0) has no driver.
+# This port will contribute value (XXXXXXXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_1/ARSIZE(2 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_1/ARBURST(1 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_1/ARVALID has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_1/RREADY has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL/L7111
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL/L7111
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL/L7111
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+do wave_arbiter_mux.do
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3473) Component instance "U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_ram_wrapper : COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_ram_wrapper" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MEMIF File: C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/COREAXI4SRAM_C2/COREAXI4SRAM_C2_0/rtl/vhdl/core/CoreAXI4SRAM_MEMIF.vhd
+# Loading C:/Microchip/Libero_SoC_v2023.2/Designer/lib/modelsimpro/pli/pf_crypto_win_me_pli.dll
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_0/ARADDR(31 downto 0) has no driver.
+# This port will contribute value (XXXXXXXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_0/ARSIZE(2 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_0/ARBURST(1 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_0/ARVALID has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_0/RREADY has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_1/ARADDR(31 downto 0) has no driver.
+# This port will contribute value (XXXXXXXX) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_1/ARSIZE(2 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_1/ARBURST(1 downto 0) has no driver.
+# This port will contribute value (X) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_1/ARVALID has no driver.
+# This port will contribute value (U) to the signal network.
+# ** Warning: (vsim-8683) Uninitialized out port /tb_axi_arbiter_mux/axi_master_florian_64bits_1/RREADY has no driver.
+# This port will contribute value (U) to the signal network.
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL/L7111
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL/L7111
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Region: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL/L7111
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 2  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 4  Instance: /tb_axi_arbiter_mux/COREAXI4SRAM_C2_0/COREAXI4SRAM_C2_0/U_COREAXI4SRAM_C2_COREAXI4SRAM_C2_0_CoreAXI4SRAM_MAINCTRL
+add wave -position end  sim:/tb_axi_arbiter_mux/axi_arbiter_mus_0/trigger_signal
+force -freeze sim:/tb_axi_arbiter_mux/axi_arbiter_mus_0/trigger_signal 0 0 -cancel 100ns
+# ** Warning: (vsim-8780) Forcing /tb_axi_arbiter_mux/VCC_net as root of /tb_axi_arbiter_mux/axi_arbiter_mus_0/trigger_signal specified in the force.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 13:18:07 on Feb 20,2024, Elapsed time: 0:02:23
+# Errors: 0, Warnings: 72

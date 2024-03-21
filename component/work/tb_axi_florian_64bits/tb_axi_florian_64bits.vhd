@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------
--- Created by SmartDesign Fri Feb  9 09:31:45 2024
+-- Created by SmartDesign Thu Mar 14 12:25:11 2024
 -- Version: 2023.2 2023.2.0.8
 ----------------------------------------------------------------------
 
@@ -383,8 +383,8 @@ AndOfThree_0 : AndOfThree
         reset_n     => RESET_GEN_C1_0_RESET,
         input_valid => axi_master_florian_64bits_0_o_ready,
         -- Outputs
-        addr        => AndOfThree_0_addr,
-        start_write => AndOfThree_0_start_write 
+        start_write => AndOfThree_0_start_write,
+        addr        => AndOfThree_0_addr 
         );
 -- axi_master_florian_64bits_0
 axi_master_florian_64bits_0 : entity work.axi_master_florian_64bits
@@ -392,7 +392,7 @@ axi_master_florian_64bits_0 : entity work.axi_master_florian_64bits
         -- Inputs
         i_clk                 => CLK_GEN_C0_0_CLK_1,
         i_rstn                => RESET_GEN_C1_0_RESET,
-        i_start_write         => AndOfThree_0_start_write,
+        i_start_write         => GND_net,
         i_start_read          => GND_net,
         AWREADY               => axi_master_florian_64bits_0_BIF_1_AWREADY,
         WREADY                => axi_master_florian_64bits_0_BIF_1_WREADY,

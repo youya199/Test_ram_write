@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet type="text/xsl" href="drcss.xsl"?>
+<drcreport>
+  <header>tb_axi_arbiter</header>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Unconnected Bus Interface</message>
+    <detail>Unconnected bus interface pin axi_arbiter_0:BIF_besteffort</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter/pins/axi_arbiter_0:BIF_besteffort</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin axi_master_florian_64bits_0:o_data_req</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter/pins/axi_master_florian_64bits_0:o_data_req</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output pin axi_master_florian_64bits_0:o_data_valid</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter/pins/axi_master_florian_64bits_0:o_data_valid</crossprobe>
+  </drc>
+  <drc>
+    <status>C:\Microchip\Libero_SoC_v2023.2\Designer/data/drcreport\warn.png</status>
+    <StatusMessage>Warning</StatusMessage>
+    <message>Floating Driver</message>
+    <detail>Floating output bus pin axi_master_florian_64bits_0:o_data[63:0]</detail>
+    <crossprobe>liberoaction://cross_probe/smartdesign/tb_axi_arbiter/pins/axi_master_florian_64bits_0:o_data</crossprobe>
+  </drc>
+</drcreport>

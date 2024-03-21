@@ -1,0 +1,17 @@
+Microchip Technology Inc. - Microchip Libero Software Release v2023.2 (Version 2023.2.0.8)
+
+Date      :  Wed Mar  6 15:17:14 2024
+Project   :  C:\Users\YanGao\Desktop\Yan\Test_ram_write
+Component :  PF_SRAM_AHBL_AXI_C0
+Family    :  PolarFire
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_SRAM_AHBL_AXI_C0/PF_SRAM_AHBL_AXI_C0.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_SRAM_AHBL_AXI_C0/COREAXI4SRAM_0/rtl/vlog/core/CoreAXI4SRAM.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_SRAM_AHBL_AXI_C0/COREAXI4SRAM_0/rtl/vlog/core/CoreAXI4SRAM_MAINCTRL.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_SRAM_AHBL_AXI_C0/COREAXI4SRAM_0/rtl/vlog/core/CoreAXI4SRAM_MAINCTRL_ECC.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_SRAM_AHBL_AXI_C0/COREAXI4SRAM_0/rtl/vlog/core/CoreAXI4SRAM_SLVIF.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_SRAM_AHBL_AXI_C0/PF_DPSRAM_AHB_AXI_0/PF_SRAM_AHBL_AXI_C0_PF_DPSRAM_AHB_AXI_0_PF_DPSRAM.v
+    C:/Users/YanGao/Desktop/Yan/Test_ram_write/component/work/PF_SRAM_AHBL_AXI_C0/PF_SRAM_AHBL_AXI_C0.v
+
